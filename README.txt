@@ -1,16 +1,14 @@
-Fix v9 — Rectangular Menus
+Fix v10 — Full Dark Theme + Rectangular Menus
 
-What this does:
-- Turns home game buttons (.game-btn) into rectangles
-- Turns in-game section cards (.section-card) into rectangles
-- Adds a subtle hover elevation
+If your site looks white after previous changes, replace your CSS with this pack.
 
 How to install:
-1) Replace your CSS with ONE of these (choose the path your pages actually load):
-   - /style.css  (root)
-   - /assets/style.css  (if your HTML links assets/style.css)
-2) No HTML changes required.
-3) Hard refresh the site (Ctrl+F5 or Cmd+Shift+R).
+1) Replace ONE file depending on your HTML link:
+   - /style.css   (if your <link rel="stylesheet" href="style.css">)
+   - /assets/style.css  (if your <link rel="stylesheet" href="assets/style.css">)
+2) Hard refresh (Ctrl+F5 / Cmd+Shift+R).
 
-If you also want CHARACTER cards rectangular,
-the rule at the bottom sets .card to squared corners.
+This CSS includes:
+- Base dark theme (body, header, footer, container)
+- Rectangular game buttons (.game-btn) and section cards (.section-card)
+- Character list flex layout (.cards, .card) with small thumbnails
