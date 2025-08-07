@@ -1,0 +1,68 @@
+/* === Bolle Gacha — Fix v9: Rectangular Menus ===
+   Apply to: index.html (game buttons) and <game>.html (section cards)
+   Effect: turn .game-btn and .section-card into rectangles (no rounded corners),
+           with a subtle hover elevation and clear borders.
+================================================================== */
+:root{
+  --bg:#0b0f14; --panel:#121821; --text:#e6edf3; --muted:#9fb2c8;
+  --card:#161e29; --border:#263244; --accent:#5ac8fa;
+}
+/* Global (keep your existing rules; these can be appended safely) */
+
+/* Rectangular game buttons on Home */
+.game-buttons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:16px;
+  margin-top:12px;
+}
+.game-btn{
+  display:block;
+  text-align:center;
+  padding:18px 20px;
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:0;                 /* <-- rectangle */
+  color:var(--text);
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:box-shadow .15s ease, transform .03s ease, background .2s ease;
+}
+.game-btn:hover{
+  background:#1b2534;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transform:translateY(-1px);
+}
+
+/* Rectangular section cards inside each game page */
+.section-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:16px;
+  margin-top:16px;
+}
+.section-card{
+  display:block;
+  padding:16px;
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:0;                 /* <-- rectangle */
+  color:var(--text);
+  text-decoration:none;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:box-shadow .15s ease, background .2s ease, transform .03s ease;
+}
+.section-card h3{ margin:0 0 8px; }
+.section-card p{ margin:0; color:var(--muted); }
+.section-card:hover{
+  background:#1b2534;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transform:translateY(-1px);
+}
+
+/* Optional: make character cards rectangular too (if you want consistency) */
+.card{
+  border-radius:0 !important;
+  border-width:2px !important;
+}
