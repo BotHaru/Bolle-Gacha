@@ -18,33 +18,127 @@
   <main class="container">
     <section class="center-hero">
       <h1>Genshin — Characters</h1>
-      <p>Click a character to open the detailed sheet.</p>
+      <p>Filter by rarity, weapon, element or search by name. Click to open the detailed sheet.</p>
+
+      <div class="filters">
+        <select id="f-rarity">
+          <option value="">All Rarities</option>
+          <option value="5">5★</option>
+          <option value="4">4★</option>
+        </select>
+
+        <select id="f-weapon">
+          <option value="">All Weapons</option>
+          <option value="Sword">Sword</option>
+          <option value="Claymore">Claymore</option>
+          <option value="Polearm">Polearm</option>
+          <option value="Bow">Bow</option>
+          <option value="Catalyst">Catalyst</option>
+        </select>
+
+        <select id="f-element">
+          <option value="">All Elements</option>
+          <option value="Anemo">Anemo</option>
+          <option value="Geo">Geo</option>
+          <option value="Electro">Electro</option>
+          <option value="Dendro">Dendro</option>
+          <option value="Hydro">Hydro</option>
+          <option value="Pyro">Pyro</option>
+          <option value="Cryo">Cryo</option>
+        </select>
+
+        <input id="f-search" type="search" placeholder="Search name..." />
+      </div>
+
       <div class="cards">
-        <!-- Example cards: replace/extend with your list -->
-        <div class="card">
+        <!-- Example cards with data-attributes for filtering -->
+        <div class="card" data-name="Albedo" data-rarity="5" data-weapon="Sword" data-element="Geo">
           <a href="genshin-albedo.html"><img src="assets/placeholder.png" alt="Albedo"></a>
           <div class="card-body">
             <h3><a href="genshin-albedo.html">Albedo</a></h3>
-            <div class="meta">Geo • Sword</div>
-            <p class="skills">Skill: Geo flower that blooms on hit. Burst: Geo explosion with Transient Blossoms.</p>
+            <div class="meta">Geo • Sword • 5★</div>
+            <p class="skills">Geo flower blooms; Geo burst with Transient Blossoms.</p>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-name="Alhaitham" data-rarity="5" data-weapon="Sword" data-element="Dendro">
+          <a href="genshin-alhaitham.html"><img src="assets/placeholder.png" alt="Alhaitham"></a>
+          <div class="card-body">
+            <h3><a href="genshin-alhaitham.html">Alhaitham</a></h3>
+            <div class="meta">Dendro • Sword • 5★</div>
+            <p class="skills">Chisel-Light Mirrors; sustained Dendro field.</p>
+          </div>
+        </div>
+
+        <div class="card" data-name="Aloy" data-rarity="5" data-weapon="Bow" data-element="Cryo">
+          <a href="genshin-aloy.html"><img src="assets/placeholder.png" alt="Aloy"></a>
+          <div class="card-body">
+            <h3><a href="genshin-aloy.html">Aloy</a></h3>
+            <div class="meta">Cryo • Bow • 5★</div>
+            <p class="skills">Freeze Bomb & Cryo bomblets.</p>
+          </div>
+        </div>
+
+        <div class="card" data-name="Amber" data-rarity="4" data-weapon="Bow" data-element="Pyro">
+          <a href="genshin-amber.html"><img src="assets/placeholder.png" alt="Amber"></a>
+          <div class="card-body">
+            <h3><a href="genshin-amber.html">Amber</a></h3>
+            <div class="meta">Pyro • Bow • 4★</div>
+            <p class="skills">Explosive puppet taunt; fiery rain burst.</p>
+          </div>
+        </div>
+
+        <div class="card" data-name="Arataki Itto" data-rarity="5" data-weapon="Claymore" data-element="Geo">
+          <a href="genshin-arataki-itto.html"><img src="assets/placeholder.png" alt="Arataki Itto"></a>
+          <div class="card-body">
+            <h3><a href="genshin-arataki-itto.html">Arataki Itto</a></h3>
+            <div class="meta">Geo • Claymore • 5★</div>
+            <p class="skills">Oni King mode; Superlative Superstrength slashes.</p>
+          </div>
+        </div>
+
+        <div class="card" data-name="Arlecchino" data-rarity="5" data-weapon="Polearm" data-element="Pyro">
+          <a href="genshin-arlecchino.html"><img src="assets/placeholder.png" alt="Arlecchino"></a>
+          <div class="card-body">
+            <h3><a href="genshin-arlecchino.html">Arlecchino</a></h3>
+            <div class="meta">Pyro • Polearm • 5★</div>
+            <p class="skills">Bond of Life mechanics; high Pyro strikes.</p>
+          </div>
+        </div>
+
+        <div class="card" data-name="Kamisato Ayaka" data-rarity="5" data-weapon="Sword" data-element="Cryo">
           <a href="genshin-kamisato-ayaka.html"><img src="assets/placeholder.png" alt="Kamisato Ayaka"></a>
           <div class="card-body">
             <h3><a href="genshin-kamisato-ayaka.html">Kamisato Ayaka</a></h3>
-            <div class="meta">Cryo • Sword</div>
-            <p class="skills">Burst: persistent Cryo storm with multi-slashes.</p>
+            <div class="meta">Cryo • Sword • 5★</div>
+            <p class="skills">Alternate sprint; devastating Cryo storm.</p>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-name="Kamisato Ayato" data-rarity="5" data-weapon="Sword" data-element="Hydro">
           <a href="genshin-kamisato-ayato.html"><img src="assets/placeholder.png" alt="Kamisato Ayato"></a>
           <div class="card-body">
             <h3><a href="genshin-kamisato-ayato.html">Kamisato Ayato</a></h3>
-            <div class="meta">Hydro • Sword</div>
-            <p class="skills">Skill: Shunsuiken mode with rapid Hydro slashes.</p>
+            <div class="meta">Hydro • Sword • 5★</div>
+            <p class="skills">Shunsuiken rapid Hydro slashes; buffing garden.</p>
+          </div>
+        </div>
+
+        <div class="card" data-name="Baizhu" data-rarity="5" data-weapon="Catalyst" data-element="Dendro">
+          <a href="genshin-baizhu.html"><img src="assets/placeholder.png" alt="Baizhu"></a>
+          <div class="card-body">
+            <h3><a href="genshin-baizhu.html">Baizhu</a></h3>
+            <div class="meta">Dendro • Catalyst • 5★</div>
+            <p class="skills">Healing shield pulses; Dendro application.</p>
+          </div>
+        </div>
+
+        <div class="card" data-name="Barbara" data-rarity="4" data-weapon="Catalyst" data-element="Hydro">
+          <a href="genshin-barbara.html"><img src="assets/placeholder.png" alt="Barbara"></a>
+          <div class="card-body">
+            <h3><a href="genshin-barbara.html">Barbara</a></h3>
+            <div class="meta">Hydro • Catalyst • 4★</div>
+            <p class="skills">Healing melody; teamwide regen.</p>
           </div>
         </div>
       </div>
@@ -52,5 +146,6 @@
   </main>
 
   <footer class="site-footer">© 2025 Bolle Gacha</footer>
+  <script src="assets/filters.js"></script>
 </body>
 </html>
