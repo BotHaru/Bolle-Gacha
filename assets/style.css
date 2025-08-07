@@ -1,60 +1,68 @@
-/* === Bolle Gacha — Fix v8 (root-level CSS) ===
-   Ensures left→right card flow with FLEX and adds filters styling.
-   Drop-in replacement for /style.css
-=========================================================== */
-:root{--bg:#0b0f14;--panel:#121821;--text:#e6edf3;--muted:#9fb2c8;--card:#161e29;--border:#263244;--accent:#5ac8fa}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg)}
-a{text-decoration:none;color:inherit}
-
-.site-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:14px;border-bottom:1px solid var(--border);background:var(--panel)}
-.logo-wrap{justify-self:center}
-.site-logo{width:88px;height:88px;border-radius:50%;display:block;border:2px solid var(--border);background:#0b0f14}
-.header-spacer{height:1px}
-
-.container{max-width:1100px;margin:0 auto;padding:24px}
-.center-hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding:36px 12px 12px}
-.center-hero h1{margin:8px 0 4px}
-.center-hero p{margin:0 0 14px;color:var(--muted)}
-
-.site-footer{border-top:1px solid var(--border);background:var(--panel);padding:12px;text-align:center;color:var(--muted);margin-top:24px}
-
-/* ===== FILTERS ===== */
-.filters{
-  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
-  background:var(--panel);border:1px solid var(--border);border-radius:12px;
-  padding:10px 12px;margin:10px 0 8px;width:100%;
+/* === Bolle Gacha — Fix v9: Rectangular Menus ===
+   Apply to: index.html (game buttons) and <game>.html (section cards)
+   Effect: turn .game-btn and .section-card into rectangles (no rounded corners),
+           with a subtle hover elevation and clear borders.
+================================================================== */
+:root{
+  --bg:#0b0f14; --panel:#121821; --text:#e6edf3; --muted:#9fb2c8;
+  --card:#161e29; --border:#263244; --accent:#5ac8fa;
 }
-.filters select,.filters input[type="search"]{
-  background:#0e141d;color:var(--text);border:1px solid var(--border);
-  border-radius:10px;padding:8px 10px;min-width:140px
+/* Global (keep your existing rules; these can be appended safely) */
+
+/* Rectangular game buttons on Home */
+.game-buttons{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+  gap:16px;
+  margin-top:12px;
+}
+.game-btn{
+  display:block;
+  text-align:center;
+  padding:18px 20px;
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:0;                 /* <-- rectangle */
+  color:var(--text);
+  font-weight:700;
+  text-decoration:none;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:box-shadow .15s ease, transform .03s ease, background .2s ease;
+}
+.game-btn:hover{
+  background:#1b2534;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transform:translateY(-1px);
 }
 
-/* ===== CHARACTERS (STRONG OVERRIDES) ===== */
-.cards{
-  display:flex !important;
-  flex-wrap:wrap !important;
-  gap:12px !important;
-  align-items:stretch;
-  width:100%;
+/* Rectangular section cards inside each game page */
+.section-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:16px;
+  margin-top:16px;
 }
+.section-card{
+  display:block;
+  padding:16px;
+  background:var(--card);
+  border:2px solid var(--border);
+  border-radius:0;                 /* <-- rectangle */
+  color:var(--text);
+  text-decoration:none;
+  box-shadow:0 0 0 rgba(0,0,0,0);
+  transition:box-shadow .15s ease, background .2s ease, transform .03s ease;
+}
+.section-card h3{ margin:0 0 8px; }
+.section-card p{ margin:0; color:var(--muted); }
+.section-card:hover{
+  background:#1b2534;
+  box-shadow:0 6px 18px rgba(0,0,0,.25);
+  transform:translateY(-1px);
+}
+
+/* Optional: make character cards rectangular too (if you want consistency) */
 .card{
-  display:flex !important;
-  gap:10px !important;align-items:center !important;
-  background:var(--card);border:1px solid var(--border);border-radius:12px;padding:10px;
-  flex: 1 1 240px; /* basis 240px, grows to fill row */
-  max-width: 360px;
-}
-.card img{width:40px;height:40px;border-radius:10px;object-fit:cover;border:1px solid var(--border)}
-.card h3{margin:2px 0 4px;font-size:15px}
-.meta{color:var(--muted);font-size:12px;margin-bottom:2px}
-.skills{font-size:13px;line-height:1.35;color:#d7e2ee}
-.card a{color:inherit}
-
-.hidden{display:none !important}
-
-/* Mobile: force two columns min when possible */
-@media (max-width:520px){
-  .card{flex: 1 1 calc(50% - 12px)}
+  border-radius:0 !important;
+  border-width:2px !important;
 }
