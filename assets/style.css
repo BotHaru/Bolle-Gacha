@@ -1,0 +1,48 @@
+/* Minimal, clean styles */
+:root {
+  --bg: #0b0f14;
+  --panel: #121821;
+  --text: #e6edf3;
+  --muted: #9fb2c8;
+  --card: #161e29;
+  --border: #263244;
+  --accent: #5ac8fa;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
+a { color: var(--text); text-decoration: none; }
+
+.site-header, .site-footer {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 18px;
+}
+.site-footer { border-top: 1px solid var(--border); border-bottom: none; }
+
+.topnav a { margin-right: 12px; padding: 6px 10px; border-radius: 8px; }
+.topnav a.active { background: #1f2a3a; border: 1px solid var(--border); }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+}
+.card img {
+  width: 64px; height: 64px; border-radius: 10px; object-fit: cover;
+  border: 1px solid var(--border);
+}
+.card h3 { margin: 4px 0 6px; font-size: 18px; }
+.meta { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.skills { font-size: 14px; line-height: 1.35; color: #d7e2ee; }
