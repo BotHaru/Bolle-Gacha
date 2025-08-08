@@ -1,0 +1,182 @@
+{
+  "current_patch": "5.8",
+  "current": {
+    "characters": [
+      {
+        "name": "Furina",
+        "phase": 1
+      },
+      {
+        "name": "Navia",
+        "phase": 1
+      },
+      {
+        "name": "Neuvillette",
+        "phase": 2
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Splendor of Tranquil Waters",
+        "phase": 1
+      },
+      {
+        "name": "Verdict",
+        "phase": 1
+      },
+      {
+        "name": "Tome of the Eternal Flow",
+        "phase": 2
+      }
+    ]
+  },
+  "history": [
+    {
+      "patch": "5.8",
+      "phase_1": [
+        {
+          "name": "Furina",
+          "rarity": 5
+        },
+        {
+          "name": "Navia",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Neuvillette",
+          "rarity": 5
+        }
+      ]
+    },
+    {
+      "patch": "5.7",
+      "phase_1": [
+        {
+          "name": "Yelan",
+          "rarity": 5
+        },
+        {
+          "name": "Xiao",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Raiden Shogun",
+          "rarity": 5
+        },
+        {
+          "name": "Kazuha",
+          "rarity": 5
+        }
+      ]
+    },
+    {
+      "patch": "5.6",
+      "phase_1": [
+        {
+          "name": "Alhaitham",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Nilou",
+          "rarity": 5
+        }
+      ]
+    },
+    {
+      "patch": "5.5",
+      "phase_1": [
+        {
+          "name": "Hu Tao",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Shenhe",
+          "rarity": 5
+        }
+      ]
+    },
+    {
+      "patch": "5.4",
+      "phase_1": [
+        {
+          "name": "Xianyun",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Navia",
+          "rarity": 5
+        }
+      ]
+    },
+    {
+      "patch": "5.3",
+      "phase_1": [
+        {
+          "name": "Furina",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Clorinde",
+          "rarity": 5
+        }
+      ]
+    },
+    {
+      "patch": "5.2",
+      "phase_1": [
+        {
+          "name": "Wriothesley",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Neuvillette",
+          "rarity": 5
+        }
+      ]
+    },
+    {
+      "patch": "5.1",
+      "phase_1": [
+        {
+          "name": "Furina",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Charlotte",
+          "rarity": 4
+        }
+      ]
+    },
+    {
+      "patch": "5.0",
+      "phase_1": [
+        {
+          "name": "Lyney",
+          "rarity": 5
+        }
+      ],
+      "phase_2": [
+        {
+          "name": "Hu Tao",
+          "rarity": 5
+        }
+      ]
+    }
+  ]
+}

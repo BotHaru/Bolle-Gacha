@@ -1,183 +1,74 @@
 {
-  "generated": "2025-08-08",
-  "patches": [
+  "events": [
     {
       "patch": "5.8",
-      "events": [
-        {
-          "slug": "5-8-main-event",
-          "title": "Main Event 5.8",
-          "dates": "2025-07-10 \u2192 2025-08-05",
-          "summary": "Flagship limited-time event for Version 5.8 with quests, mini-games, and shop.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-8-combat-challenge",
-          "title": "Combat Challenge 5.8",
-          "dates": "2025-07-15 \u2192 2025-08-01",
-          "summary": "Time-limited combat domain with modifiers and score system.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-8-photo-contest",
-          "title": "Photo Contest 5.8",
-          "dates": "2025-07-20 \u2192 2025-08-05",
-          "summary": "Take themed photos around Teyvat to earn Primogems and furnishings.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-8-main-event",
+      "title": "Main Event 5.8",
+      "dates": "2025-07-10 \u2192 2025-08-05",
+      "summary": "Flagship limited-time event with quests, mini-games, and shop."
+    },
+    {
+      "patch": "5.8",
+      "slug": "5-8-combat-challenge",
+      "title": "Combat Challenge 5.8",
+      "dates": "2025-07-15 \u2192 2025-08-01",
+      "summary": "Time-limited combat domain with modifiers and scoring."
     },
     {
       "patch": "5.7",
-      "events": [
-        {
-          "slug": "5-7-main-event",
-          "title": "Main Event 5.7",
-          "dates": "2025-06-05 \u2192 2025-07-08",
-          "summary": "Seasonal event hub with multiple activities and shop.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-7-fishing-frenzy",
-          "title": "Fishing Frenzy 5.7",
-          "dates": "2025-06-12 \u2192 2025-07-01",
-          "summary": "Fishing-themed time trial challenges across regions.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-7-main-event",
+      "title": "Main Event 5.7",
+      "dates": "2025-06-05 \u2192 2025-07-08",
+      "summary": "Seasonal event hub with multiple activities and shop."
     },
     {
       "patch": "5.6",
-      "events": [
-        {
-          "slug": "5-6-main-event",
-          "title": "Main Event 5.6",
-          "dates": "2025-04-30 \u2192 2025-06-03",
-          "summary": "Flagship event with exploration and mini-games.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-6-roguelike-domain",
-          "title": "Roguelike Domain 5.6",
-          "dates": "2025-05-10 \u2192 2025-05-28",
-          "summary": "Randomized domain with blessing cards and scoring.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-6-roguelike-domain",
+      "title": "Roguelike Domain 5.6",
+      "dates": "2025-05-10 \u2192 2025-05-28",
+      "summary": "Randomized domain with blessing cards and scoring."
     },
     {
       "patch": "5.5",
-      "events": [
-        {
-          "slug": "5-5-main-event",
-          "title": "Main Event 5.5",
-          "dates": "2025-03-20 \u2192 2025-04-28",
-          "summary": "Region-themed celebration with currency shop.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-5-parkour-challenge",
-          "title": "Parkour Challenge 5.5",
-          "dates": "2025-03-28 \u2192 2025-04-18",
-          "summary": "Speed-run time trials with movement buffs.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-5-parkour-challenge",
+      "title": "Parkour Challenge 5.5",
+      "dates": "2025-03-28 \u2192 2025-04-18",
+      "summary": "Speed-run time trials with movement buffs."
     },
     {
       "patch": "5.4",
-      "events": [
-        {
-          "slug": "5-4-main-event",
-          "title": "Main Event 5.4",
-          "dates": "2025-02-05 \u2192 2025-03-18",
-          "summary": "Festive hub with quests and event shop.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-4-theatre-mechanics",
-          "title": "Theatre Mechanics 5.4",
-          "dates": "2025-02-12 \u2192 2025-03-05",
-          "summary": "Tower-defense style mini-game returns with new stages.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-4-theatre-mechanics",
+      "title": "Theatre Mechanics 5.4",
+      "dates": "2025-02-12 \u2192 2025-03-05",
+      "summary": "Tower-defense style mini-game returns with new stages."
     },
     {
       "patch": "5.3",
-      "events": [
-        {
-          "slug": "5-3-main-event",
-          "title": "Main Event 5.3",
-          "dates": "2024-12-20 \u2192 2025-02-03",
-          "summary": "Patch-long event storyline with mini-games.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-3-alchemy-workshop",
-          "title": "Alchemy Workshop 5.3",
-          "dates": "2025-01-06 \u2192 2025-01-24",
-          "summary": "Crafting and potion experiments challenges.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-3-alchemy-workshop",
+      "title": "Alchemy Workshop 5.3",
+      "dates": "2025-01-06 \u2192 2025-01-24",
+      "summary": "Crafting and potion experiments challenges."
     },
     {
       "patch": "5.2",
-      "events": [
-        {
-          "slug": "5-2-main-event",
-          "title": "Main Event 5.2",
-          "dates": "2024-11-05 \u2192 2024-12-17",
-          "summary": "Seasonal hub with exploration, quests, and shop.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-2-photo-festival",
-          "title": "Photo Festival 5.2",
-          "dates": "2024-11-12 \u2192 2024-12-05",
-          "summary": "Photography routes and scoring challenges.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-2-photo-festival",
+      "title": "Photo Festival 5.2",
+      "dates": "2024-11-12 \u2192 2024-12-05",
+      "summary": "Photography routes and scoring challenges."
     },
     {
       "patch": "5.1",
-      "events": [
-        {
-          "slug": "5-1-main-event",
-          "title": "Main Event 5.1",
-          "dates": "2024-09-24 \u2192 2024-11-03",
-          "summary": "Flagship festival with multi-activity tickets and shop.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-1-boss-rush",
-          "title": "Boss Rush 5.1",
-          "dates": "2024-10-05 \u2192 2024-10-25",
-          "summary": "Series of timed boss challenges with modifiers.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-1-boss-rush",
+      "title": "Boss Rush 5.1",
+      "dates": "2024-10-05 \u2192 2024-10-25",
+      "summary": "Series of timed boss challenges with modifiers."
     },
     {
       "patch": "5.0",
-      "events": [
-        {
-          "slug": "5-0-main-event",
-          "title": "Main Event 5.0",
-          "dates": "2024-08-16 \u2192 2024-09-28",
-          "summary": "Kickoff patch event with exploration quests.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        },
-        {
-          "slug": "5-0-rhythm-games",
-          "title": "Rhythm Mini-Games 5.0",
-          "dates": "2024-08-25 \u2192 2024-09-20",
-          "summary": "Music rhythm challenges across regions.",
-          "guide": "https://game8.co/games/Genshin-Impact/archives/301601"
-        }
-      ]
+      "slug": "5-0-rhythm-games",
+      "title": "Rhythm Mini-Games 5.0",
+      "dates": "2024-08-25 \u2192 2024-09-20",
+      "summary": "Music rhythm challenges across regions."
     }
   ]
 }
