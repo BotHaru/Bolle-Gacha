@@ -1,22 +1,255 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genshin Eventi — Bolle Gacha</title>
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genshin Impact — Events by Patch — Bolle Gacha</title>
+<style>
+  body{background:#0b0f14;color:#e6edf3;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .container{max-width:1100px;margin:0 auto;padding:24px}
+  .site-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:14px;border-bottom:1px solid #263244;background:#121821}
+  .logo-wrap{justify-self:center}.site-logo{width:88px;height:88px;border-radius:50%;border:2px solid #263244;background:#0b0f14}
+  .site-footer{border-top:1px solid #263244;background:#121821;padding:12px;text-align:center;color:#9fb2c8;margin-top:24px}
+  a{color:#5ac8fa;text-decoration:none}
+  h1,h2{margin:0 0 12px}
+  .intro{color:#9fb2c8;margin-bottom:16px}
+  .search{margin:6px 0 16px}
+  .search input{width:100%;padding:10px;border:1px solid #263244;background:#0e141d;color:#e6edf3;border-radius:8px}
+  .accordion{display:grid;gap:10px}
+  .panel{background:#161e29;border:2px solid #263244}
+  .panel summary{cursor:pointer;list-style:none;padding:12px 14px;font-weight:700}
+  .panel summary::-webkit-details-marker{display:none}
+  .panel .content{padding:10px 14px;border-top:1px solid #263244}
+  .event{display:flex;flex-direction:column;gap:4px;padding:10px 0;border-bottom:1px dashed #263244}
+  .event:last-child{border-bottom:none}
+  .event-title{font-weight:600}
+  .event-dates{color:#9fb2c8;font-size:13px}
+  .banners{background:#121821;border:2px solid #263244;padding:12px;margin:16px 0}
+  .banners h3{margin:0 0 8px}
+  .badge{display:inline-block;border:1px solid #263244;padding:4px 8px;margin:4px;background:#0e141d;border-radius:6px}
+</style>
 </head>
 <body>
-  <header class="site-header">
-      <div></div>
-      <a class="logo-wrap" href="index.html" title="Back to Home">
-        <img class="site-logo" src="assets/logo.png" alt="Bolle Gacha Logo">
-      </a>
-      <div class="header-spacer"></div>
-    </header>
-  <main class="container">
-    <section class="center-hero"><p>Placeholder.</p></section>
-  </main>
-  <footer class="site-footer">© 2025 Bolle Gacha</footer>
+<header class="site-header">
+  <div></div>
+  <a class="logo-wrap" href="index.html" title="Back to Home">
+    <img class="site-logo" src="assets/logo.png" alt="Bolle Gacha Logo">
+  </a>
+  <div></div>
+</header>
+<main class="container">
+  <a href="genshin.html" style="color:#9fb2c8">← Back to Genshin menu</a>
+  <h1>Genshin Impact — Events by Patch</h1>
+  <p class="intro">Browse limited-time events grouped by patch. Click an event for a detailed page with a paraphrased guide and links to sources (Game8, etc.).</p>
+  
+  <div class="banners">
+    <h3>Current Banners (v5.8)</h3>
+    <div>Characters: <span class="badge">Furina</span> <span class="badge">Navia</span> <span class="badge">Neuvillette</span></div>
+    <div>Weapons: <span class="badge">Splendor of Tranquil Waters</span> <span class="badge">Verdict</span> <span class="badge">Tome of the Eternal Flow</span></div>
+    <p class="intro">Update this box every patch. See README.txt for how-to.</p>
+  </div>
+
+  <div class="search"><input id="q" placeholder="Search events by title..." oninput="filterEvents()"></div>
+  <div class="accordion">
+    
+      <details class="panel" open>
+        <summary>Version 5.8</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-8-main-event.html">Main Event 5.8</a></div>
+            <div class="event-dates">2025-07-10 → 2025-08-05</div>
+            <div class="event-summary" style="color:#d7e2ee">Flagship limited-time event for Version 5.8 with quests, mini-games, and shop.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-8-combat-challenge.html">Combat Challenge 5.8</a></div>
+            <div class="event-dates">2025-07-15 → 2025-08-01</div>
+            <div class="event-summary" style="color:#d7e2ee">Time-limited combat domain with modifiers and score system.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-8-photo-contest.html">Photo Contest 5.8</a></div>
+            <div class="event-dates">2025-07-20 → 2025-08-05</div>
+            <div class="event-summary" style="color:#d7e2ee">Take themed photos around Teyvat to earn Primogems and furnishings.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.7</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-7-main-event.html">Main Event 5.7</a></div>
+            <div class="event-dates">2025-06-05 → 2025-07-08</div>
+            <div class="event-summary" style="color:#d7e2ee">Seasonal event hub with multiple activities and shop.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-7-fishing-frenzy.html">Fishing Frenzy 5.7</a></div>
+            <div class="event-dates">2025-06-12 → 2025-07-01</div>
+            <div class="event-summary" style="color:#d7e2ee">Fishing-themed time trial challenges across regions.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.6</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-6-main-event.html">Main Event 5.6</a></div>
+            <div class="event-dates">2025-04-30 → 2025-06-03</div>
+            <div class="event-summary" style="color:#d7e2ee">Flagship event with exploration and mini-games.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-6-roguelike-domain.html">Roguelike Domain 5.6</a></div>
+            <div class="event-dates">2025-05-10 → 2025-05-28</div>
+            <div class="event-summary" style="color:#d7e2ee">Randomized domain with blessing cards and scoring.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.5</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-5-main-event.html">Main Event 5.5</a></div>
+            <div class="event-dates">2025-03-20 → 2025-04-28</div>
+            <div class="event-summary" style="color:#d7e2ee">Region-themed celebration with currency shop.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-5-parkour-challenge.html">Parkour Challenge 5.5</a></div>
+            <div class="event-dates">2025-03-28 → 2025-04-18</div>
+            <div class="event-summary" style="color:#d7e2ee">Speed-run time trials with movement buffs.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.4</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-4-main-event.html">Main Event 5.4</a></div>
+            <div class="event-dates">2025-02-05 → 2025-03-18</div>
+            <div class="event-summary" style="color:#d7e2ee">Festive hub with quests and event shop.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-4-theatre-mechanics.html">Theatre Mechanics 5.4</a></div>
+            <div class="event-dates">2025-02-12 → 2025-03-05</div>
+            <div class="event-summary" style="color:#d7e2ee">Tower-defense style mini-game returns with new stages.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.3</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-3-main-event.html">Main Event 5.3</a></div>
+            <div class="event-dates">2024-12-20 → 2025-02-03</div>
+            <div class="event-summary" style="color:#d7e2ee">Patch-long event storyline with mini-games.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-3-alchemy-workshop.html">Alchemy Workshop 5.3</a></div>
+            <div class="event-dates">2025-01-06 → 2025-01-24</div>
+            <div class="event-summary" style="color:#d7e2ee">Crafting and potion experiments challenges.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.2</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-2-main-event.html">Main Event 5.2</a></div>
+            <div class="event-dates">2024-11-05 → 2024-12-17</div>
+            <div class="event-summary" style="color:#d7e2ee">Seasonal hub with exploration, quests, and shop.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-2-photo-festival.html">Photo Festival 5.2</a></div>
+            <div class="event-dates">2024-11-12 → 2024-12-05</div>
+            <div class="event-summary" style="color:#d7e2ee">Photography routes and scoring challenges.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.1</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-1-main-event.html">Main Event 5.1</a></div>
+            <div class="event-dates">2024-09-24 → 2024-11-03</div>
+            <div class="event-summary" style="color:#d7e2ee">Flagship festival with multi-activity tickets and shop.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-1-boss-rush.html">Boss Rush 5.1</a></div>
+            <div class="event-dates">2024-10-05 → 2024-10-25</div>
+            <div class="event-summary" style="color:#d7e2ee">Series of timed boss challenges with modifiers.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+      <details class="panel" open>
+        <summary>Version 5.0</summary>
+        <div class="content">
+          
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-0-main-event.html">Main Event 5.0</a></div>
+            <div class="event-dates">2024-08-16 → 2024-09-28</div>
+            <div class="event-summary" style="color:#d7e2ee">Kickoff patch event with exploration quests.</div>
+          </div>
+        
+
+          <div class="event">
+            <div class="event-title"><a href="genshin-event-5-0-rhythm-games.html">Rhythm Mini-Games 5.0</a></div>
+            <div class="event-dates">2024-08-25 → 2024-09-20</div>
+            <div class="event-summary" style="color:#d7e2ee">Music rhythm challenges across regions.</div>
+          </div>
+        
+        </div>
+      </details>
+    
+  </div>
+</main>
+<footer class="site-footer">© 2025 Bolle Gacha</footer>
+<script>
+function filterEvents(){
+  const q = document.getElementById('q').value.toLowerCase().trim();
+  document.querySelectorAll('.event').forEach(ev=>{
+    const t = ev.querySelector('.event-title').textContent.toLowerCase();
+    ev.style.display = (!q || t.includes(q)) ? 'block' : 'none';
+  });
+}
+</script>
 </body>
 </html>
