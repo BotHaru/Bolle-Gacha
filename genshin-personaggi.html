@@ -692,5 +692,40 @@ function filterCharacters(){
   });
 }
 </script>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const base = 'assets/genshin/';                 // cartella icone
+  const exts = ['webp','png','jpg','jpeg'];       // ordina come preferisci
+
+  // funzione che prova più estensioni finché ne trova una
+  function resolveSrc(slug, i = 0) {
+    if (i >= exts.length) return null;
+    return `${base}${slug}.${exts[i]}`;
+  }
+
+  document.querySelectorAll('.char-card[data-name]').forEach(card => {
+    const slug = card.getAttribute('data-name');   // es: "amber", "kamisato-ayaka"
+    const name = card.querySelector('.char-name')?.textContent?.trim() || slug;
+
+    const img = new Image();
+    img.className = 'char-icon';
+    img.alt = name;
+    img.width = 96; img.height = 96; img.loading = 'lazy';
+
+    let idx = 0;
+    function tryNext() {
+      const src = resolveSrc(slug, idx++);
+      if (!src) { card.classList.remove('has-icon'); return; }
+      img.src = src;
+    }
+    img.onerror = tryNext;
+    img.onload = () => { card.classList.add('has-icon'); };
+    tryNext();
+
+    // inserisci l'immagine in alto nella card
+    card.insertBefore(img, card.firstChild);
+  });
+});
+</script>
 </body>
 </html>
