@@ -12,7 +12,6 @@
   .site-footer{border-top:1px solid #263244;background:#121821;padding:12px;text-align:center;color:#9fb2c8;margin-top:24px}
   a{color:#5ac8fa;text-decoration:none}
   h1,h2{margin:0 0 12px}
-  .intro{color:#9fb2c8;margin-bottom:16px}
   .split{display:grid;grid-template-columns:320px 1fr;gap:16px}
   @media(max-width:960px){.split{grid-template-columns:1fr}}
   .banners-col{background:#161e29;border:2px solid #263244;padding:12px}
@@ -31,86 +30,6 @@
   .event-title{font-weight:700}
   .event-dates{color:#9fb2c8;font-size:13px}
 </style>
-</head>
-<body>
-<header class="site-header">
-  <div></div>
-  <a class="logo-wrap" href="index.html" title="Back to Home"><img class="site-logo" src="assets/logo.png" alt="Bolle Gacha Logo"></a>
-  <div></div>
-</header>
-<main class="container">
-  <a href="genshin.html" style="color:#9fb2c8">← Back to Genshin menu</a>
-  <h1>Genshin Impact — Events & Banner History</h1>
-  <p class="intro">Left: Banner History with current banners. Right: Events by patch (searchable).</p>
-  <div class="split">
-    <aside class="banners-col">
-      
-  <div class="current">
-    <h2 style="margin:0 0 6px">Current Banners (v5.8)</h2>
-    <div style="margin-bottom:6px"><strong>Characters:</strong></div>
-    <div class="badges">
-      <span class="badge">Ineffa (Phase 1)</span>
-      <span class="badge">Citlali (Phase 1)</span>
-      <span class="badge">Mualani (Phase 2)</span>
-      <span class="badge">Chasca (Phase 2)</span>
-    </div>
-    <div style="margin:8px 0 6px"><strong>Weapons:</strong></div>
-    <div class="badges">
-      <span class="badge">Fractured Halo (P1)</span>
-      <span class="badge">Starcaller's Watch (P1)</span>
-      <span class="badge">[Phase 2 weapons TBD]</span>
-    </div>
-    <p class="intro">Dates: Phase 1 (Jul 30 → Aug 19, 2025). Phase 2 (Aug 19 → ~Sep 9, 2025).</p>
-    <p class="intro">Source: Game8 / PCGamer.</p>
-  </div>
-
-      <h2 style="margin:4px 0 8px">Banner History</h2>
-      <div class="accordion">
-        
-  <details class="panel" open>
-    <summary>Version 5.8</summary>
-    <div class="content">
-      <div><strong>Phase 1:</strong> <a href="genshin-banner-5-8-phase-1.html">Ineffa, Citlali</a></div>
-      <div><strong>Phase 2:</strong> <a href="genshin-banner-5-8-phase-2.html">Mualani, Chasca</a></div>
-    </div>
-  </details>
-  <details class="panel">
-    <summary>Version 5.7</summary>
-    <div class="content">
-      <div><strong>Phase 1:</strong> Yelan, Xiao</div>
-      <div><strong>Phase 2:</strong> Raiden Shogun, Kaedehara Kazuha</div>
-    </div>
-  </details>
-  <details class="panel">
-    <summary>Older Versions</summary>
-    <div class="content">We will populate 5.6 → 5.0 (and earlier) from Game8 in the next pass.</div>
-  </details>
-
-      </div>
-    </aside>
-    <section class="events-col">
-      <div class="search"><input id="q" placeholder="Search events by title or patch (e.g. 5.7)..." oninput="filterEvents()"></div>
-      
-  <div class="event" data-patch="5.8">
-    <div class="event-title"><a href="genshin-event-5-8-stygian-onslaught.html">Stygian Onslaught</a></div>
-    <div class="event-dates">v5.8 • Aug 6 → Sep 9, 2025</div>
-    <div class="event-summary" style="color:#d7e2ee">Combat challenge event featuring waves and modifiers.</div>
-  </div>
-  <div class="event" data-patch="5.8">
-    <div class="event-title"><a href="genshin-event-5-8-tracing-vanishing-trails.html">Tracing Vanishing Trails</a></div>
-    <div class="event-dates">v5.8 • Aug 14 → Aug 25, 2025</div>
-    <div class="event-summary" style="color:#d7e2ee">Exploration event with route tracking and chest rewards.</div>
-  </div>
-  <div class="event" data-patch="5.8">
-    <div class="event-title"><a href="genshin-event-5-8-automatic-artistry.html">Heated Battle Mode: Automatic Artistry</a></div>
-    <div class="event-dates">v5.8 • Aug 16 → Sep 1, 2025</div>
-    <div class="event-summary" style="color:#d7e2ee">Special TCG ruleset event.</div>
-  </div>
-
-    </section>
-  </div>
-</main>
-<footer class="site-footer">© 2025 Bolle Gacha</footer>
 <script>
 function filterEvents(){
   const q = document.getElementById('q').value.toLowerCase().trim();
@@ -121,5 +40,136 @@ function filterEvents(){
   });
 }
 </script>
+</head>
+<body>
+<header class="site-header">
+  <div></div>
+  <a class="logo-wrap" href="index.html" title="Back to Home"><img class="site-logo" src="assets/logo.png" alt="Bolle Gacha Logo"></a>
+  <div></div>
+</header>
+<main class="container">
+  <a href="genshin.html" style="color:#9fb2c8">← Back to Genshin menu</a>
+  <h1>Genshin Impact — Events & Banner History</h1>
+  <p style="color:#9fb2c8;margin:6px 0 12px">Left: Banners (current + history). Right: Events by patch. Use the quick index to jump.</p>
+  <div class="split">
+    <aside class="banners-col">
+      <div class="current">
+        <h2 style="margin:0 0 6px">Current Banners (v5.8)</h2>
+        <div style="margin-bottom:6px"><strong>Characters:</strong></div>
+        <div class="badges">
+          <span class="badge">Ineffa (P1)</span><span class="badge">Citlali (P1)</span><span class="badge">Mualani (P2)</span><span class="badge">Chasca (P2)</span>
+        </div>
+        <div style="margin:8px 0 6px"><strong>Weapons:</strong></div>
+        <div class="badges"><span class="badge">Fractured Halo (P1)</span><span class="badge">Starcaller's Watch (P1)</span><span class="badge">TBD (P2)</span></div>
+      </div>
+      <h2 style="margin:4px 0 8px">Banner History</h2>
+      <div class="accordion">
+        <details class="panel" open>
+          <summary>Version 5.8</summary>
+          <div class="content">
+            <div><strong>Phase 1:</strong> Ineffa, Citlali</div>
+            <div><strong>Phase 2:</strong> Mualani, Chasca</div>
+          </div>
+        </details>
+        <details class="panel"><summary>Version 5.7</summary><div class="content"><div>Phase 1: Yelan, Xiao</div><div>Phase 2: Raiden Shogun, Kazuha</div></div></details>
+        <details class="panel"><summary>Version 5.6</summary><div class="content">…</div></details>
+        <details class="panel"><summary>Version 5.5</summary><div class="content">…</div></details>
+        <details class="panel"><summary>Version 5.4</summary><div class="content">…</div></details>
+        <details class="panel"><summary>Version 5.3</summary><div class="content">…</div></details>
+        <details class="panel"><summary>Version 5.2</summary><div class="content">…</div></details>
+        <details class="panel"><summary>Version 5.1</summary><div class="content">…</div></details>
+        <details class="panel"><summary>Version 5.0</summary><div class="content">…</div></details>
+      </div>
+    </aside>
+    <section class="events-col">
+      <div class="search"><input id="q" placeholder="Search events by title or patch (e.g. 5.7)..." oninput="filterEvents()"></div>
+      
+  <div class="quick-index" style="display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px">
+    <a href="#v5-8" class="badge" style="text-decoration:none">5.8</a>
+    <a href="#v5-7" class="badge" style="text-decoration:none">5.7</a>
+    <a href="#v5-6" class="badge" style="text-decoration:none">5.6</a>
+    <a href="#v5-5" class="badge" style="text-decoration:none">5.5</a>
+    <a href="#v5-4" class="badge" style="text-decoration:none">5.4</a>
+    <a href="#v5-3" class="badge" style="text-decoration:none">5.3</a>
+    <a href="#v5-2" class="badge" style="text-decoration:none">5.2</a>
+    <a href="#v5-1" class="badge" style="text-decoration:none">5.1</a>
+    <a href="#v5-0" class="badge" style="text-decoration:none">5.0</a>
+  </div>
+
+      <div id="v5-8" class="event" data-patch="5.8">
+        <div class="event-title"><a href="genshin-event-5-8-stygian-onslaught.html">Stygian Onslaught</a></div>
+        <div class="event-dates">v5.8 • Aug 6 → Sep 9, 2025</div>
+        <div class="event-summary" style="color:#d7e2ee">Multi-round combat challenge with score modifiers.</div>
+      </div>
+      <div class="event" data-patch="5.8">
+        <div class="event-title"><a href="genshin-event-5-8-tracing-vanishing-trails.html">Tracing Vanishing Trails</a></div>
+        <div class="event-dates">v5.8 • Aug 14 → Aug 25, 2025</div>
+        <div class="event-summary" style="color:#d7e2ee">Exploration routes with timed trials and clues.</div>
+      </div>
+      <div class="event" data-patch="5.8">
+        <div class="event-title"><a href="genshin-event-5-8-automatic-artistry.html">Heated Battle Mode: Automatic Artistry (TCG)</a></div>
+        <div class="event-dates">v5.8 • Aug 16 → Sep 1, 2025</div>
+        <div class="event-summary" style="color:#d7e2ee">Special TCG rules; beat themed AI decks.</div>
+      </div>
+
+      <div id="v5-7" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.7">
+        <div class="event-title"><a href="#">Main Event 5.7</a></div>
+        <div class="event-dates">v5.7 • 2025-06-05 → 2025-07-08</div>
+        <div class="event-summary" style="color:#d7e2ee">Seasonal hub with activities & shop. (Filling details next)</div>
+      </div>
+
+      <div id="v5-6" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.6">
+        <div class="event-title"><a href="#">Roguelike Domain 5.6</a></div>
+        <div class="event-dates">v5.6 • 2025-05-10 → 2025-05-28</div>
+        <div class="event-summary" style="color:#d7e2ee">Randomized domain with blessing cards. (Next)</div>
+      </div>
+
+      <div id="v5-5" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.5">
+        <div class="event-title"><a href="#">Parkour Challenge 5.5</a></div>
+        <div class="event-dates">v5.5 • 2025-03-28 → 2025-04-18</div>
+        <div class="event-summary" style="color:#d7e2ee">Speed-run time trials. (Next)</div>
+      </div>
+
+      <div id="v5-4" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.4">
+        <div class="event-title"><a href="#">Theatre Mechanics 5.4</a></div>
+        <div class="event-dates">v5.4 • 2025-02-12 → 2025-03-05</div>
+        <div class="event-summary" style="color:#d7e2ee">Tower defense mini-game returns. (Next)</div>
+      </div>
+
+      <div id="v5-3" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.3">
+        <div class="event-title"><a href="#">Alchemy Workshop 5.3</a></div>
+        <div class="event-dates">v5.3 • 2025-01-06 → 2025-01-24</div>
+        <div class="event-summary" style="color:#d7e2ee">Crafting/potion challenges. (Next)</div>
+      </div>
+
+      <div id="v5-2" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.2">
+        <div class="event-title"><a href="#">Photo Festival 5.2</a></div>
+        <div class="event-dates">v5.2 • 2024-11-12 → 2024-12-05</div>
+        <div class="event-summary" style="color:#d7e2ee">Photography routes & scoring. (Next)</div>
+      </div>
+
+      <div id="v5-1" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.1">
+        <div class="event-title"><a href="#">Boss Rush 5.1</a></div>
+        <div class="event-dates">v5.1 • 2024-10-05 → 2024-10-25</div>
+        <div class="event-summary" style="color:#d7e2ee">Boss challenges with modifiers. (Next)</div>
+      </div>
+
+      <div id="v5-0" style="margin-top:12px"></div>
+      <div class="event" data-patch="5.0">
+        <div class="event-title"><a href="#">Rhythm Mini-Games 5.0</a></div>
+        <div class="event-dates">v5.0 • 2024-08-25 → 2024-09-20</div>
+        <div class="event-summary" style="color:#d7e2ee">Music rhythm challenges. (Next)</div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">© 2025 Bolle Gacha</footer>
 </body>
 </html>
