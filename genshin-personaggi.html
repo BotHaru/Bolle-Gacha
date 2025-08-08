@@ -1,861 +1,117 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genshin — Characters — Bolle Gacha</title>
-
-  <!-- Inline CSS: layout + filters -->
-  <style>
-    body{background:#0b0f14;color:#e6edf3;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    .site-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:14px;border-bottom:1px solid #263244;background:#121821}
-    .logo-wrap{justify-self:center} .site-logo{width:88px;height:88px;border-radius:50%;border:2px solid #263244;background:#0b0f14}
-    .center-hero{text-align:center;padding:36px 12px 12px}
-    .filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;background:#121821;border:1px solid #263244;border-radius:12px;padding:10px 12px;margin:10px 0 8px}
-    .filters select,.filters input[type="search"]{background:#0e141d;color:#e6edf3;border:1px solid #263244;border-radius:10px;padding:8px 10px;min-width:140px}
-    .cards{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
-    .card{display:flex;gap:10px;align-items:center;background:#161e29;border:1px solid #263244;border-radius:12px;padding:10px;flex:1 1 240px;max-width:360px}
-    .card img{width:40px;height:40px;border-radius:10px;object-fit:cover;border:1px solid #263244}
-    .card h3{margin:2px 0 4px;font-size:15px}
-    .meta{color:#9fb2c8;font-size:12px;margin-bottom:2px}
-    .skills{font-size:13px;line-height:1.35;color:#d7e2ee}
-    .hidden{display:none !important}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genshin Impact Characters — Bolle Gacha</title>
+<style>
+  body{background:#0b0f14;color:#e6edf3;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+  .container{max-width:1200px;margin:0 auto;padding:24px}
+  .site-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:14px;border-bottom:1px solid #263244;background:#121821}
+  .logo-wrap{justify-self:center}.site-logo{width:88px;height:88px;border-radius:50%;border:2px solid #263244;background:#0b0f14}
+  .site-footer{border-top:1px solid #263244;background:#121821;padding:12px;text-align:center;color:#9fb2c8;margin-top:24px}
+  h1{color:#e6edf3;margin-top:0}
+  a{color:#5ac8fa;text-decoration:none}
+  .characters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:16px}
+  .char-card{text-align:center;background:#121821;padding:10px;border-radius:8px}
+  .char-card img{width:80px;height:80px;object-fit:cover;border-radius:8px;margin-bottom:8px;border:1px solid #263244;background:#0b0f14}
+  .char-card span{display:block;font-size:14px;color:#e6edf3}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div></div>
-    <a class="logo-wrap" href="index.html" title="Back to Home">
-      <img class="site-logo" src="assets/logo.png" alt="Bolle Gacha Logo">
-    </a>
-    <div class="header-spacer"></div>
-  </header>
-
-  <main class="container">
-    <section class="center-hero">
-      <h1>Genshin — Characters</h1>
-      <p>Filter by rarity, weapon, element, or search by name. Click a character to open the detailed sheet.</p>
-
-      <div class="filters">
-        <select id="f-rarity">
-          <option value="">All Rarities</option>
-          <option value="5">5★</option>
-          <option value="4">4★</option>
-        </select>
-
-        <select id="f-weapon">
-          <option value="">All Weapons</option>
-          <option value="Sword">Sword</option>
-          <option value="Claymore">Claymore</option>
-          <option value="Polearm">Polearm</option>
-          <option value="Bow">Bow</option>
-          <option value="Catalyst">Catalyst</option>
-        </select>
-
-        <select id="f-element">
-          <option value="">All Elements</option>
-          <option value="Anemo">Anemo</option>
-          <option value="Geo">Geo</option>
-          <option value="Electro">Electro</option>
-          <option value="Dendro">Dendro</option>
-          <option value="Hydro">Hydro</option>
-          <option value="Pyro">Pyro</option>
-          <option value="Cryo">Cryo</option>
-        </select>
-
-        <input id="f-search" type="search" placeholder="Search name..." />
-      </div>
-
-      <div class="cards">
-        
-      <div class="card" data-name="Albedo" data-rarity="5" data-weapon="Sword" data-element="Geo">
-        <a href="genshin-albedo.html"><img src="assets/placeholder.png" alt="Albedo"></a>
-        <div class="card-body">
-          <h3><a href="genshin-albedo.html">Albedo</a></h3>
-          <div class="meta">Geo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Alhaitham" data-rarity="5" data-weapon="Sword" data-element="Dendro">
-        <a href="genshin-alhaitham.html"><img src="assets/placeholder.png" alt="Alhaitham"></a>
-        <div class="card-body">
-          <h3><a href="genshin-alhaitham.html">Alhaitham</a></h3>
-          <div class="meta">Dendro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Aloy" data-rarity="5" data-weapon="Bow" data-element="Cryo">
-        <a href="genshin-aloy.html"><img src="assets/placeholder.png" alt="Aloy"></a>
-        <div class="card-body">
-          <h3><a href="genshin-aloy.html">Aloy</a></h3>
-          <div class="meta">Cryo • Bow • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Amber" data-rarity="4" data-weapon="Bow" data-element="Pyro">
-        <a href="genshin-amber.html"><img src="assets/placeholder.png" alt="Amber"></a>
-        <div class="card-body">
-          <h3><a href="genshin-amber.html">Amber</a></h3>
-          <div class="meta">Pyro • Bow • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Arataki Itto" data-rarity="5" data-weapon="Claymore" data-element="Geo">
-        <a href="genshin-arataki-itto.html"><img src="assets/placeholder.png" alt="Arataki Itto"></a>
-        <div class="card-body">
-          <h3><a href="genshin-arataki-itto.html">Arataki Itto</a></h3>
-          <div class="meta">Geo • Claymore • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Arlecchino" data-rarity="5" data-weapon="Polearm" data-element="Pyro">
-        <a href="genshin-arlecchino.html"><img src="assets/placeholder.png" alt="Arlecchino"></a>
-        <div class="card-body">
-          <h3><a href="genshin-arlecchino.html">Arlecchino</a></h3>
-          <div class="meta">Pyro • Polearm • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Ayaka" data-rarity="5" data-weapon="Sword" data-element="Cryo">
-        <a href="genshin-ayaka.html"><img src="assets/placeholder.png" alt="Ayaka (Kamisato Ayaka)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-ayaka.html">Ayaka (Kamisato Ayaka)</a></h3>
-          <div class="meta">Cryo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Ayato" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-        <a href="genshin-ayato.html"><img src="assets/placeholder.png" alt="Ayato (Kamisato Ayato)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-ayato.html">Ayato (Kamisato Ayato)</a></h3>
-          <div class="meta">Hydro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Baizhu" data-rarity="5" data-weapon="Catalyst" data-element="Dendro">
-        <a href="genshin-baizhu.html"><img src="assets/placeholder.png" alt="Baizhu"></a>
-        <div class="card-body">
-          <h3><a href="genshin-baizhu.html">Baizhu</a></h3>
-          <div class="meta">Dendro • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Barbara" data-rarity="4" data-weapon="Catalyst" data-element="Hydro">
-        <a href="genshin-barbara.html"><img src="assets/placeholder.png" alt="Barbara"></a>
-        <div class="card-body">
-          <h3><a href="genshin-barbara.html">Barbara</a></h3>
-          <div class="meta">Hydro • Catalyst • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Beidou" data-rarity="4" data-weapon="Claymore" data-element="Electro">
-        <a href="genshin-beidou.html"><img src="assets/placeholder.png" alt="Beidou"></a>
-        <div class="card-body">
-          <h3><a href="genshin-beidou.html">Beidou</a></h3>
-          <div class="meta">Electro • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Bennett" data-rarity="4" data-weapon="Sword" data-element="Pyro">
-        <a href="genshin-bennett.html"><img src="assets/placeholder.png" alt="Bennett"></a>
-        <div class="card-body">
-          <h3><a href="genshin-bennett.html">Bennett</a></h3>
-          <div class="meta">Pyro • Sword • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Candace" data-rarity="4" data-weapon="Polearm" data-element="Hydro">
-        <a href="genshin-candace.html"><img src="assets/placeholder.png" alt="Candace"></a>
-        <div class="card-body">
-          <h3><a href="genshin-candace.html">Candace</a></h3>
-          <div class="meta">Hydro • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Charlotte" data-rarity="4" data-weapon="Catalyst" data-element="Cryo">
-        <a href="genshin-charlotte.html"><img src="assets/placeholder.png" alt="Charlotte"></a>
-        <div class="card-body">
-          <h3><a href="genshin-charlotte.html">Charlotte</a></h3>
-          <div class="meta">Cryo • Catalyst • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Chevreuse" data-rarity="4" data-weapon="Polearm" data-element="Pyro">
-        <a href="genshin-chevreuse.html"><img src="assets/placeholder.png" alt="Chevreuse"></a>
-        <div class="card-body">
-          <h3><a href="genshin-chevreuse.html">Chevreuse</a></h3>
-          <div class="meta">Pyro • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Chiori" data-rarity="5" data-weapon="Sword" data-element="Geo">
-        <a href="genshin-chiori.html"><img src="assets/placeholder.png" alt="Chiori"></a>
-        <div class="card-body">
-          <h3><a href="genshin-chiori.html">Chiori</a></h3>
-          <div class="meta">Geo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Chongyun" data-rarity="4" data-weapon="Claymore" data-element="Cryo">
-        <a href="genshin-chongyun.html"><img src="assets/placeholder.png" alt="Chongyun"></a>
-        <div class="card-body">
-          <h3><a href="genshin-chongyun.html">Chongyun</a></h3>
-          <div class="meta">Cryo • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Collei" data-rarity="4" data-weapon="Bow" data-element="Dendro">
-        <a href="genshin-collei.html"><img src="assets/placeholder.png" alt="Collei"></a>
-        <div class="card-body">
-          <h3><a href="genshin-collei.html">Collei</a></h3>
-          <div class="meta">Dendro • Bow • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Clorinde" data-rarity="5" data-weapon="Sword" data-element="Electro">
-        <a href="genshin-clorinde.html"><img src="assets/placeholder.png" alt="Clorinde"></a>
-        <div class="card-body">
-          <h3><a href="genshin-clorinde.html">Clorinde</a></h3>
-          <div class="meta">Electro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Cyno" data-rarity="5" data-weapon="Polearm" data-element="Electro">
-        <a href="genshin-cyno.html"><img src="assets/placeholder.png" alt="Cyno"></a>
-        <div class="card-body">
-          <h3><a href="genshin-cyno.html">Cyno</a></h3>
-          <div class="meta">Electro • Polearm • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Dehya" data-rarity="5" data-weapon="Claymore" data-element="Pyro">
-        <a href="genshin-dehya.html"><img src="assets/placeholder.png" alt="Dehya"></a>
-        <div class="card-body">
-          <h3><a href="genshin-dehya.html">Dehya</a></h3>
-          <div class="meta">Pyro • Claymore • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Diluc" data-rarity="5" data-weapon="Claymore" data-element="Pyro">
-        <a href="genshin-diluc.html"><img src="assets/placeholder.png" alt="Diluc"></a>
-        <div class="card-body">
-          <h3><a href="genshin-diluc.html">Diluc</a></h3>
-          <div class="meta">Pyro • Claymore • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Diona" data-rarity="4" data-weapon="Bow" data-element="Cryo">
-        <a href="genshin-diona.html"><img src="assets/placeholder.png" alt="Diona"></a>
-        <div class="card-body">
-          <h3><a href="genshin-diona.html">Diona</a></h3>
-          <div class="meta">Cryo • Bow • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Dori" data-rarity="4" data-weapon="Claymore" data-element="Electro">
-        <a href="genshin-dori.html"><img src="assets/placeholder.png" alt="Dori"></a>
-        <div class="card-body">
-          <h3><a href="genshin-dori.html">Dori</a></h3>
-          <div class="meta">Electro • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Eula" data-rarity="5" data-weapon="Claymore" data-element="Cryo">
-        <a href="genshin-eula.html"><img src="assets/placeholder.png" alt="Eula"></a>
-        <div class="card-body">
-          <h3><a href="genshin-eula.html">Eula</a></h3>
-          <div class="meta">Cryo • Claymore • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Faruzan" data-rarity="4" data-weapon="Bow" data-element="Anemo">
-        <a href="genshin-faruzan.html"><img src="assets/placeholder.png" alt="Faruzan"></a>
-        <div class="card-body">
-          <h3><a href="genshin-faruzan.html">Faruzan</a></h3>
-          <div class="meta">Anemo • Bow • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Fischl" data-rarity="4" data-weapon="Bow" data-element="Electro">
-        <a href="genshin-fischl.html"><img src="assets/placeholder.png" alt="Fischl"></a>
-        <div class="card-body">
-          <h3><a href="genshin-fischl.html">Fischl</a></h3>
-          <div class="meta">Electro • Bow • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Freminet" data-rarity="4" data-weapon="Claymore" data-element="Cryo">
-        <a href="genshin-freminet.html"><img src="assets/placeholder.png" alt="Freminet"></a>
-        <div class="card-body">
-          <h3><a href="genshin-freminet.html">Freminet</a></h3>
-          <div class="meta">Cryo • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Furina" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-        <a href="genshin-furina.html"><img src="assets/placeholder.png" alt="Furina"></a>
-        <div class="card-body">
-          <h3><a href="genshin-furina.html">Furina</a></h3>
-          <div class="meta">Hydro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Gaming" data-rarity="4" data-weapon="Claymore" data-element="Pyro">
-        <a href="genshin-gaming.html"><img src="assets/placeholder.png" alt="Gaming"></a>
-        <div class="card-body">
-          <h3><a href="genshin-gaming.html">Gaming</a></h3>
-          <div class="meta">Pyro • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Ganyu" data-rarity="5" data-weapon="Bow" data-element="Cryo">
-        <a href="genshin-ganyu.html"><img src="assets/placeholder.png" alt="Ganyu"></a>
-        <div class="card-body">
-          <h3><a href="genshin-ganyu.html">Ganyu</a></h3>
-          <div class="meta">Cryo • Bow • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Gorou" data-rarity="4" data-weapon="Bow" data-element="Geo">
-        <a href="genshin-gorou.html"><img src="assets/placeholder.png" alt="Gorou"></a>
-        <div class="card-body">
-          <h3><a href="genshin-gorou.html">Gorou</a></h3>
-          <div class="meta">Geo • Bow • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Heizou" data-rarity="4" data-weapon="Catalyst" data-element="Anemo">
-        <a href="genshin-heizou.html"><img src="assets/placeholder.png" alt="Heizou (Shikanoin Heizou)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-heizou.html">Heizou (Shikanoin Heizou)</a></h3>
-          <div class="meta">Anemo • Catalyst • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Hu Tao" data-rarity="5" data-weapon="Polearm" data-element="Pyro">
-        <a href="genshin-hu-tao.html"><img src="assets/placeholder.png" alt="Hu Tao"></a>
-        <div class="card-body">
-          <h3><a href="genshin-hu-tao.html">Hu Tao</a></h3>
-          <div class="meta">Pyro • Polearm • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Jean" data-rarity="5" data-weapon="Sword" data-element="Anemo">
-        <a href="genshin-jean.html"><img src="assets/placeholder.png" alt="Jean"></a>
-        <div class="card-body">
-          <h3><a href="genshin-jean.html">Jean</a></h3>
-          <div class="meta">Anemo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Kaeya" data-rarity="4" data-weapon="Sword" data-element="Cryo">
-        <a href="genshin-kaeya.html"><img src="assets/placeholder.png" alt="Kaeya"></a>
-        <div class="card-body">
-          <h3><a href="genshin-kaeya.html">Kaeya</a></h3>
-          <div class="meta">Cryo • Sword • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Kaveh" data-rarity="4" data-weapon="Claymore" data-element="Dendro">
-        <a href="genshin-kaveh.html"><img src="assets/placeholder.png" alt="Kaveh"></a>
-        <div class="card-body">
-          <h3><a href="genshin-kaveh.html">Kaveh</a></h3>
-          <div class="meta">Dendro • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Kazuha" data-rarity="5" data-weapon="Sword" data-element="Anemo">
-        <a href="genshin-kazuha.html"><img src="assets/placeholder.png" alt="Kazuha (Kaedehara Kazuha)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-kazuha.html">Kazuha (Kaedehara Kazuha)</a></h3>
-          <div class="meta">Anemo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Keqing" data-rarity="5" data-weapon="Sword" data-element="Electro">
-        <a href="genshin-keqing.html"><img src="assets/placeholder.png" alt="Keqing"></a>
-        <div class="card-body">
-          <h3><a href="genshin-keqing.html">Keqing</a></h3>
-          <div class="meta">Electro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Kirara" data-rarity="4" data-weapon="Sword" data-element="Dendro">
-        <a href="genshin-kirara.html"><img src="assets/placeholder.png" alt="Kirara"></a>
-        <div class="card-body">
-          <h3><a href="genshin-kirara.html">Kirara</a></h3>
-          <div class="meta">Dendro • Sword • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Klee" data-rarity="5" data-weapon="Catalyst" data-element="Pyro">
-        <a href="genshin-klee.html"><img src="assets/placeholder.png" alt="Klee"></a>
-        <div class="card-body">
-          <h3><a href="genshin-klee.html">Klee</a></h3>
-          <div class="meta">Pyro • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Kokomi" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
-        <a href="genshin-kokomi.html"><img src="assets/placeholder.png" alt="Kokomi (Sangonomiya Kokomi)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-kokomi.html">Kokomi (Sangonomiya Kokomi)</a></h3>
-          <div class="meta">Hydro • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Kujou Sara" data-rarity="4" data-weapon="Bow" data-element="Electro">
-        <a href="genshin-kujou-sara.html"><img src="assets/placeholder.png" alt="Kujou Sara"></a>
-        <div class="card-body">
-          <h3><a href="genshin-kujou-sara.html">Kujou Sara</a></h3>
-          <div class="meta">Electro • Bow • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Kuki Shinobu" data-rarity="4" data-weapon="Sword" data-element="Electro">
-        <a href="genshin-kuki-shinobu.html"><img src="assets/placeholder.png" alt="Kuki Shinobu"></a>
-        <div class="card-body">
-          <h3><a href="genshin-kuki-shinobu.html">Kuki Shinobu</a></h3>
-          <div class="meta">Electro • Sword • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Layla" data-rarity="4" data-weapon="Sword" data-element="Cryo">
-        <a href="genshin-layla.html"><img src="assets/placeholder.png" alt="Layla"></a>
-        <div class="card-body">
-          <h3><a href="genshin-layla.html">Layla</a></h3>
-          <div class="meta">Cryo • Sword • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Lisa" data-rarity="4" data-weapon="Catalyst" data-element="Electro">
-        <a href="genshin-lisa.html"><img src="assets/placeholder.png" alt="Lisa"></a>
-        <div class="card-body">
-          <h3><a href="genshin-lisa.html">Lisa</a></h3>
-          <div class="meta">Electro • Catalyst • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Lynette" data-rarity="4" data-weapon="Sword" data-element="Anemo">
-        <a href="genshin-lynette.html"><img src="assets/placeholder.png" alt="Lynette"></a>
-        <div class="card-body">
-          <h3><a href="genshin-lynette.html">Lynette</a></h3>
-          <div class="meta">Anemo • Sword • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Lyney" data-rarity="5" data-weapon="Bow" data-element="Pyro">
-        <a href="genshin-lyney.html"><img src="assets/placeholder.png" alt="Lyney"></a>
-        <div class="card-body">
-          <h3><a href="genshin-lyney.html">Lyney</a></h3>
-          <div class="meta">Pyro • Bow • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Mika" data-rarity="4" data-weapon="Polearm" data-element="Cryo">
-        <a href="genshin-mika.html"><img src="assets/placeholder.png" alt="Mika"></a>
-        <div class="card-body">
-          <h3><a href="genshin-mika.html">Mika</a></h3>
-          <div class="meta">Cryo • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Mona" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
-        <a href="genshin-mona.html"><img src="assets/placeholder.png" alt="Mona"></a>
-        <div class="card-body">
-          <h3><a href="genshin-mona.html">Mona</a></h3>
-          <div class="meta">Hydro • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Nahida" data-rarity="5" data-weapon="Catalyst" data-element="Dendro">
-        <a href="genshin-nahida.html"><img src="assets/placeholder.png" alt="Nahida"></a>
-        <div class="card-body">
-          <h3><a href="genshin-nahida.html">Nahida</a></h3>
-          <div class="meta">Dendro • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Navia" data-rarity="5" data-weapon="Claymore" data-element="Geo">
-        <a href="genshin-navia.html"><img src="assets/placeholder.png" alt="Navia"></a>
-        <div class="card-body">
-          <h3><a href="genshin-navia.html">Navia</a></h3>
-          <div class="meta">Geo • Claymore • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Neuvillette" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
-        <a href="genshin-neuvillette.html"><img src="assets/placeholder.png" alt="Neuvillette"></a>
-        <div class="card-body">
-          <h3><a href="genshin-neuvillette.html">Neuvillette</a></h3>
-          <div class="meta">Hydro • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Nilou" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-        <a href="genshin-nilou.html"><img src="assets/placeholder.png" alt="Nilou"></a>
-        <div class="card-body">
-          <h3><a href="genshin-nilou.html">Nilou</a></h3>
-          <div class="meta">Hydro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Ningguang" data-rarity="4" data-weapon="Catalyst" data-element="Geo">
-        <a href="genshin-ningguang.html"><img src="assets/placeholder.png" alt="Ningguang"></a>
-        <div class="card-body">
-          <h3><a href="genshin-ningguang.html">Ningguang</a></h3>
-          <div class="meta">Geo • Catalyst • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Noelle" data-rarity="4" data-weapon="Claymore" data-element="Geo">
-        <a href="genshin-noelle.html"><img src="assets/placeholder.png" alt="Noelle"></a>
-        <div class="card-body">
-          <h3><a href="genshin-noelle.html">Noelle</a></h3>
-          <div class="meta">Geo • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Qiqi" data-rarity="5" data-weapon="Sword" data-element="Cryo">
-        <a href="genshin-qiqi.html"><img src="assets/placeholder.png" alt="Qiqi"></a>
-        <div class="card-body">
-          <h3><a href="genshin-qiqi.html">Qiqi</a></h3>
-          <div class="meta">Cryo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Raiden Shogun" data-rarity="5" data-weapon="Polearm" data-element="Electro">
-        <a href="genshin-raiden-shogun.html"><img src="assets/placeholder.png" alt="Raiden Shogun"></a>
-        <div class="card-body">
-          <h3><a href="genshin-raiden-shogun.html">Raiden Shogun</a></h3>
-          <div class="meta">Electro • Polearm • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Razor" data-rarity="4" data-weapon="Claymore" data-element="Electro">
-        <a href="genshin-razor.html"><img src="assets/placeholder.png" alt="Razor"></a>
-        <div class="card-body">
-          <h3><a href="genshin-razor.html">Razor</a></h3>
-          <div class="meta">Electro • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Rosaria" data-rarity="4" data-weapon="Polearm" data-element="Cryo">
-        <a href="genshin-rosaria.html"><img src="assets/placeholder.png" alt="Rosaria"></a>
-        <div class="card-body">
-          <h3><a href="genshin-rosaria.html">Rosaria</a></h3>
-          <div class="meta">Cryo • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Sayu" data-rarity="4" data-weapon="Claymore" data-element="Anemo">
-        <a href="genshin-sayu.html"><img src="assets/placeholder.png" alt="Sayu"></a>
-        <div class="card-body">
-          <h3><a href="genshin-sayu.html">Sayu</a></h3>
-          <div class="meta">Anemo • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Shenhe" data-rarity="5" data-weapon="Polearm" data-element="Cryo">
-        <a href="genshin-shenhe.html"><img src="assets/placeholder.png" alt="Shenhe"></a>
-        <div class="card-body">
-          <h3><a href="genshin-shenhe.html">Shenhe</a></h3>
-          <div class="meta">Cryo • Polearm • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Sucrose" data-rarity="4" data-weapon="Catalyst" data-element="Anemo">
-        <a href="genshin-sucrose.html"><img src="assets/placeholder.png" alt="Sucrose"></a>
-        <div class="card-body">
-          <h3><a href="genshin-sucrose.html">Sucrose</a></h3>
-          <div class="meta">Anemo • Catalyst • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Thoma" data-rarity="4" data-weapon="Polearm" data-element="Pyro">
-        <a href="genshin-thoma.html"><img src="assets/placeholder.png" alt="Thoma"></a>
-        <div class="card-body">
-          <h3><a href="genshin-thoma.html">Thoma</a></h3>
-          <div class="meta">Pyro • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Tighnari" data-rarity="5" data-weapon="Bow" data-element="Dendro">
-        <a href="genshin-tighnari.html"><img src="assets/placeholder.png" alt="Tighnari"></a>
-        <div class="card-body">
-          <h3><a href="genshin-tighnari.html">Tighnari</a></h3>
-          <div class="meta">Dendro • Bow • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Traveler" data-rarity="5" data-weapon="Sword" data-element="Anemo">
-        <a href="genshin-traveler.html"><img src="assets/placeholder.png" alt="Traveler (Anemo)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-traveler.html">Traveler (Anemo)</a></h3>
-          <div class="meta">Anemo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Traveler" data-rarity="5" data-weapon="Sword" data-element="Geo">
-        <a href="genshin-traveler.html"><img src="assets/placeholder.png" alt="Traveler (Geo)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-traveler.html">Traveler (Geo)</a></h3>
-          <div class="meta">Geo • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Traveler" data-rarity="5" data-weapon="Sword" data-element="Electro">
-        <a href="genshin-traveler.html"><img src="assets/placeholder.png" alt="Traveler (Electro)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-traveler.html">Traveler (Electro)</a></h3>
-          <div class="meta">Electro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Traveler" data-rarity="5" data-weapon="Sword" data-element="Dendro">
-        <a href="genshin-traveler.html"><img src="assets/placeholder.png" alt="Traveler (Dendro)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-traveler.html">Traveler (Dendro)</a></h3>
-          <div class="meta">Dendro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Traveler" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-        <a href="genshin-traveler.html"><img src="assets/placeholder.png" alt="Traveler (Hydro)"></a>
-        <div class="card-body">
-          <h3><a href="genshin-traveler.html">Traveler (Hydro)</a></h3>
-          <div class="meta">Hydro • Sword • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Venti" data-rarity="5" data-weapon="Bow" data-element="Anemo">
-        <a href="genshin-venti.html"><img src="assets/placeholder.png" alt="Venti"></a>
-        <div class="card-body">
-          <h3><a href="genshin-venti.html">Venti</a></h3>
-          <div class="meta">Anemo • Bow • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Wanderer" data-rarity="5" data-weapon="Catalyst" data-element="Anemo">
-        <a href="genshin-wanderer.html"><img src="assets/placeholder.png" alt="Wanderer"></a>
-        <div class="card-body">
-          <h3><a href="genshin-wanderer.html">Wanderer</a></h3>
-          <div class="meta">Anemo • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Wriothesley" data-rarity="5" data-weapon="Catalyst" data-element="Cryo">
-        <a href="genshin-wriothesley.html"><img src="assets/placeholder.png" alt="Wriothesley"></a>
-        <div class="card-body">
-          <h3><a href="genshin-wriothesley.html">Wriothesley</a></h3>
-          <div class="meta">Cryo • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Xiangling" data-rarity="4" data-weapon="Polearm" data-element="Pyro">
-        <a href="genshin-xiangling.html"><img src="assets/placeholder.png" alt="Xiangling"></a>
-        <div class="card-body">
-          <h3><a href="genshin-xiangling.html">Xiangling</a></h3>
-          <div class="meta">Pyro • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Xiao" data-rarity="5" data-weapon="Polearm" data-element="Anemo">
-        <a href="genshin-xiao.html"><img src="assets/placeholder.png" alt="Xiao"></a>
-        <div class="card-body">
-          <h3><a href="genshin-xiao.html">Xiao</a></h3>
-          <div class="meta">Anemo • Polearm • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Xingqiu" data-rarity="4" data-weapon="Sword" data-element="Hydro">
-        <a href="genshin-xingqiu.html"><img src="assets/placeholder.png" alt="Xingqiu"></a>
-        <div class="card-body">
-          <h3><a href="genshin-xingqiu.html">Xingqiu</a></h3>
-          <div class="meta">Hydro • Sword • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Xinyan" data-rarity="4" data-weapon="Claymore" data-element="Pyro">
-        <a href="genshin-xinyan.html"><img src="assets/placeholder.png" alt="Xinyan"></a>
-        <div class="card-body">
-          <h3><a href="genshin-xinyan.html">Xinyan</a></h3>
-          <div class="meta">Pyro • Claymore • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Xianyun" data-rarity="5" data-weapon="Catalyst" data-element="Anemo">
-        <a href="genshin-xianyun.html"><img src="assets/placeholder.png" alt="Xianyun"></a>
-        <div class="card-body">
-          <h3><a href="genshin-xianyun.html">Xianyun</a></h3>
-          <div class="meta">Anemo • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Yae Miko" data-rarity="5" data-weapon="Catalyst" data-element="Electro">
-        <a href="genshin-yae-miko.html"><img src="assets/placeholder.png" alt="Yae Miko"></a>
-        <div class="card-body">
-          <h3><a href="genshin-yae-miko.html">Yae Miko</a></h3>
-          <div class="meta">Electro • Catalyst • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Yanfei" data-rarity="4" data-weapon="Catalyst" data-element="Pyro">
-        <a href="genshin-yanfei.html"><img src="assets/placeholder.png" alt="Yanfei"></a>
-        <div class="card-body">
-          <h3><a href="genshin-yanfei.html">Yanfei</a></h3>
-          <div class="meta">Pyro • Catalyst • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Yaoyao" data-rarity="4" data-weapon="Polearm" data-element="Dendro">
-        <a href="genshin-yaoyao.html"><img src="assets/placeholder.png" alt="Yaoyao"></a>
-        <div class="card-body">
-          <h3><a href="genshin-yaoyao.html">Yaoyao</a></h3>
-          <div class="meta">Dendro • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Yelan" data-rarity="5" data-weapon="Bow" data-element="Hydro">
-        <a href="genshin-yelan.html"><img src="assets/placeholder.png" alt="Yelan"></a>
-        <div class="card-body">
-          <h3><a href="genshin-yelan.html">Yelan</a></h3>
-          <div class="meta">Hydro • Bow • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Yoimiya" data-rarity="5" data-weapon="Bow" data-element="Pyro">
-        <a href="genshin-yoimiya.html"><img src="assets/placeholder.png" alt="Yoimiya"></a>
-        <div class="card-body">
-          <h3><a href="genshin-yoimiya.html">Yoimiya</a></h3>
-          <div class="meta">Pyro • Bow • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Yun Jin" data-rarity="4" data-weapon="Polearm" data-element="Geo">
-        <a href="genshin-yun-jin.html"><img src="assets/placeholder.png" alt="Yun Jin"></a>
-        <div class="card-body">
-          <h3><a href="genshin-yun-jin.html">Yun Jin</a></h3>
-          <div class="meta">Geo • Polearm • 4★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      <div class="card" data-name="Zhongli" data-rarity="5" data-weapon="Polearm" data-element="Geo">
-        <a href="genshin-zhongli.html"><img src="assets/placeholder.png" alt="Zhongli"></a>
-        <div class="card-body">
-          <h3><a href="genshin-zhongli.html">Zhongli</a></h3>
-          <div class="meta">Geo • Polearm • 5★</div>
-          <p class="skills">Click to open the detailed sheet.</p>
-        </div>
-      </div>
-    
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" style="border-top:1px solid #263244;background:#121821;padding:12px;text-align:center;color:#9fb2c8;margin-top:24px">© 2025 Bolle Gacha</footer>
-
-  <!-- Inline JS: filters -->
-  <script>
-    (function(){
-      const $ = (s)=>document.querySelector(s);
-      const $$ = (s)=>Array.from(document.querySelectorAll(s));
-      const r=$('#f-rarity'), w=$('#f-weapon'), e=$('#f-element'), s=$('#f-search');
-      function match(card){
-        const RR=r&&r.value||'', WW=w&&w.value||'', EE=e&&e.value||'', QQ=(s&&s.value||'').toLowerCase().trim();
-        const name=(card.dataset.name||'').toLowerCase(); const rar=card.dataset.rarity||'', wea=card.dataset.weapon||'', ele=card.dataset.element||'';
-        if (RR && rar!==RR) return false; if (WW && wea!==WW) return false; if (EE && ele!==EE) return false; if (QQ && !name.includes(QQ)) return false;
-        return true;
-      }
-      function apply(){ $$('.card').forEach(c=>c.classList.toggle('hidden', !match(c))); }
-      [r,w,e,s].forEach(el=>el&&el.addEventListener('input', apply));
-      document.addEventListener('DOMContentLoaded', apply);
-    })();
-  </script>
+<header class="site-header">
+  <div></div>
+  <a class="logo-wrap" href="index.html" title="Back to Home">
+    <img class="site-logo" src="assets/logo.png" alt="Bolle Gacha Logo">
+  </a>
+  <div></div>
+</header>
+<main class="container">
+  <h1>Genshin Impact Characters</h1>
+  <div class="characters-grid">
+    <a class="char-card" href="genshin-albedo.html"><img src="assets/genshin/albedo.png" alt="Albedo"><span>Albedo</span></a>
+<a class="char-card" href="genshin-aloy.html"><img src="assets/genshin/aloy.png" alt="Aloy"><span>Aloy</span></a>
+<a class="char-card" href="genshin-amber.html"><img src="assets/genshin/amber.png" alt="Amber"><span>Amber</span></a>
+<a class="char-card" href="genshin-arataki-itto.html"><img src="assets/genshin/arataki-itto.png" alt="Arataki Itto"><span>Arataki Itto</span></a>
+<a class="char-card" href="genshin-baizhu.html"><img src="assets/genshin/baizhu.png" alt="Baizhu"><span>Baizhu</span></a>
+<a class="char-card" href="genshin-barbara.html"><img src="assets/genshin/barbara.png" alt="Barbara"><span>Barbara</span></a>
+<a class="char-card" href="genshin-beidou.html"><img src="assets/genshin/beidou.png" alt="Beidou"><span>Beidou</span></a>
+<a class="char-card" href="genshin-bennett.html"><img src="assets/genshin/bennett.png" alt="Bennett"><span>Bennett</span></a>
+<a class="char-card" href="genshin-candace.html"><img src="assets/genshin/candace.png" alt="Candace"><span>Candace</span></a>
+<a class="char-card" href="genshin-charlotte.html"><img src="assets/genshin/charlotte.png" alt="Charlotte"><span>Charlotte</span></a>
+<a class="char-card" href="genshin-chevreuse.html"><img src="assets/genshin/chevreuse.png" alt="Chevreuse"><span>Chevreuse</span></a>
+<a class="char-card" href="genshin-chiori.html"><img src="assets/genshin/chiori.png" alt="Chiori"><span>Chiori</span></a>
+<a class="char-card" href="genshin-collei.html"><img src="assets/genshin/collei.png" alt="Collei"><span>Collei</span></a>
+<a class="char-card" href="genshin-cyno.html"><img src="assets/genshin/cyno.png" alt="Cyno"><span>Cyno</span></a>
+<a class="char-card" href="genshin-dehya.html"><img src="assets/genshin/dehya.png" alt="Dehya"><span>Dehya</span></a>
+<a class="char-card" href="genshin-diluc.html"><img src="assets/genshin/diluc.png" alt="Diluc"><span>Diluc</span></a>
+<a class="char-card" href="genshin-diona.html"><img src="assets/genshin/diona.png" alt="Diona"><span>Diona</span></a>
+<a class="char-card" href="genshin-dori.html"><img src="assets/genshin/dori.png" alt="Dori"><span>Dori</span></a>
+<a class="char-card" href="genshin-eula.html"><img src="assets/genshin/eula.png" alt="Eula"><span>Eula</span></a>
+<a class="char-card" href="genshin-faruzan.html"><img src="assets/genshin/faruzan.png" alt="Faruzan"><span>Faruzan</span></a>
+<a class="char-card" href="genshin-fischl.html"><img src="assets/genshin/fischl.png" alt="Fischl"><span>Fischl</span></a>
+<a class="char-card" href="genshin-freminet.html"><img src="assets/genshin/freminet.png" alt="Freminet"><span>Freminet</span></a>
+<a class="char-card" href="genshin-furina.html"><img src="assets/genshin/furina.png" alt="Furina"><span>Furina</span></a>
+<a class="char-card" href="genshin-gaming.html"><img src="assets/genshin/gaming.png" alt="Gaming"><span>Gaming</span></a>
+<a class="char-card" href="genshin-ganyu.html"><img src="assets/genshin/ganyu.png" alt="Ganyu"><span>Ganyu</span></a>
+<a class="char-card" href="genshin-gorou.html"><img src="assets/genshin/gorou.png" alt="Gorou"><span>Gorou</span></a>
+<a class="char-card" href="genshin-hu-tao.html"><img src="assets/genshin/hu-tao.png" alt="Hu Tao"><span>Hu Tao</span></a>
+<a class="char-card" href="genshin-jean.html"><img src="assets/genshin/jean.png" alt="Jean"><span>Jean</span></a>
+<a class="char-card" href="genshin-kamisato-ayaka.html"><img src="assets/genshin/kamisato-ayaka.png" alt="Kamisato Ayaka"><span>Kamisato Ayaka</span></a>
+<a class="char-card" href="genshin-kamisato-ayato.html"><img src="assets/genshin/kamisato-ayato.png" alt="Kamisato Ayato"><span>Kamisato Ayato</span></a>
+<a class="char-card" href="genshin-kaeya.html"><img src="assets/genshin/kaeya.png" alt="Kaeya"><span>Kaeya</span></a>
+<a class="char-card" href="genshin-kaedehara-kazuha.html"><img src="assets/genshin/kaedehara-kazuha.png" alt="Kaedehara Kazuha"><span>Kaedehara Kazuha</span></a>
+<a class="char-card" href="genshin-kaveh.html"><img src="assets/genshin/kaveh.png" alt="Kaveh"><span>Kaveh</span></a>
+<a class="char-card" href="genshin-keqing.html"><img src="assets/genshin/keqing.png" alt="Keqing"><span>Keqing</span></a>
+<a class="char-card" href="genshin-kirara.html"><img src="assets/genshin/kirara.png" alt="Kirara"><span>Kirara</span></a>
+<a class="char-card" href="genshin-klee.html"><img src="assets/genshin/klee.png" alt="Klee"><span>Klee</span></a>
+<a class="char-card" href="genshin-kujou-sara.html"><img src="assets/genshin/kujou-sara.png" alt="Kujou Sara"><span>Kujou Sara</span></a>
+<a class="char-card" href="genshin-kuki-shinobu.html"><img src="assets/genshin/kuki-shinobu.png" alt="Kuki Shinobu"><span>Kuki Shinobu</span></a>
+<a class="char-card" href="genshin-layla.html"><img src="assets/genshin/layla.png" alt="Layla"><span>Layla</span></a>
+<a class="char-card" href="genshin-lisa.html"><img src="assets/genshin/lisa.png" alt="Lisa"><span>Lisa</span></a>
+<a class="char-card" href="genshin-lynette.html"><img src="assets/genshin/lynette.png" alt="Lynette"><span>Lynette</span></a>
+<a class="char-card" href="genshin-lyney.html"><img src="assets/genshin/lyney.png" alt="Lyney"><span>Lyney</span></a>
+<a class="char-card" href="genshin-mika.html"><img src="assets/genshin/mika.png" alt="Mika"><span>Mika</span></a>
+<a class="char-card" href="genshin-mona.html"><img src="assets/genshin/mona.png" alt="Mona"><span>Mona</span></a>
+<a class="char-card" href="genshin-nahida.html"><img src="assets/genshin/nahida.png" alt="Nahida"><span>Nahida</span></a>
+<a class="char-card" href="genshin-navia.html"><img src="assets/genshin/navia.png" alt="Navia"><span>Navia</span></a>
+<a class="char-card" href="genshin-neuvillette.html"><img src="assets/genshin/neuvillette.png" alt="Neuvillette"><span>Neuvillette</span></a>
+<a class="char-card" href="genshin-nilou.html"><img src="assets/genshin/nilou.png" alt="Nilou"><span>Nilou</span></a>
+<a class="char-card" href="genshin-ningguang.html"><img src="assets/genshin/ningguang.png" alt="Ningguang"><span>Ningguang</span></a>
+<a class="char-card" href="genshin-noelle.html"><img src="assets/genshin/noelle.png" alt="Noelle"><span>Noelle</span></a>
+<a class="char-card" href="genshin-qiqi.html"><img src="assets/genshin/qiqi.png" alt="Qiqi"><span>Qiqi</span></a>
+<a class="char-card" href="genshin-raiden-shogun.html"><img src="assets/genshin/raiden-shogun.png" alt="Raiden Shogun"><span>Raiden Shogun</span></a>
+<a class="char-card" href="genshin-razor.html"><img src="assets/genshin/razor.png" alt="Razor"><span>Razor</span></a>
+<a class="char-card" href="genshin-rosaria.html"><img src="assets/genshin/rosaria.png" alt="Rosaria"><span>Rosaria</span></a>
+<a class="char-card" href="genshin-sangonomiya-kokomi.html"><img src="assets/genshin/sangonomiya-kokomi.png" alt="Sangonomiya Kokomi"><span>Sangonomiya Kokomi</span></a>
+<a class="char-card" href="genshin-sayu.html"><img src="assets/genshin/sayu.png" alt="Sayu"><span>Sayu</span></a>
+<a class="char-card" href="genshin-shenhe.html"><img src="assets/genshin/shenhe.png" alt="Shenhe"><span>Shenhe</span></a>
+<a class="char-card" href="genshin-shikanoin-heizou.html"><img src="assets/genshin/shikanoin-heizou.png" alt="Shikanoin Heizou"><span>Shikanoin Heizou</span></a>
+<a class="char-card" href="genshin-sucrose.html"><img src="assets/genshin/sucrose.png" alt="Sucrose"><span>Sucrose</span></a>
+<a class="char-card" href="genshin-tartaglia.html"><img src="assets/genshin/tartaglia.png" alt="Tartaglia"><span>Tartaglia</span></a>
+<a class="char-card" href="genshin-thoma.html"><img src="assets/genshin/thoma.png" alt="Thoma"><span>Thoma</span></a>
+<a class="char-card" href="genshin-tighnari.html"><img src="assets/genshin/tighnari.png" alt="Tighnari"><span>Tighnari</span></a>
+<a class="char-card" href="genshin-traveler-anemo.html"><img src="assets/genshin/traveler-anemo.png" alt="Traveler (Anemo)"><span>Traveler (Anemo)</span></a>
+<a class="char-card" href="genshin-traveler-geo.html"><img src="assets/genshin/traveler-geo.png" alt="Traveler (Geo)"><span>Traveler (Geo)</span></a>
+<a class="char-card" href="genshin-traveler-electro.html"><img src="assets/genshin/traveler-electro.png" alt="Traveler (Electro)"><span>Traveler (Electro)</span></a>
+<a class="char-card" href="genshin-traveler-dendro.html"><img src="assets/genshin/traveler-dendro.png" alt="Traveler (Dendro)"><span>Traveler (Dendro)</span></a>
+<a class="char-card" href="genshin-traveler-hydro.html"><img src="assets/genshin/traveler-hydro.png" alt="Traveler (Hydro)"><span>Traveler (Hydro)</span></a>
+<a class="char-card" href="genshin-venti.html"><img src="assets/genshin/venti.png" alt="Venti"><span>Venti</span></a>
+<a class="char-card" href="genshin-wanderer.html"><img src="assets/genshin/wanderer.png" alt="Wanderer"><span>Wanderer</span></a>
+<a class="char-card" href="genshin-wriothesley.html"><img src="assets/genshin/wriothesley.png" alt="Wriothesley"><span>Wriothesley</span></a>
+<a class="char-card" href="genshin-xiangling.html"><img src="assets/genshin/xiangling.png" alt="Xiangling"><span>Xiangling</span></a>
+<a class="char-card" href="genshin-xiao.html"><img src="assets/genshin/xiao.png" alt="Xiao"><span>Xiao</span></a>
+<a class="char-card" href="genshin-xingqiu.html"><img src="assets/genshin/xingqiu.png" alt="Xingqiu"><span>Xingqiu</span></a>
+<a class="char-card" href="genshin-xinyan.html"><img src="assets/genshin/xinyan.png" alt="Xinyan"><span>Xinyan</span></a>
+<a class="char-card" href="genshin-yae-miko.html"><img src="assets/genshin/yae-miko.png" alt="Yae Miko"><span>Yae Miko</span></a>
+<a class="char-card" href="genshin-yanfei.html"><img src="assets/genshin/yanfei.png" alt="Yanfei"><span>Yanfei</span></a>
+<a class="char-card" href="genshin-yaoyao.html"><img src="assets/genshin/yaoyao.png" alt="Yaoyao"><span>Yaoyao</span></a>
+<a class="char-card" href="genshin-yelan.html"><img src="assets/genshin/yelan.png" alt="Yelan"><span>Yelan</span></a>
+<a class="char-card" href="genshin-yoimiya.html"><img src="assets/genshin/yoimiya.png" alt="Yoimiya"><span>Yoimiya</span></a>
+<a class="char-card" href="genshin-yun-jin.html"><img src="assets/genshin/yun-jin.png" alt="Yun Jin"><span>Yun Jin</span></a>
+<a class="char-card" href="genshin-zhongli.html"><img src="assets/genshin/zhongli.png" alt="Zhongli"><span>Zhongli</span></a>
+  </div>
+</main>
+<footer class="site-footer">© 2025 Bolle Gacha</footer>
 </body>
 </html>
