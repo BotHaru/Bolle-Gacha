@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Acheron",
+    "slug": "acheron",
+    "rarity": "5",
+    "path": "Nihility",
+    "element": "Lightning",
+    "link": "hsr-acheron.html"
+  },
+  {
+    "name": "Bronya",
+    "slug": "bronya",
+    "rarity": "5",
+    "path": "Harmony",
+    "element": "Wind",
+    "link": "hsr-bronya.html"
+  },
+  {
+    "name": "Kafka",
+    "slug": "kafka",
+    "rarity": "5",
+    "path": "Nihility",
+    "element": "Lightning",
+    "link": "hsr-kafka.html"
+  },
+  {
+    "name": "Seele",
+    "slug": "seele",
+    "rarity": "5",
+    "path": "The Hunt",
+    "element": "Quantum",
+    "link": "hsr-seele.html"
+  },
+  {
+    "name": "Jingliu",
+    "slug": "jingliu",
+    "rarity": "5",
+    "path": "Destruction",
+    "element": "Ice",
+    "link": "hsr-jingliu.html"
+  }
+]

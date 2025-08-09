@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Jiyan",
+    "slug": "jiyan",
+    "rarity": "5",
+    "weapon": "Broadblade",
+    "element": "Aero",
+    "link": "wuwa-jiyan.html"
+  },
+  {
+    "name": "Verina",
+    "slug": "verina",
+    "rarity": "5",
+    "weapon": "Rectifier",
+    "element": "Spectro",
+    "link": "wuwa-verina.html"
+  },
+  {
+    "name": "Calcharo",
+    "slug": "calcharo",
+    "rarity": "5",
+    "weapon": "Broadblade",
+    "element": "Electro",
+    "link": "wuwa-calcharo.html"
+  },
+  {
+    "name": "Encore",
+    "slug": "encore",
+    "rarity": "5",
+    "weapon": "Rectifier",
+    "element": "Fusion",
+    "link": "wuwa-encore.html"
+  },
+  {
+    "name": "Lingyang",
+    "slug": "lingyang",
+    "rarity": "5",
+    "weapon": "Gauntlets",
+    "element": "Glacio",
+    "link": "wuwa-lingyang.html"
+  }
+]
