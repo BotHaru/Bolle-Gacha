@@ -1,26 +1,93 @@
 <!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HSR — Characters</title>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Honkai: Star Rail — Personaggi</title>
+<link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/style-extra.css">
-<script defer src="assets/filters-roster.js"></script>
 </head>
 <body>
-<header class="site-header">
-  <div></div>
-  <a href="index.html" title="Back"><div class="logo" aria-label="Bolle Gacha"></div></a>
-  <div></div>
-</header>
-<main class="container">
-  <h1>Honkai: Star Rail — Characters</h1>
-  <div class="filter-box"><label>Search<br><input id="q" type="search" placeholder="Search name"></label></div>
-  <div class="filter-box"><label>Rarity<br><select id="rarity"><option value="">All</option><option value="5">5★</option><option value="4">4★</option></select></label></div>
-  <div class="filter-box"><label>Path<br><select id="weapon"><option value="">All</option><option>Destruction</option><option>The Hunt</option><option>Erudition</option><option>Harmony</option><option>Preservation</option><option>Nihility</option><option>Abundance</option><option>Remembrance</option></select></label></div>
-  <div class="filter-box"><label>Element<br><select id="element"><option value="">All</option><option>Physical</option><option>Fire</option><option>Ice</option><option>Lightning</option><option>Wind</option><option>Quantum</option><option>Imaginary</option></select></label></div>
-  <div class="characters-grid" id="hsr-list"></div>
-</main>
-<script>
-__rosterLoader.loadAndInit('assets/hsr_roster.json', '#hsr-list');
-</script>
+  <header class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> ·
+      <a href="genshin-personaggi.html">Genshin</a> ·
+      <strong>HSR</strong> ·
+      <a href="wuthering-personaggi.html">Wuthering Waves</a>
+    </nav>
+    <h1>Honkai: Star Rail — Tutti i personaggi</h1>
+  </header>
+
+  <main class="container">
+    <!-- FILTRI -->
+    <div class="filters">
+      <input id="q" type="search" placeholder="Cerca nome…" />
+      <select id="rarity">
+        <option value="">Rarità</option>
+        <option value="5">5★</option>
+        <option value="4">4★</option>
+      </select>
+      <select id="weapon">
+        <option value="">Percorso</option>
+        <option value="Destruction">Destruction</option>
+        <option value="Hunt">Hunt</option>
+        <option value="Erudition">Erudition</option>
+        <option value="Harmony">Harmony</option>
+        <option value="Nihility">Nihility</option>
+        <option value="Preservation">Preservation</option>
+        <option value="Abundance">Abundance</option>
+        <option value="Remembrance">Remembrance</option>
+      </select>
+      <select id="element">
+        <option value="">Elemento</option>
+        <option value="Physical">Physical</option>
+        <option value="Fire">Fire</option>
+        <option value="Ice">Ice</option>
+        <option value="Lightning">Lightning</option>
+        <option value="Wind">Wind</option>
+        <option value="Quantum">Quantum</option>
+        <option value="Imaginary">Imaginary</option>
+      </select>
+    </div>
+
+    <!-- GRIGLIA -->
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <script src="assets/filters.js"></script>
+  <script>
+    // Render minimale: genera .char-card con data-* così filters.js funziona.
+    function renderCards(list, targetSel){
+      const wrap = document.querySelector(targetSel);
+      wrap.innerHTML = list.map(c => `
+        <a class="char-card" href="${c.link}"
+           data-name="${c.name||''}"
+           data-rarity="${c.rarity||''}"
+           data-weapon="${c.path||c.weapon||''}"
+           data-element="${c.element||''}">
+          <div class="char-top">
+            <div class="char-name">${c.name||''}</div>
+            <div class="meta">
+              ${c.element?`<span class="badge">${c.element}</span>`:''}
+              ${c.path?`<span class="badge">${c.path}</span>`:''}
+              ${c.weapon?`<span class="badge">${c.weapon}</span>`:''}
+              ${c.rarity?`<span class="badge">${c.rarity}★</span>`:''}
+            </div>
+          </div>
+        </a>
+      `).join('');
+      // trigger filtro iniziale
+      if (window.filterCharacters) window.filterCharacters();
+    }
+
+    fetch('assets/hsr_roster.json?v=20250809')
+      .then(r => r.json())
+      .then(list => renderCards(list, '#grid'))
+      .catch(err => {
+        console.error(err);
+        document.querySelector('#grid').innerHTML =
+          '<div class="alert">Errore nel caricamento del roster HSR.</div>';
+      });
+  </script>
 </body>
 </html>

@@ -1,26 +1,79 @@
 <!doctype html>
-<html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wuthering Waves — Characters</title>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wuthering Waves — Personaggi</title>
+<link rel="stylesheet" href="assets/style.css">
 <link rel="stylesheet" href="assets/style-extra.css">
-<script defer src="assets/filters-roster.js"></script>
 </head>
 <body>
-<header class="site-header">
-  <div></div>
-  <a href="index.html" title="Back"><div class="logo" aria-label="Bolle Gacha"></div></a>
-  <div></div>
-</header>
-<main class="container">
-  <h1>Wuthering Waves — Characters</h1>
-  <div class="filter-box"><label>Search<br><input id="q" type="search" placeholder="Search name"></label></div>
-  <div class="filter-box"><label>Rarity<br><select id="rarity"><option value="">All</option><option value="5">5★</option><option value="4">4★</option></select></label></div>
-  <div class="filter-box"><label>Weapon<br><select id="weapon"><option value="">All</option><option>Sword</option><option>Broadblade</option><option>Gauntlets</option><option>Pistols</option><option>Rectifier</option></select></label></div>
-  <div class="filter-box"><label>Element<br><select id="element"><option value="">All</option><option>Spectro</option><option>Havoc</option><option>Aero</option><option>Glacio</option><option>Fusion</option><option>Electro</option></select></label></div>
-  <div class="characters-grid" id="wuwa-list"></div>
-</main>
-<script>
-__rosterLoader.loadAndInit('assets/wuwa_roster.json', '#wuwa-list');
-</script>
+  <header class="container">
+    <nav class="breadcrumb">
+      <a href="index.html">Home</a> ·
+      <a href="genshin-personaggi.html">Genshin</a> ·
+      <a href="hsr-personaggi.html">HSR</a> ·
+      <strong>Wuthering Waves</strong>
+    </nav>
+    <h1>Wuthering Waves — Tutti i personaggi</h1>
+  </header>
+
+  <main class="container">
+    <!-- FILTRI -->
+    <div class="filters">
+      <input id="q" type="search" placeholder="Cerca nome…" />
+      <select id="rarity">
+        <option value="">Rarità</option>
+        <option value="5">5★</option>
+        <option value="4">4★</option>
+      </select>
+      <select id="weapon">
+        <option value="">Arma</option>
+        <option>Broadblade</option><option>Gauntlets</option><option>Pistols</option>
+        <option>Rectifier</option><option>Sword</option><option>Gauntlet</option>
+      </select>
+      <select id="element">
+        <option value="">Elemento</option>
+        <option>Havoc</option><option>Fusion</option><option>Electro</option>
+        <option>Glacio</option><option>Spectro</option><option>Aero</option>
+      </select>
+    </div>
+
+    <!-- GRIGLIA -->
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <script src="assets/filters.js"></script>
+  <script>
+    function renderCards(list, targetSel){
+      const wrap = document.querySelector(targetSel);
+      wrap.innerHTML = list.map(c => `
+        <a class="char-card" href="${c.link}"
+           data-name="${c.name||''}"
+           data-rarity="${c.rarity||''}"
+           data-weapon="${c.weapon||c.path||''}"
+           data-element="${c.element||''}">
+          <div class="char-top">
+            <div class="char-name">${c.name||''}</div>
+            <div class="meta">
+              ${c.element?`<span class="badge">${c.element}</span>`:''}
+              ${c.weapon?`<span class="badge">${c.weapon}</span>`:''}
+              ${c.rarity?`<span class="badge">${c.rarity}★</span>`:''}
+            </div>
+          </div>
+        </a>
+      `).join('');
+      if (window.filterCharacters) window.filterCharacters();
+    }
+
+    fetch('assets/wuwa_roster.json?v=20250809')
+      .then(r => r.json())
+      .then(list => renderCards(list, '#grid'))
+      .catch(err => {
+        console.error(err);
+        document.querySelector('#grid').innerHTML =
+          '<div class="alert">Errore nel caricamento del roster Wuthering Waves.</div>';
+      });
+  </script>
 </body>
 </html>
