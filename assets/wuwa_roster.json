@@ -4,293 +4,287 @@
     "slug": "aalto",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Augusta2.6",
-    "slug": "augusta26",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-aalto.html"
   },
   {
     "name": "Baizhi",
     "slug": "baizhi",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Brant",
-    "slug": "brant",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-baizhi.html"
   },
   {
     "name": "Calcharo",
     "slug": "calcharo",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Camellya",
-    "slug": "camellya",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Cantarella",
-    "slug": "cantarella",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Carlotta",
-    "slug": "carlotta",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Cartethyia",
-    "slug": "cartethyia",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Changli",
-    "slug": "changli",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Chisa2.x",
-    "slug": "chisa2x",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-calcharo.html"
   },
   {
     "name": "Chixia",
     "slug": "chixia",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Ciaccona",
-    "slug": "ciaccona",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-chixia.html"
   },
   {
     "name": "Danjin",
     "slug": "danjin",
     "rarity": "",
     "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-danjin.html"
   },
   {
     "name": "Encore",
     "slug": "encore",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Galbrena2.x",
-    "slug": "galbrena2x",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Iuno2.6",
-    "slug": "iuno26",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-encore.html"
   },
   {
     "name": "Jianxin",
     "slug": "jianxin",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Jinhsi",
-    "slug": "jinhsi",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-jianxin.html"
   },
   {
     "name": "Jiyan",
     "slug": "jiyan",
     "rarity": "",
     "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-jiyan.html"
   },
   {
     "name": "Lingyang",
     "slug": "lingyang",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Lumi",
-    "slug": "lumi",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Lupa",
-    "slug": "lupa",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-lingyang.html"
   },
   {
     "name": "Mortefi",
     "slug": "mortefi",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Phoebe",
-    "slug": "phoebe",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "PhrolovaNew",
-    "slug": "phrolovanew",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Qiuyuan2.x",
-    "slug": "qiuyuan2x",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Roccia",
-    "slug": "roccia",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Rover (Aero)",
-    "slug": "rover-aero",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Rover (Havoc)",
-    "slug": "rover-havoc",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Rover (Spectro)",
-    "slug": "rover-spectro",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-mortefi.html"
   },
   {
     "name": "Sanhua",
     "slug": "sanhua",
     "rarity": "",
     "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-sanhua.html"
   },
   {
     "name": "Taoqi",
     "slug": "taoqi",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "The Shorekeeper",
-    "slug": "the-shorekeeper",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Verina",
-    "slug": "verina",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Xiangli Yao",
-    "slug": "xiangli-yao",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-taoqi.html"
   },
   {
     "name": "Yangyang",
     "slug": "yangyang",
     "rarity": "",
     "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-yangyang.html"
   },
   {
     "name": "Yinlin",
     "slug": "yinlin",
     "rarity": "",
     "weapon": "",
-    "element": ""
-  },
-  {
-    "name": "Youhu",
-    "slug": "youhu",
-    "rarity": "",
-    "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-yinlin.html"
   },
   {
     "name": "Yuanwu",
     "slug": "yuanwu",
     "rarity": "",
     "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-yuanwu.html"
   },
   {
-    "name": "Zani",
-    "slug": "zani",
+    "name": "Verina",
+    "slug": "verina",
     "rarity": "",
     "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-verina.html"
+  },
+  {
+    "name": "Jinhsi",
+    "slug": "jinhsi",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-jinhsi.html"
+  },
+  {
+    "name": "Changli",
+    "slug": "changli",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-changli.html"
+  },
+  {
+    "name": "Rover (Spectro)",
+    "slug": "rover-spectro",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-rover-spectro.html"
+  },
+  {
+    "name": "Rover (Havoc)",
+    "slug": "rover-havoc",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-rover-havoc.html"
+  },
+  {
+    "name": "Xiangli Yao",
+    "slug": "xiangli-yao",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-xiangli-yao.html"
   },
   {
     "name": "Zhezhi",
     "slug": "zhezhi",
     "rarity": "",
     "weapon": "",
-    "element": ""
+    "element": "",
+    "link": "wuwa-zhezhi.html"
+  },
+  {
+    "name": "Carlotta",
+    "slug": "carlotta",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-carlotta.html"
+  },
+  {
+    "name": "Ciaccona",
+    "slug": "ciaccona",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-ciaccona.html"
+  },
+  {
+    "name": "Camellya",
+    "slug": "camellya",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-camellya.html"
+  },
+  {
+    "name": "Cantarella",
+    "slug": "cantarella",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-cantarella.html"
+  },
+  {
+    "name": "Cartethyia",
+    "slug": "cartethyia",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-cartethyia.html"
+  },
+  {
+    "name": "Brant",
+    "slug": "brant",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-brant.html"
+  },
+  {
+    "name": "Augusta",
+    "slug": "augusta",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-augusta.html"
+  },
+  {
+    "name": "Lumi",
+    "slug": "lumi",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-lumi.html"
+  },
+  {
+    "name": "Youhu",
+    "slug": "youhu",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-youhu.html"
+  },
+  {
+    "name": "Roccia",
+    "slug": "roccia",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-roccia.html"
+  },
+  {
+    "name": "Phrolova",
+    "slug": "phrolova",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-phrolova.html"
+  },
+  {
+    "name": "Iuno",
+    "slug": "iuno",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-iuno.html"
+  },
+  {
+    "name": "Mory",
+    "slug": "mory",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-mory.html"
+  },
+  {
+    "name": "J",
+    "slug": "j",
+    "rarity": "",
+    "weapon": "",
+    "element": "",
+    "link": "wuwa-j.html"
   }
 ]

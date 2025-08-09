@@ -4,531 +4,591 @@
     "slug": "acheron",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-acheron.html"
   },
   {
     "name": "Aglaea",
     "slug": "aglaea",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-aglaea.html"
   },
   {
     "name": "Anaxa",
     "slug": "anaxa",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-anaxa.html"
   },
   {
-    "name": "ArcherNew",
-    "slug": "archernew",
+    "name": "Archer",
+    "slug": "archer",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-archer.html"
   },
   {
     "name": "Argenti",
     "slug": "argenti",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Arlan",
-    "slug": "arlan",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "Asta",
-    "slug": "asta",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-argenti.html"
   },
   {
     "name": "Aventurine",
     "slug": "aventurine",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-aventurine.html"
   },
   {
     "name": "Bailu",
     "slug": "bailu",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-bailu.html"
   },
   {
     "name": "Black Swan",
     "slug": "black-swan",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-black-swan.html"
   },
   {
     "name": "Blade",
     "slug": "blade",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-blade.html"
   },
   {
     "name": "Boothill",
     "slug": "boothill",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-boothill.html"
   },
   {
     "name": "Bronya",
     "slug": "bronya",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-bronya.html"
   },
   {
     "name": "Castorice",
     "slug": "castorice",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Cerydra3.5",
-    "slug": "cerydra35",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-castorice.html"
   },
   {
     "name": "Cipher",
     "slug": "cipher",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-cipher.html"
   },
   {
     "name": "Clara",
     "slug": "clara",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-clara.html"
   },
   {
-    "name": "Dan Heng",
-    "slug": "dan-heng",
+    "name": "Dan Heng - Imbibitor Lunae",
+    "slug": "dan-heng-il",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Dan Heng â¢ Imbibitor Lunae",
-    "slug": "dan-heng-â-imbibitor-lunae",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-dan-heng-il.html"
   },
   {
     "name": "Dr. Ratio",
     "slug": "dr-ratio",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-dr-ratio.html"
   },
   {
     "name": "Feixiao",
     "slug": "feixiao",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-feixiao.html"
   },
   {
     "name": "Firefly",
     "slug": "firefly",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-firefly.html"
   },
   {
     "name": "Fu Xuan",
     "slug": "fu-xuan",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-fu-xuan.html"
   },
   {
-    "name": "Gallagher",
-    "slug": "gallagher",
+    "name": "Fugue",
+    "slug": "fugue",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-fugue.html"
   },
   {
     "name": "Gepard",
     "slug": "gepard",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Guinaifen",
-    "slug": "guinaifen",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "Hanya",
-    "slug": "hanya",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "Herta",
-    "slug": "herta",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-gepard.html"
   },
   {
     "name": "Himeko",
     "slug": "himeko",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Hook",
-    "slug": "hook",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-himeko.html"
   },
   {
     "name": "Huohuo",
     "slug": "huohuo",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-huohuo.html"
   },
   {
     "name": "Hyacine",
     "slug": "hyacine",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Hysilens3.5",
-    "slug": "hysilens35",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-hyacine.html"
   },
   {
     "name": "Jade",
     "slug": "jade",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-jade.html"
   },
   {
     "name": "Jiaoqiu",
     "slug": "jiaoqiu",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-jiaoqiu.html"
   },
   {
     "name": "Jing Yuan",
     "slug": "jing-yuan",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-jing-yuan.html"
   },
   {
     "name": "Jingliu",
     "slug": "jingliu",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-jingliu.html"
   },
   {
     "name": "Kafka",
     "slug": "kafka",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-kafka.html"
   },
   {
     "name": "Lingsha",
     "slug": "lingsha",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Luka",
-    "slug": "luka",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-lingsha.html"
   },
   {
     "name": "Luocha",
     "slug": "luocha",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Lynx",
-    "slug": "lynx",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "March 7th",
-    "slug": "march-7th",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "March 7th â¢ The Hunt",
-    "slug": "march-7th-â-the-hunt",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "Misha",
-    "slug": "misha",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "Moze",
-    "slug": "moze",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-luocha.html"
   },
   {
     "name": "Mydei",
     "slug": "mydei",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Natasha",
-    "slug": "natasha",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "Pela",
-    "slug": "pela",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-mydei.html"
   },
   {
     "name": "Phainon",
     "slug": "phainon",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Qingque",
-    "slug": "qingque",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-phainon.html"
   },
   {
     "name": "Rappa",
     "slug": "rappa",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-rappa.html"
   },
   {
     "name": "Robin",
     "slug": "robin",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-robin.html"
   },
   {
     "name": "Ruan Mei",
     "slug": "ruan-mei",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-ruan-mei.html"
   },
   {
-    "name": "SaberNew",
-    "slug": "sabernew",
+    "name": "Saber",
+    "slug": "saber",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Sampo",
-    "slug": "sampo",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-saber.html"
   },
   {
     "name": "Seele",
     "slug": "seele",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Serval",
-    "slug": "serval",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-seele.html"
   },
   {
     "name": "Silver Wolf",
     "slug": "silver-wolf",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-silver-wolf.html"
   },
   {
     "name": "Sparkle",
     "slug": "sparkle",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-sparkle.html"
   },
   {
     "name": "Sunday",
     "slug": "sunday",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Sushang",
-    "slug": "sushang",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-sunday.html"
   },
   {
     "name": "The Herta",
     "slug": "the-herta",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-the-herta.html"
   },
   {
-    "name": "Tingyun",
-    "slug": "tingyun",
+    "name": "Topaz and Numby",
+    "slug": "topaz",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-topaz.html"
   },
   {
-    "name": "Tingyun â¢ Fugue",
-    "slug": "tingyun-â-fugue",
+    "name": "Trailblazer (Fire)",
+    "slug": "trailblazer-fire",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-trailblazer-fire.html"
   },
   {
-    "name": "Topaz & Numby",
-    "slug": "topaz-numby",
+    "name": "Trailblazer (Ice)",
+    "slug": "trailblazer-ice",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-trailblazer-ice.html"
   },
   {
-    "name": "Trailblazer â¢ Destruction",
-    "slug": "trailblazer-â-destruction",
+    "name": "Trailblazer (Imaginary)",
+    "slug": "trailblazer-imaginary",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-trailblazer-imaginary.html"
   },
   {
-    "name": "Trailblazer â¢ Harmony",
-    "slug": "trailblazer-â-harmony",
+    "name": "Trailblazer (Physical)",
+    "slug": "trailblazer-phys",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Trailblazer â¢ Preservation",
-    "slug": "trailblazer-â-preservation",
-    "rarity": "",
-    "path": "",
-    "element": ""
-  },
-  {
-    "name": "Trailblazer â¢ Remembrance",
-    "slug": "trailblazer-â-remembrance",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-trailblazer-phys.html"
   },
   {
     "name": "Tribbie",
     "slug": "tribbie",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-tribbie.html"
   },
   {
     "name": "Welt",
     "slug": "welt",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Xueyi",
-    "slug": "xueyi",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-welt.html"
   },
   {
     "name": "Yanqing",
     "slug": "yanqing",
     "rarity": "",
     "path": "",
-    "element": ""
-  },
-  {
-    "name": "Yukong",
-    "slug": "yukong",
-    "rarity": "",
-    "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-yanqing.html"
   },
   {
     "name": "Yunli",
     "slug": "yunli",
     "rarity": "",
     "path": "",
-    "element": ""
+    "element": "",
+    "link": "hsr-yunli.html"
+  },
+  {
+    "name": "Arlan",
+    "slug": "arlan",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-arlan.html"
+  },
+  {
+    "name": "Asta",
+    "slug": "asta",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-asta.html"
+  },
+  {
+    "name": "Dan Heng",
+    "slug": "dan-heng",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-dan-heng.html"
+  },
+  {
+    "name": "Gallagher",
+    "slug": "gallagher",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-gallagher.html"
+  },
+  {
+    "name": "Guinaifen",
+    "slug": "guinaifen",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-guinaifen.html"
+  },
+  {
+    "name": "Hanya",
+    "slug": "hanya",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-hanya.html"
+  },
+  {
+    "name": "Herta",
+    "slug": "herta",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-herta.html"
+  },
+  {
+    "name": "Hook",
+    "slug": "hook",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-hook.html"
+  },
+  {
+    "name": "Luka",
+    "slug": "luka",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-luka.html"
+  },
+  {
+    "name": "Lynx",
+    "slug": "lynx",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-lynx.html"
+  },
+  {
+    "name": "March 7th",
+    "slug": "march-7th",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-march-7th.html"
+  },
+  {
+    "name": "March 7th (The Hunt)",
+    "slug": "march-7th-hunt",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-march-7th-hunt.html"
+  },
+  {
+    "name": "Misha",
+    "slug": "misha",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-misha.html"
+  },
+  {
+    "name": "Moze",
+    "slug": "moze",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-moze.html"
+  },
+  {
+    "name": "Natasha",
+    "slug": "natasha",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-natasha.html"
+  },
+  {
+    "name": "Pela",
+    "slug": "pela",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-pela.html"
+  },
+  {
+    "name": "Qingque",
+    "slug": "qingque",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-qingque.html"
+  },
+  {
+    "name": "Sampo",
+    "slug": "sampo",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-sampo.html"
+  },
+  {
+    "name": "Serval",
+    "slug": "serval",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-serval.html"
+  },
+  {
+    "name": "Sushang",
+    "slug": "sushang",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-sushang.html"
+  },
+  {
+    "name": "Tingyun",
+    "slug": "tingyun",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-tingyun.html"
+  },
+  {
+    "name": "Xueyi",
+    "slug": "xueyi",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-xueyi.html"
+  },
+  {
+    "name": "Yukong",
+    "slug": "yukong",
+    "rarity": "",
+    "path": "",
+    "element": "",
+    "link": "hsr-yukong.html"
   }
 ]
