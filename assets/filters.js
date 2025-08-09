@@ -1,82 +1,112 @@
 (function () {
-  // Helpers
-  function $(id) { return document.getElementById(id); }
-  function text(s) { return (s || "").toLowerCase().trim(); }
+  // ---- helpers ------------------------------------------------------------
+  function $(id){ return document.getElementById(id); }
+  function t(s){ return (s||"").toLowerCase().trim(); }
+  function num(s){ return (s||"").replace(/[^0-9]/g,""); }
+  function normBase(s){ s=t(s).replace(/\s+/g," ").replace(/^the\s+/,"").replace(/[–—]/g,"-"); return s; }
 
-  // Normalizzazione tollerante
-  function normBase(s) {
-    s = text(s).replace(/\s+/g, " ").replace(/^the\s+/, "");
-    s = s.replace(/[–—]/g, "-");
-    return s;
-  }
-  function normWeaponOrPath(s) {
-    s = normBase(s);
-    const singular = s.replace(/s$/, "").replace(/blades$/, "blade");
-    const map = {
-      // HSR Path
-      "destruction": "destruction",
-      "hunt": "hunt",
-      "erudition": "erudition",
-      "harmony": "harmony",
-      "nihility": "nihility",
-      "preservation": "preservation",
-      "abundance": "abundance",
-      "remembrance": "remembrance",
-      // WuWa Weapon
-      "sword": "sword",
-      "broadblade": "broadblade",
-      "gauntlet": "gauntlet",
-      "pistol": "pistol",
-      "rectifier": "rectifier",
-    };
-    return map[singular] || singular;
-  }
-  function normElement(s) {
-    s = normBase(s);
-    const map = {
-      // HSR
-      "physical": "physical","fire": "fire","ice": "ice","lightning": "lightning","wind": "wind","quantum": "quantum","imaginary": "imaginary",
-      // WuWa
-      "aero": "aero","electro": "electro","fusion": "fusion","glacio": "glacio","havoc": "havoc","spectro": "spectro",
-    };
-    return map[s] || s;
-  }
-  function normRarity(v) { return text(v).replace(/[^0-9]/g, ""); }
+  // ---- vocabolari per gioco ----------------------------------------------
+  const VOCABS = {
+    genshin: {
+      weapon: ["sword","claymore","polearm","bow","catalyst"],
+      element: ["anemo","geo","electro","dendro","hydro","pyro","cryo"]
+    },
+    hsr: {
+      // NB: in HSR usiamo "weapon" per il PATH (per compatibilità markup)
+      weapon: ["destruction","hunt","erudition","harmony","nihility","preservation","abundance","remembrance"],
+      element: ["physical","fire","ice","lightning","wind","quantum","imaginary"]
+    },
+    wuwa: {
+      weapon: ["sword","broadblade","gauntlet","pistol","rectifier"],
+      element: ["aero","electro","fusion","glacio","havoc","spectro"]
+    }
+  };
 
-  // MATCH con wildcard sugli sconosciuti:
-  // - se la card NON ha il dato richiesto (es. weapon/element), NON viene esclusa.
-  function matches(want, have, normalizer) {
-    const w = normalizer ? normalizer(want) : text(want);
-    const h = normalizer ? normalizer(have) : text(have);
-    if (!w) return true;       // filtro non selezionato
-    if (!h) return true;       // dato assente nella card -> non escludere
-    return w === h;
+  // Detect gioco dalla pagina (title/h1)
+  function detectGame(){
+    const txt = (document.title + " " + (document.querySelector("h1")?.textContent||"")).toLowerCase();
+    if (txt.includes("honkai: star rail") || txt.includes("star rail")) return "hsr";
+    if (txt.includes("wuthering waves") || txt.includes("wuthering")) return "wuwa";
+    return "genshin";
   }
 
-  window.filterCharacters = function () {
-    const q = text($("q") ? $("q").value : "");
-    const wantR = normRarity($("rarity") ? $("rarity").value : "");
-    const wantW = $("weapon") ? $("weapon").value : "";
-    const wantE = $("element") ? $("element").value : "";
+  // Normalizzazioni specifiche
+  function normWeaponOrPath(s, game){
+    let x = normBase(s);
+    // singolarizza
+    x = x.replace(/s$/,"").replace(/blades$/,"blade"); // gauntlets->gauntlet, pistols->pistol, broadblades->broadblade
+    // mappa sinonimi
+    if (x === "the hunt") x = "hunt";
+    return x;
+  }
+  function normElement(s, game){ return normBase(s); }
 
-    document.querySelectorAll(".char-card").forEach((card) => {
-      const r = normRarity(card.dataset.rarity || "");
-      const w = card.dataset.weapon || card.dataset.path || "";
-      const e = card.dataset.element || "";
-      const n = text(card.dataset.name || "");
+  // Validazione rispetto al vocabolario del gioco
+  function valid(value, set){ return set.includes(value); }
+
+  // Audit: stampa card con valori fuori vocabolario
+  function audit(game, vocab){
+    const bad = [];
+    document.querySelectorAll(".char-card").forEach(card=>{
+      const name = card.dataset.name || "(unknown)";
+      const w = normWeaponOrPath(card.dataset.weapon || card.dataset.path || "", game);
+      const e = normElement(card.dataset.element||"", game);
+      const r = num(card.dataset.rarity||"");
+      const wOk = !w || valid(w, vocab.weapon);
+      const eOk = !e || valid(e, vocab.element);
+      if (!wOk || !eOk){
+        bad.push({name, weapon:w||"(empty)", element:e||"(empty)", rarity:r||"(empty)"});
+      }
+    });
+    if (bad.length){
+      console.warn(`[AUDIT] ${bad.length} card con valori fuori vocabolario per ${game.toUpperCase()}:`);
+      console.table(bad);
+    } else {
+      console.log(`[AUDIT] Nessuna incongruenza trovata per ${game.toUpperCase()}.`);
+    }
+  }
+
+  // ---- filtro strict + whitelist -----------------------------------------
+  window.filterCharacters = function(){
+    const game = detectGame();
+    const vocab = VOCABS[game] || VOCABS.genshin;
+
+    const q = t($("q")?.value);
+    const wantR = num($("rarity")?.value);
+    const wantW = normWeaponOrPath($("weapon")?.value, game);
+    const wantE = normElement($("element")?.value, game);
+
+    document.querySelectorAll(".char-card").forEach(card=>{
+      const rRaw = card.dataset.rarity || "";
+      const wRaw = card.dataset.weapon || card.dataset.path || "";
+      const eRaw = card.dataset.element || "";
+      const n = t(card.dataset.name || "");
+
+      const r = num(rRaw);
+      const w = normWeaponOrPath(wRaw, game);
+      const e = normElement(eRaw, game);
+
+      // scarta subito se i dati della card sono fuori vocabolario quando un filtro è attivo
+      const wValid = !wantW || (w && valid(w, vocab.weapon));
+      const eValid = !wantE || (e && valid(e, vocab.element));
 
       const ok =
-        matches(wantR, r) &&
-        matches(wantW, w, normWeaponOrPath) &&
-        matches(wantE, e, normElement) &&
+        (!wantR || (r && r===wantR)) &&
+        (!wantW || (wValid && w===wantW)) &&
+        (!wantE || (eValid && e===wantE)) &&
         (!q || n.includes(q));
 
       card.style.display = ok ? "flex" : "none";
     });
+
+    // audit opzionale via query string: ?audit=1
+    if (/\baudit=1\b/.test(location.search)) {
+      audit(game, vocab);
+    }
   };
 
-  window.addEventListener("DOMContentLoaded", () => {
-    ["rarity", "weapon", "element", "q"].forEach((id) => {
+  window.addEventListener("DOMContentLoaded", ()=>{
+    ["rarity","weapon","element","q"].forEach(id=>{
       const el = $(id);
       if (el) el.addEventListener("input", window.filterCharacters);
     });
