@@ -1,22 +1,475 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hsr Personaggi — Bolle Gacha</title>
-  <link rel="stylesheet" href="assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSR — Characters</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/filters.js"></script>
 </head>
 <body>
-  <header class="site-header">
-      <div></div>
-      <a class="logo-wrap" href="index.html" title="Back to Home">
-        <img class="site-logo" src="assets/logo.png" alt="Bolle Gacha Logo">
+<header class="site-header">
+  <div></div>
+  <a class="logo-wrap" href="index.html" title="Back to Home"><div class="site-logo" aria-label="Bolle Gacha Logo"></div></a>
+  <div></div>
+</header>
+<main class="container">
+
+  <h1>HSR — Characters</h1>
+  <div class="filters">
+    <div class="filter-box"><label>Search<br><input id="q" type="search" placeholder="Search name..."></label></div>
+    <div class="filter-box"><label>Rarity<br><select id="rarity"><option value="">All</option><option value="5">5★</option><option value="4">4★</option></select></label></div>
+    <div class="filter-box"><label>Path<br><select id="weapon"><option value="">All</option><option>Destruction</option><option>The Hunt</option><option>Erudition</option><option>Harmony</option><option>Preservation</option><option>Nihility</option><option>Abundance</option></select></label></div>
+    <div class="filter-box"><label>Element<br><select id="element"><option value="">All</option><option>Physical</option><option>Fire</option><option>Ice</option><option>Lightning</option><option>Wind</option><option>Quantum</option><option>Imaginary</option></select></label></div>
+  </div>
+  <div class="characters-grid">
+    
+      <a class="char-card" href="hsr-acheron.html" data-name="Acheron" data-rarity="5" data-weapon="Nihility" data-element="Lightning">
+        <div class="char-top">
+          <div class="char-name">Acheron</div>
+          <div class="meta">
+            <span class="badge">Lightning</span>
+            <span class="badge">Nihility</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
       </a>
-      <div class="header-spacer"></div>
-    </header>
-  <main class="container">
-    <section class="center-hero"><p>Placeholder.</p></section>
-  </main>
-  <footer class="site-footer">© 2025 Bolle Gacha</footer>
+    
+
+      <a class="char-card" href="hsr-argenti.html" data-name="Argenti" data-rarity="5" data-weapon="Erudition" data-element="Physical">
+        <div class="char-top">
+          <div class="char-name">Argenti</div>
+          <div class="meta">
+            <span class="badge">Physical</span>
+            <span class="badge">Erudition</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-asta.html" data-name="Asta" data-rarity="4" data-weapon="Harmony" data-element="Fire">
+        <div class="char-top">
+          <div class="char-name">Asta</div>
+          <div class="meta">
+            <span class="badge">Fire</span>
+            <span class="badge">Harmony</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-blade.html" data-name="Blade" data-rarity="5" data-weapon="Destruction" data-element="Wind">
+        <div class="char-top">
+          <div class="char-name">Blade</div>
+          <div class="meta">
+            <span class="badge">Wind</span>
+            <span class="badge">Destruction</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-bronya.html" data-name="Bronya" data-rarity="5" data-weapon="Harmony" data-element="Wind">
+        <div class="char-top">
+          <div class="char-name">Bronya</div>
+          <div class="meta">
+            <span class="badge">Wind</span>
+            <span class="badge">Harmony</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-clara.html" data-name="Clara" data-rarity="5" data-weapon="Destruction" data-element="Physical">
+        <div class="char-top">
+          <div class="char-name">Clara</div>
+          <div class="meta">
+            <span class="badge">Physical</span>
+            <span class="badge">Destruction</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-dan-heng.html" data-name="Dan Heng" data-rarity="4" data-weapon="The Hunt" data-element="Wind">
+        <div class="char-top">
+          <div class="char-name">Dan Heng</div>
+          <div class="meta">
+            <span class="badge">Wind</span>
+            <span class="badge">The Hunt</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-dan-heng-il.html" data-name="Dan Heng • IL" data-rarity="5" data-weapon="Destruction" data-element="Imaginary">
+        <div class="char-top">
+          <div class="char-name">Dan Heng • IL</div>
+          <div class="meta">
+            <span class="badge">Imaginary</span>
+            <span class="badge">Destruction</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-fu-xuan.html" data-name="Fu Xuan" data-rarity="5" data-weapon="Preservation" data-element="Quantum">
+        <div class="char-top">
+          <div class="char-name">Fu Xuan</div>
+          <div class="meta">
+            <span class="badge">Quantum</span>
+            <span class="badge">Preservation</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-gepard.html" data-name="Gepard" data-rarity="5" data-weapon="Preservation" data-element="Ice">
+        <div class="char-top">
+          <div class="char-name">Gepard</div>
+          <div class="meta">
+            <span class="badge">Ice</span>
+            <span class="badge">Preservation</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-guinaifen.html" data-name="Guinaifen" data-rarity="4" data-weapon="Nihility" data-element="Fire">
+        <div class="char-top">
+          <div class="char-name">Guinaifen</div>
+          <div class="meta">
+            <span class="badge">Fire</span>
+            <span class="badge">Nihility</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-herta.html" data-name="Herta" data-rarity="4" data-weapon="Erudition" data-element="Ice">
+        <div class="char-top">
+          <div class="char-name">Herta</div>
+          <div class="meta">
+            <span class="badge">Ice</span>
+            <span class="badge">Erudition</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-himeko.html" data-name="Himeko" data-rarity="5" data-weapon="Erudition" data-element="Fire">
+        <div class="char-top">
+          <div class="char-name">Himeko</div>
+          <div class="meta">
+            <span class="badge">Fire</span>
+            <span class="badge">Erudition</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-hook.html" data-name="Hook" data-rarity="4" data-weapon="Destruction" data-element="Fire">
+        <div class="char-top">
+          <div class="char-name">Hook</div>
+          <div class="meta">
+            <span class="badge">Fire</span>
+            <span class="badge">Destruction</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-jing-yuan.html" data-name="Jing Yuan" data-rarity="5" data-weapon="Erudition" data-element="Lightning">
+        <div class="char-top">
+          <div class="char-name">Jing Yuan</div>
+          <div class="meta">
+            <span class="badge">Lightning</span>
+            <span class="badge">Erudition</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-jingliu.html" data-name="Jingliu" data-rarity="5" data-weapon="Destruction" data-element="Ice">
+        <div class="char-top">
+          <div class="char-name">Jingliu</div>
+          <div class="meta">
+            <span class="badge">Ice</span>
+            <span class="badge">Destruction</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-kafka.html" data-name="Kafka" data-rarity="5" data-weapon="Nihility" data-element="Lightning">
+        <div class="char-top">
+          <div class="char-name">Kafka</div>
+          <div class="meta">
+            <span class="badge">Lightning</span>
+            <span class="badge">Nihility</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-luocha.html" data-name="Luocha" data-rarity="5" data-weapon="Abundance" data-element="Imaginary">
+        <div class="char-top">
+          <div class="char-name">Luocha</div>
+          <div class="meta">
+            <span class="badge">Imaginary</span>
+            <span class="badge">Abundance</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-march-7th.html" data-name="March 7th" data-rarity="4" data-weapon="Preservation" data-element="Ice">
+        <div class="char-top">
+          <div class="char-name">March 7th</div>
+          <div class="meta">
+            <span class="badge">Ice</span>
+            <span class="badge">Preservation</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-natasha.html" data-name="Natasha" data-rarity="4" data-weapon="Abundance" data-element="Physical">
+        <div class="char-top">
+          <div class="char-name">Natasha</div>
+          <div class="meta">
+            <span class="badge">Physical</span>
+            <span class="badge">Abundance</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-pela.html" data-name="Pela" data-rarity="4" data-weapon="Nihility" data-element="Ice">
+        <div class="char-top">
+          <div class="char-name">Pela</div>
+          <div class="meta">
+            <span class="badge">Ice</span>
+            <span class="badge">Nihility</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-qingque.html" data-name="Qingque" data-rarity="4" data-weapon="Erudition" data-element="Quantum">
+        <div class="char-top">
+          <div class="char-name">Qingque</div>
+          <div class="meta">
+            <span class="badge">Quantum</span>
+            <span class="badge">Erudition</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-ruan-mei.html" data-name="Ruan Mei" data-rarity="5" data-weapon="Harmony" data-element="Ice">
+        <div class="char-top">
+          <div class="char-name">Ruan Mei</div>
+          <div class="meta">
+            <span class="badge">Ice</span>
+            <span class="badge">Harmony</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-seele.html" data-name="Seele" data-rarity="5" data-weapon="The Hunt" data-element="Quantum">
+        <div class="char-top">
+          <div class="char-name">Seele</div>
+          <div class="meta">
+            <span class="badge">Quantum</span>
+            <span class="badge">The Hunt</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-serval.html" data-name="Serval" data-rarity="4" data-weapon="Erudition" data-element="Lightning">
+        <div class="char-top">
+          <div class="char-name">Serval</div>
+          <div class="meta">
+            <span class="badge">Lightning</span>
+            <span class="badge">Erudition</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-silver-wolf.html" data-name="Silver Wolf" data-rarity="5" data-weapon="Nihility" data-element="Quantum">
+        <div class="char-top">
+          <div class="char-name">Silver Wolf</div>
+          <div class="meta">
+            <span class="badge">Quantum</span>
+            <span class="badge">Nihility</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-sparkle.html" data-name="Sparkle" data-rarity="5" data-weapon="Harmony" data-element="Quantum">
+        <div class="char-top">
+          <div class="char-name">Sparkle</div>
+          <div class="meta">
+            <span class="badge">Quantum</span>
+            <span class="badge">Harmony</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-sushang.html" data-name="Sushang" data-rarity="4" data-weapon="The Hunt" data-element="Physical">
+        <div class="char-top">
+          <div class="char-name">Sushang</div>
+          <div class="meta">
+            <span class="badge">Physical</span>
+            <span class="badge">The Hunt</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-tingyun.html" data-name="Tingyun" data-rarity="4" data-weapon="Harmony" data-element="Lightning">
+        <div class="char-top">
+          <div class="char-name">Tingyun</div>
+          <div class="meta">
+            <span class="badge">Lightning</span>
+            <span class="badge">Harmony</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-topaz.html" data-name="Topaz & Numby" data-rarity="5" data-weapon="The Hunt" data-element="Fire">
+        <div class="char-top">
+          <div class="char-name">Topaz & Numby</div>
+          <div class="meta">
+            <span class="badge">Fire</span>
+            <span class="badge">The Hunt</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-trailblazer-fire.html" data-name="Trailblazer (Fire)" data-rarity="5" data-weapon="Preservation" data-element="Fire">
+        <div class="char-top">
+          <div class="char-name">Trailblazer (Fire)</div>
+          <div class="meta">
+            <span class="badge">Fire</span>
+            <span class="badge">Preservation</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-trailblazer-imaginary.html" data-name="Trailblazer (Imaginary)" data-rarity="5" data-weapon="Harmony" data-element="Imaginary">
+        <div class="char-top">
+          <div class="char-name">Trailblazer (Imaginary)</div>
+          <div class="meta">
+            <span class="badge">Imaginary</span>
+            <span class="badge">Harmony</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-trailblazer-phys.html" data-name="Trailblazer (Physical)" data-rarity="5" data-weapon="Destruction" data-element="Physical">
+        <div class="char-top">
+          <div class="char-name">Trailblazer (Physical)</div>
+          <div class="meta">
+            <span class="badge">Physical</span>
+            <span class="badge">Destruction</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-welt.html" data-name="Welt" data-rarity="5" data-weapon="Nihility" data-element="Imaginary">
+        <div class="char-top">
+          <div class="char-name">Welt</div>
+          <div class="meta">
+            <span class="badge">Imaginary</span>
+            <span class="badge">Nihility</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-xueyi.html" data-name="Xueyi" data-rarity="4" data-weapon="Destruction" data-element="Quantum">
+        <div class="char-top">
+          <div class="char-name">Xueyi</div>
+          <div class="meta">
+            <span class="badge">Quantum</span>
+            <span class="badge">Destruction</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-yanqing.html" data-name="Yanqing" data-rarity="5" data-weapon="The Hunt" data-element="Ice">
+        <div class="char-top">
+          <div class="char-name">Yanqing</div>
+          <div class="meta">
+            <span class="badge">Ice</span>
+            <span class="badge">The Hunt</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="hsr-yukong.html" data-name="Yukong" data-rarity="4" data-weapon="Harmony" data-element="Imaginary">
+        <div class="char-top">
+          <div class="char-name">Yukong</div>
+          <div class="meta">
+            <span class="badge">Imaginary</span>
+            <span class="badge">Harmony</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+  </div>
+
+</main>
+<footer class="site-footer">© 2025 Bolle Gacha</footer>
 </body>
 </html>
