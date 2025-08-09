@@ -76,5 +76,60 @@
       });
   });
 </script>
+<script>
+  // --- WUWA ENRICHER: compila Weapon/Element mancanti ---
+  const WUWA_WEAPON = {
+    "Calcharo":"Broadblade","Jiyan":"Broadblade","Lingyang":"Gauntlets",
+    "Encore":"Rectifier","Verina":"Rectifier","Yinlin":"Rectifier",
+    "Sanhua":"Sword","Taoqi":"Broadblade","Jianxin":"Gauntlets",
+    "Danjin":"Sword","Aalto":"Pistols","Yangyang":"Sword",
+    "Mortefi":"Pistols","Yuanwu":"Gauntlets","Baizhi":"Rectifier",
+    "Rover (Spectro)":"Sword","Rover (Havoc)":"Sword"
+  };
+  const WUWA_ELEM = {
+    "Calcharo":"Electro","Jiyan":"Aero","Lingyang":"Glacio",
+    "Encore":"Fusion","Verina":"Spectro","Yinlin":"Electro",
+    "Sanhua":"Glacio","Taoqi":"Havoc","Jianxin":"Aero",
+    "Danjin":"Fusion","Aalto":"Aero","Yangyang":"Aero",
+    "Mortefi":"Fusion","Yuanwu":"Electro","Baizhi":"Glacio",
+    "Rover (Spectro)":"Spectro","Rover (Havoc)":"Havoc"
+  };
+  function enrichWUWA(list){
+    return list.map(c=>{
+      const name=c.name||"";
+      const filled = { ...c };
+      if(!filled.weapon && WUWA_WEAPON[name]) filled.weapon = WUWA_WEAPON[name];
+      if(!filled.element && WUWA_ELEM[name]) filled.element = WUWA_ELEM[name];
+      return filled;
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const wrap = document.getElementById('grid');
+    fetch('assets/wuwa_roster.json?v=20250809')
+      .then(r=>r.json())
+      .then(raw=>{
+        const list = enrichWUWA(raw);
+        wrap.innerHTML = list.map(c => `
+          <a class="char-card" href="${c.link}"
+             data-name="${c.name||''}"
+             data-rarity="${c.rarity||''}"
+             data-weapon="${c.weapon||''}"
+             data-element="${c.element||''}">
+            <div class="char-top">
+              <div class="char-name">${c.name||''}</div>
+              <div class="meta">
+                ${c.element?`<span class="badge">${c.element}</span>`:''}
+                ${c.weapon?`<span class="badge">${c.weapon}</span>`:''}
+                ${c.rarity?`<span class="badge">${c.rarity}★</span>`:''}
+              </div>
+            </div>
+          </a>
+        `).join('');
+        if (window.filterCharacters) window.filterCharacters();
+      })
+      .catch(e=>{ console.error(e); wrap.innerHTML='<div class="panel">Errore caricamento roster WuWa.</div>'; });
+  });
+</script>
 </body>
 </html>
