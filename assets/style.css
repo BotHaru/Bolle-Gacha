@@ -1,8 +1,5 @@
 
-/* Bolle Gacha — Shared Styles */
-:root{
-  --bg:#0b0f14;--bg2:#121821;--panel:#161e29;--border:#263244;--text:#e6edf3;--muted:#9fb2c8;--accent:#5ac8fa;
-}
+:root{--bg:#0b0f14;--bg2:#121821;--panel:#161e29;--border:#263244;--text:#e6edf3;--muted:#9fb2c8;--accent:#5ac8fa}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 a{color:var(--accent);text-decoration:none}
@@ -11,25 +8,41 @@ a{color:var(--accent);text-decoration:none}
 .logo-wrap{justify-self:center}
 .site-logo{width:88px;height:88px;border-radius:50%;border:2px solid var(--border);background:var(--bg)}
 .site-footer{border-top:1px solid var(--border);background:var(--bg2);padding:12px;text-align:center;color:var(--muted);margin-top:24px}
-
-/* Home cards */
 .grid{display:grid;gap:16px}
 .grid-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 .card{background:var(--panel);border:2px solid var(--border);border-radius:14px;padding:16px;display:flex;align-items:center;justify-content:center;min-height:120px;text-align:center;font-weight:700;transition:transform .08s ease, border-color .08s ease}
 .card:hover{transform:translateY(-2px);border-color:var(--accent)}
-
-/* Submenu buttons */
 .menu{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-
-/* Characters page */
+/* Characters text-only */
 .filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
 .filter-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px}
 select,input{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:8px}
-.characters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:16px}
-.char-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:10px;text-align:center;transition:transform .08s ease,border-color .08s}
-.char-card:hover{transform:translateY(-2px);border-color:var(--accent)}
-.char-card picture{display:block;margin:0 auto 8px;width:80px;height:80px}
-.char-card img{width:80px;height:80px;object-fit:cover;border-radius:10px;border:1px solid var(--border);background:var(--bg)}
-.char-card span{display:block;font-size:14px}
+.characters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.char-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.char-top{display:flex;justify-content:space-between;align-items:center}
+.char-name{font-weight:700;font-size:16px}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
 .badge{display:inline-block;padding:2px 8px;border:1px solid var(--border);border-radius:999px;background:#0e141d;color:var(--text);font-size:12px}
 .muted{color:var(--muted)}
+/* Events / Map from previous pack */
+.split{display:grid;grid-template-columns:320px 1fr;gap:16px}
+@media(max-width:960px){.split{grid-template-columns:1fr}}
+.banners-col{background:var(--panel);border:2px solid var(--border);padding:12px}
+.current{background:var(--bg2);border:2px solid var(--border);margin-bottom:12px;padding:10px}
+.badges{display:flex;flex-wrap:wrap;gap:6px}
+.badge2{display:inline-block;border:1px solid var(--border);padding:4px 8px;background:#0e141d;border-radius:6px}
+.accordion{display:grid;gap:8px}
+.panel{background:var(--bg2);border:2px solid var(--border)}
+.panel summary{cursor:pointer;list-style:none;padding:10px 12px;font-weight:700}
+.panel summary::-webkit-details-marker{display:none}
+.panel .content{padding:10px 12px;border-top:1px solid var(--border)}
+.events-col{background:var(--panel);border:2px solid var(--border);padding:12px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.tab{border:1px solid var(--border);background:#0e141d;border-radius:6px;padding:6px 10px;cursor:pointer}
+.tab.active{background:#263244}
+.event{padding:10px 0;border-bottom:1px dashed var(--border)}
+.event-title{font-weight:700}
+.event-dates{color:var(--muted);font-size:13px}
+.region{background:var(--panel);border:2px solid var(--border);border-radius:12px;padding:12px;margin-bottom:12px}
+.video{display:block;padding:8px;border:1px dashed var(--border);border-radius:8px;margin:6px 0}
+.hidden{display:none}
