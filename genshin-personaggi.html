@@ -1,32 +1,12 @@
+
 <!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Genshin Impact — Characters (Lazy)</title>
-<style>
-body{background:#0b0f14;color:#e6edf3;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-.container{max-width:1200px;margin:0 auto;padding:24px}
-.site-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:14px;border-bottom:1px solid #263244;background:#121821}
-.logo-wrap{justify-self:center}.site-logo{width:88px;height:88px;border-radius:50%;border:2px solid #263244;background:#0b0f14}
-.site-footer{border-top:1px solid #263244;background:#121821;padding:12px;text-align:center;color:#9fb2c8;margin-top:24px}
-h1{color:#e6edf3;margin-top:0}
-a{color:#5ac8fa;text-decoration:none}
-.filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
-.filter-box{background:#121821;border:1px solid #263244;border-radius:10px;padding:10px}
-select,input{background:#0b0f14;color:#e6edf3;border:1px solid #263244;border-radius:8px;padding:8px}
-.characters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:16px}
-.char-card{background:#121821;border:1px solid #263244;border-radius:12px;padding:10px;text-align:center}
-.char-card picture{display:block;margin:0 auto 8px;width:80px;height:80px;position:relative}
-.char-skeleton{position:absolute;inset:0;border-radius:10px;background:#0e141d;border:1px solid #263244}
-.char-card img{width:80px;height:80px;object-fit:cover;border-radius:10px;border:1px solid #263244;background:#0b0f14;opacity:0;transition:opacity .15s ease}
-.char-card img.loaded{opacity:1}
-.char-card span{display:block;font-size:14px}
-.badge{display:inline-block;padding:2px 8px;border:1px solid #263244;border-radius:999px;background:#0e141d;color:#e6edf3;font-size:12px}
-.muted{color:#9fb2c8}
-.tools{display:flex;gap:8px;align-items:center;margin:8px 0 0}
-.btn{border:1px solid #263244;background:#0e141d;color:#e6edf3;border-radius:8px;padding:6px 10px;cursor:pointer}
-</style>
+<title>Genshin Impact — Characters</title>
+<link rel="stylesheet" href="assets/style.css">
+<script defer src="assets/filters.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -42,1138 +22,1161 @@ select,input{background:#0b0f14;color:#e6edf3;border:1px solid #263244;border-ra
     <div class="filter-box"><label>Weapon<br><select id="weapon"><option value="">All</option><option>Sword</option><option>Claymore</option><option>Polearm</option><option>Bow</option><option>Catalyst</option></select></label></div>
     <div class="filter-box"><label>Element<br><select id="element"><option value="">All</option><option>Anemo</option><option>Geo</option><option>Electro</option><option>Dendro</option><option>Hydro</option><option>Pyro</option><option>Cryo</option></select></label></div>
   </div>
-  <div class="tools">
-    <button class="btn" id="check-missing">Check missing icons (console)</button>
-  </div>
-  <div class="characters-grid" id="grid">
-    
-    <a class="char-card" href="genshin-albedo.html" data-name="Albedo" data-rarity="5" data-weapon="Sword" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-albedo.webp?v=20250809 1x, assets/genshin/ui-avataricon-albedo@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Albedo" loading="lazy">
-      </picture>
-      <span>Albedo</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-aloy.html" data-name="Aloy" data-rarity="5" data-weapon="Bow" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-aloy.webp?v=20250809 1x, assets/genshin/ui-avataricon-aloy@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Aloy" loading="lazy">
-      </picture>
-      <span>Aloy</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-amber.html" data-name="Amber" data-rarity="4" data-weapon="Bow" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-amber.webp?v=20250809 1x, assets/genshin/ui-avataricon-amber@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Amber" loading="lazy">
-      </picture>
-      <span>Amber</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kamisato-ayaka.html" data-name="Ayaka" data-rarity="5" data-weapon="Sword" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kamisato-ayaka.webp?v=20250809 1x, assets/genshin/ui-avataricon-kamisato-ayaka@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Ayaka" loading="lazy">
-      </picture>
-      <span>Ayaka</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kamisato-ayato.html" data-name="Ayato" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kamisato-ayato.webp?v=20250809 1x, assets/genshin/ui-avataricon-kamisato-ayato@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Ayato" loading="lazy">
-      </picture>
-      <span>Ayato</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-baizhu.html" data-name="Baizhu" data-rarity="5" data-weapon="Catalyst" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-baizhu.webp?v=20250809 1x, assets/genshin/ui-avataricon-baizhu@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Baizhu" loading="lazy">
-      </picture>
-      <span>Baizhu</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-barbara.html" data-name="Barbara" data-rarity="4" data-weapon="Catalyst" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-barbara.webp?v=20250809 1x, assets/genshin/ui-avataricon-barbara@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Barbara" loading="lazy">
-      </picture>
-      <span>Barbara</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Catalyst</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-bennett.html" data-name="Bennett" data-rarity="4" data-weapon="Sword" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-bennett.webp?v=20250809 1x, assets/genshin/ui-avataricon-bennett@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Bennett" loading="lazy">
-      </picture>
-      <span>Bennett</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Sword</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-candace.html" data-name="Candace" data-rarity="4" data-weapon="Polearm" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-candace.webp?v=20250809 1x, assets/genshin/ui-avataricon-candace@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Candace" loading="lazy">
-      </picture>
-      <span>Candace</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Polearm</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-charlotte.html" data-name="Charlotte" data-rarity="4" data-weapon="Catalyst" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-charlotte.webp?v=20250809 1x, assets/genshin/ui-avataricon-charlotte@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Charlotte" loading="lazy">
-      </picture>
-      <span>Charlotte</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Catalyst</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-chasca.html" data-name="Chasca" data-rarity="5" data-weapon="Bow" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-chasca.webp?v=20250809 1x, assets/genshin/ui-avataricon-chasca@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Chasca" loading="lazy">
-      </picture>
-      <span>Chasca</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-chiori.html" data-name="Chiori" data-rarity="5" data-weapon="Sword" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-chiori.webp?v=20250809 1x, assets/genshin/ui-avataricon-chiori@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Chiori" loading="lazy">
-      </picture>
-      <span>Chiori</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-clorinde.html" data-name="Clorinde" data-rarity="5" data-weapon="Sword" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-clorinde.webp?v=20250809 1x, assets/genshin/ui-avataricon-clorinde@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Clorinde" loading="lazy">
-      </picture>
-      <span>Clorinde</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-collei.html" data-name="Collei" data-rarity="4" data-weapon="Bow" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-collei.webp?v=20250809 1x, assets/genshin/ui-avataricon-collei@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Collei" loading="lazy">
-      </picture>
-      <span>Collei</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-cyno.html" data-name="Cyno" data-rarity="5" data-weapon="Polearm" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-cyno.webp?v=20250809 1x, assets/genshin/ui-avataricon-cyno@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Cyno" loading="lazy">
-      </picture>
-      <span>Cyno</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-dahlia.html" data-name="Dahlia" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-dahlia.webp?v=20250809 1x, assets/genshin/ui-avataricon-dahlia@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Dahlia" loading="lazy">
-      </picture>
-      <span>Dahlia</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-dehya.html" data-name="Dehya" data-rarity="5" data-weapon="Claymore" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-dehya.webp?v=20250809 1x, assets/genshin/ui-avataricon-dehya@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Dehya" loading="lazy">
-      </picture>
-      <span>Dehya</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Claymore</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-diluc.html" data-name="Diluc" data-rarity="5" data-weapon="Claymore" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-diluc.webp?v=20250809 1x, assets/genshin/ui-avataricon-diluc@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Diluc" loading="lazy">
-      </picture>
-      <span>Diluc</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Claymore</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-diona.html" data-name="Diona" data-rarity="4" data-weapon="Bow" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-diona.webp?v=20250809 1x, assets/genshin/ui-avataricon-diona@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Diona" loading="lazy">
-      </picture>
-      <span>Diona</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-dori.html" data-name="Dori" data-rarity="4" data-weapon="Claymore" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-dori.webp?v=20250809 1x, assets/genshin/ui-avataricon-dori@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Dori" loading="lazy">
-      </picture>
-      <span>Dori</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-emilie.html" data-name="Emilie" data-rarity="5" data-weapon="Polearm" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-emilie.webp?v=20250809 1x, assets/genshin/ui-avataricon-emilie@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Emilie" loading="lazy">
-      </picture>
-      <span>Emilie</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-escoffier.html" data-name="Escoffier" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-escoffier.webp?v=20250809 1x, assets/genshin/ui-avataricon-escoffier@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Escoffier" loading="lazy">
-      </picture>
-      <span>Escoffier</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-eula.html" data-name="Eula" data-rarity="5" data-weapon="Claymore" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-eula.webp?v=20250809 1x, assets/genshin/ui-avataricon-eula@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Eula" loading="lazy">
-      </picture>
-      <span>Eula</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Claymore</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-faruzan.html" data-name="Faruzan" data-rarity="4" data-weapon="Bow" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-faruzan.webp?v=20250809 1x, assets/genshin/ui-avataricon-faruzan@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Faruzan" loading="lazy">
-      </picture>
-      <span>Faruzan</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-fischl.html" data-name="Fischl" data-rarity="4" data-weapon="Bow" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-fischl.webp?v=20250809 1x, assets/genshin/ui-avataricon-fischl@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Fischl" loading="lazy">
-      </picture>
-      <span>Fischl</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-freminet.html" data-name="Freminet" data-rarity="4" data-weapon="Claymore" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-freminet.webp?v=20250809 1x, assets/genshin/ui-avataricon-freminet@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Freminet" loading="lazy">
-      </picture>
-      <span>Freminet</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-furina.html" data-name="Furina" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-furina.webp?v=20250809 1x, assets/genshin/ui-avataricon-furina@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Furina" loading="lazy">
-      </picture>
-      <span>Furina</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-gaming.html" data-name="Gaming" data-rarity="4" data-weapon="Claymore" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-gaming.webp?v=20250809 1x, assets/genshin/ui-avataricon-gaming@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Gaming" loading="lazy">
-      </picture>
-      <span>Gaming</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-ganyu.html" data-name="Ganyu" data-rarity="5" data-weapon="Bow" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-ganyu.webp?v=20250809 1x, assets/genshin/ui-avataricon-ganyu@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Ganyu" loading="lazy">
-      </picture>
-      <span>Ganyu</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-gorou.html" data-name="Gorou" data-rarity="4" data-weapon="Bow" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-gorou.webp?v=20250809 1x, assets/genshin/ui-avataricon-gorou@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Gorou" loading="lazy">
-      </picture>
-      <span>Gorou</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-shikanoin-heizou.html" data-name="Heizou" data-rarity="4" data-weapon="Catalyst" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-shikanoin-heizou.webp?v=20250809 1x, assets/genshin/ui-avataricon-shikanoin-heizou@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Heizou" loading="lazy">
-      </picture>
-      <span>Heizou</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Catalyst</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-hu-tao.html" data-name="Hu Tao" data-rarity="5" data-weapon="Polearm" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-hu-tao.webp?v=20250809 1x, assets/genshin/ui-avataricon-hu-tao@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Hu Tao" loading="lazy">
-      </picture>
-      <span>Hu Tao</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-iansan.html" data-name="Iansan" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-iansan.webp?v=20250809 1x, assets/genshin/ui-avataricon-iansan@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Iansan" loading="lazy">
-      </picture>
-      <span>Iansan</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-ifa.html" data-name="Ifa" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-ifa.webp?v=20250809 1x, assets/genshin/ui-avataricon-ifa@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Ifa" loading="lazy">
-      </picture>
-      <span>Ifa</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-ineffa.html" data-name="Ineffa" data-rarity="5" data-weapon="Polearm" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-ineffa.webp?v=20250809 1x, assets/genshin/ui-avataricon-ineffa@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Ineffa" loading="lazy">
-      </picture>
-      <span>Ineffa</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-arataki-itto.html" data-name="Itto" data-rarity="5" data-weapon="Claymore" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-arataki-itto.webp?v=20250809 1x, assets/genshin/ui-avataricon-arataki-itto@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Itto" loading="lazy">
-      </picture>
-      <span>Itto</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Claymore</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-jean.html" data-name="Jean" data-rarity="5" data-weapon="Sword" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-jean.webp?v=20250809 1x, assets/genshin/ui-avataricon-jean@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Jean" loading="lazy">
-      </picture>
-      <span>Jean</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kachina.html" data-name="Kachina" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kachina.webp?v=20250809 1x, assets/genshin/ui-avataricon-kachina@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Kachina" loading="lazy">
-      </picture>
-      <span>Kachina</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kaeya.html" data-name="Kaeya" data-rarity="4" data-weapon="Sword" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kaeya.webp?v=20250809 1x, assets/genshin/ui-avataricon-kaeya@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Kaeya" loading="lazy">
-      </picture>
-      <span>Kaeya</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Sword</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kaveh.html" data-name="Kaveh" data-rarity="4" data-weapon="Claymore" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kaveh.webp?v=20250809 1x, assets/genshin/ui-avataricon-kaveh@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Kaveh" loading="lazy">
-      </picture>
-      <span>Kaveh</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kaedehara-kazuha.html" data-name="Kazuha" data-rarity="5" data-weapon="Sword" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kaedehara-kazuha.webp?v=20250809 1x, assets/genshin/ui-avataricon-kaedehara-kazuha@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Kazuha" loading="lazy">
-      </picture>
-      <span>Kazuha</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-keqing.html" data-name="Keqing" data-rarity="5" data-weapon="Sword" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-keqing.webp?v=20250809 1x, assets/genshin/ui-avataricon-keqing@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Keqing" loading="lazy">
-      </picture>
-      <span>Keqing</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kinich.html" data-name="Kinich" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kinich.webp?v=20250809 1x, assets/genshin/ui-avataricon-kinich@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Kinich" loading="lazy">
-      </picture>
-      <span>Kinich</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kirara.html" data-name="Kirara" data-rarity="4" data-weapon="Sword" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kirara.webp?v=20250809 1x, assets/genshin/ui-avataricon-kirara@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Kirara" loading="lazy">
-      </picture>
-      <span>Kirara</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Sword</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-klee.html" data-name="Klee" data-rarity="5" data-weapon="Catalyst" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-klee.webp?v=20250809 1x, assets/genshin/ui-avataricon-klee@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Klee" loading="lazy">
-      </picture>
-      <span>Klee</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-sangonomiya-kokomi.html" data-name="Kokomi" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-sangonomiya-kokomi.webp?v=20250809 1x, assets/genshin/ui-avataricon-sangonomiya-kokomi@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Kokomi" loading="lazy">
-      </picture>
-      <span>Kokomi</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-lan-yan.html" data-name="Lan Yan" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-lan-yan.webp?v=20250809 1x, assets/genshin/ui-avataricon-lan-yan@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Lan Yan" loading="lazy">
-      </picture>
-      <span>Lan Yan</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-layla.html" data-name="Layla" data-rarity="4" data-weapon="Sword" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-layla.webp?v=20250809 1x, assets/genshin/ui-avataricon-layla@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Layla" loading="lazy">
-      </picture>
-      <span>Layla</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Sword</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-lisa.html" data-name="Lisa" data-rarity="4" data-weapon="Catalyst" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-lisa.webp?v=20250809 1x, assets/genshin/ui-avataricon-lisa@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Lisa" loading="lazy">
-      </picture>
-      <span>Lisa</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Catalyst</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-lynette.html" data-name="Lynette" data-rarity="4" data-weapon="Sword" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-lynette.webp?v=20250809 1x, assets/genshin/ui-avataricon-lynette@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Lynette" loading="lazy">
-      </picture>
-      <span>Lynette</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Sword</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-lyney.html" data-name="Lyney" data-rarity="5" data-weapon="Bow" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-lyney.webp?v=20250809 1x, assets/genshin/ui-avataricon-lyney@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Lyney" loading="lazy">
-      </picture>
-      <span>Lyney</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-mavuika.html" data-name="Mavuika" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-mavuika.webp?v=20250809 1x, assets/genshin/ui-avataricon-mavuika@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Mavuika" loading="lazy">
-      </picture>
-      <span>Mavuika</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-mika.html" data-name="Mika" data-rarity="4" data-weapon="Polearm" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-mika.webp?v=20250809 1x, assets/genshin/ui-avataricon-mika@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Mika" loading="lazy">
-      </picture>
-      <span>Mika</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Polearm</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-mizuki.html" data-name="Mizuki" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-mizuki.webp?v=20250809 1x, assets/genshin/ui-avataricon-mizuki@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Mizuki" loading="lazy">
-      </picture>
-      <span>Mizuki</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-mona.html" data-name="Mona" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-mona.webp?v=20250809 1x, assets/genshin/ui-avataricon-mona@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Mona" loading="lazy">
-      </picture>
-      <span>Mona</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-mualani.html" data-name="Mualani" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-mualani.webp?v=20250809 1x, assets/genshin/ui-avataricon-mualani@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Mualani" loading="lazy">
-      </picture>
-      <span>Mualani</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-nahida.html" data-name="Nahida" data-rarity="5" data-weapon="Catalyst" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-nahida.webp?v=20250809 1x, assets/genshin/ui-avataricon-nahida@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Nahida" loading="lazy">
-      </picture>
-      <span>Nahida</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-navia.html" data-name="Navia" data-rarity="5" data-weapon="Claymore" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-navia.webp?v=20250809 1x, assets/genshin/ui-avataricon-navia@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Navia" loading="lazy">
-      </picture>
-      <span>Navia</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Claymore</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-neuvillette.html" data-name="Neuvillette" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-neuvillette.webp?v=20250809 1x, assets/genshin/ui-avataricon-neuvillette@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Neuvillette" loading="lazy">
-      </picture>
-      <span>Neuvillette</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-nilou.html" data-name="Nilou" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-nilou.webp?v=20250809 1x, assets/genshin/ui-avataricon-nilou@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Nilou" loading="lazy">
-      </picture>
-      <span>Nilou</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-ningguang.html" data-name="Ningguang" data-rarity="4" data-weapon="Catalyst" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-ningguang.webp?v=20250809 1x, assets/genshin/ui-avataricon-ningguang@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Ningguang" loading="lazy">
-      </picture>
-      <span>Ningguang</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Catalyst</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-noelle.html" data-name="Noelle" data-rarity="4" data-weapon="Claymore" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-noelle.webp?v=20250809 1x, assets/genshin/ui-avataricon-noelle@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Noelle" loading="lazy">
-      </picture>
-      <span>Noelle</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-ororon.html" data-name="Ororon" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-ororon.webp?v=20250809 1x, assets/genshin/ui-avataricon-ororon@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Ororon" loading="lazy">
-      </picture>
-      <span>Ororon</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-qiqi.html" data-name="Qiqi" data-rarity="5" data-weapon="Sword" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-qiqi.webp?v=20250809 1x, assets/genshin/ui-avataricon-qiqi@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Qiqi" loading="lazy">
-      </picture>
-      <span>Qiqi</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-raiden-shogun.html" data-name="Raiden" data-rarity="5" data-weapon="Polearm" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-raiden-shogun.webp?v=20250809 1x, assets/genshin/ui-avataricon-raiden-shogun@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Raiden" loading="lazy">
-      </picture>
-      <span>Raiden</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-razor.html" data-name="Razor" data-rarity="4" data-weapon="Claymore" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-razor.webp?v=20250809 1x, assets/genshin/ui-avataricon-razor@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Razor" loading="lazy">
-      </picture>
-      <span>Razor</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-rosaria.html" data-name="Rosaria" data-rarity="4" data-weapon="Polearm" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-rosaria.webp?v=20250809 1x, assets/genshin/ui-avataricon-rosaria@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Rosaria" loading="lazy">
-      </picture>
-      <span>Rosaria</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Polearm</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-kujou-sara.html" data-name="Sara" data-rarity="4" data-weapon="Bow" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-kujou-sara.webp?v=20250809 1x, assets/genshin/ui-avataricon-kujou-sara@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Sara" loading="lazy">
-      </picture>
-      <span>Sara</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-sayu.html" data-name="Sayu" data-rarity="4" data-weapon="Claymore" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-sayu.webp?v=20250809 1x, assets/genshin/ui-avataricon-sayu@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Sayu" loading="lazy">
-      </picture>
-      <span>Sayu</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-sethos.html" data-name="Sethos" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-sethos.webp?v=20250809 1x, assets/genshin/ui-avataricon-sethos@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Sethos" loading="lazy">
-      </picture>
-      <span>Sethos</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-shenhe.html" data-name="Shenhe" data-rarity="5" data-weapon="Polearm" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-shenhe.webp?v=20250809 1x, assets/genshin/ui-avataricon-shenhe@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Shenhe" loading="lazy">
-      </picture>
-      <span>Shenhe</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-sigewinne.html" data-name="Sigewinne" data-rarity="4" data-weapon="Bow" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-sigewinne.webp?v=20250809 1x, assets/genshin/ui-avataricon-sigewinne@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Sigewinne" loading="lazy">
-      </picture>
-      <span>Sigewinne</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Bow</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-skirk.html" data-name="Skirk" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-skirk.webp?v=20250809 1x, assets/genshin/ui-avataricon-skirk@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Skirk" loading="lazy">
-      </picture>
-      <span>Skirk</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-sucrose.html" data-name="Sucrose" data-rarity="4" data-weapon="Catalyst" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-sucrose.webp?v=20250809 1x, assets/genshin/ui-avataricon-sucrose@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Sucrose" loading="lazy">
-      </picture>
-      <span>Sucrose</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Catalyst</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-tartaglia.html" data-name="Tartaglia" data-rarity="5" data-weapon="Bow" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-tartaglia.webp?v=20250809 1x, assets/genshin/ui-avataricon-tartaglia@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Tartaglia" loading="lazy">
-      </picture>
-      <span>Tartaglia</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-thoma.html" data-name="Thoma" data-rarity="4" data-weapon="Polearm" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-thoma.webp?v=20250809 1x, assets/genshin/ui-avataricon-thoma@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Thoma" loading="lazy">
-      </picture>
-      <span>Thoma</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Polearm</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-tighnari.html" data-name="Tighnari" data-rarity="5" data-weapon="Bow" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-tighnari.webp?v=20250809 1x, assets/genshin/ui-avataricon-tighnari@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Tighnari" loading="lazy">
-      </picture>
-      <span>Tighnari</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-traveler-anemo.html" data-name="Traveler Anemo" data-rarity="5" data-weapon="Sword" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-traveler-anemo.webp?v=20250809 1x, assets/genshin/ui-avataricon-traveler-anemo@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Traveler Anemo" loading="lazy">
-      </picture>
-      <span>Traveler Anemo</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-traveler-dendro.html" data-name="Traveler Dendro" data-rarity="5" data-weapon="Sword" data-element="Dendro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-traveler-dendro.webp?v=20250809 1x, assets/genshin/ui-avataricon-traveler-dendro@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Traveler Dendro" loading="lazy">
-      </picture>
-      <span>Traveler Dendro</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Dendro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-traveler-electro.html" data-name="Traveler Electro" data-rarity="5" data-weapon="Sword" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-traveler-electro.webp?v=20250809 1x, assets/genshin/ui-avataricon-traveler-electro@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Traveler Electro" loading="lazy">
-      </picture>
-      <span>Traveler Electro</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-traveler-geo.html" data-name="Traveler Geo" data-rarity="5" data-weapon="Sword" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-traveler-geo.webp?v=20250809 1x, assets/genshin/ui-avataricon-traveler-geo@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Traveler Geo" loading="lazy">
-      </picture>
-      <span>Traveler Geo</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-traveler-hydro.html" data-name="Traveler Hydro" data-rarity="5" data-weapon="Sword" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-traveler-hydro.webp?v=20250809 1x, assets/genshin/ui-avataricon-traveler-hydro@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Traveler Hydro" loading="lazy">
-      </picture>
-      <span>Traveler Hydro</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-traveler-pyro.html" data-name="Traveler Pyro" data-rarity="5" data-weapon="Sword" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-traveler-pyro.webp?v=20250809 1x, assets/genshin/ui-avataricon-traveler-pyro@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Traveler Pyro" loading="lazy">
-      </picture>
-      <span>Traveler Pyro</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Sword</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-varesa.html" data-name="Varesa" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-varesa.webp?v=20250809 1x, assets/genshin/ui-avataricon-varesa@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Varesa" loading="lazy">
-      </picture>
-      <span>Varesa</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-venti.html" data-name="Venti" data-rarity="5" data-weapon="Bow" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-venti.webp?v=20250809 1x, assets/genshin/ui-avataricon-venti@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Venti" loading="lazy">
-      </picture>
-      <span>Venti</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-wanderer.html" data-name="Wanderer" data-rarity="5" data-weapon="Catalyst" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-wanderer.webp?v=20250809 1x, assets/genshin/ui-avataricon-wanderer@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Wanderer" loading="lazy">
-      </picture>
-      <span>Wanderer</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-wriothesley.html" data-name="Wriothesley" data-rarity="5" data-weapon="Catalyst" data-element="Cryo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-wriothesley.webp?v=20250809 1x, assets/genshin/ui-avataricon-wriothesley@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Wriothesley" loading="lazy">
-      </picture>
-      <span>Wriothesley</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Cryo</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-xiangling.html" data-name="Xiangling" data-rarity="4" data-weapon="Polearm" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-xiangling.webp?v=20250809 1x, assets/genshin/ui-avataricon-xiangling@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Xiangling" loading="lazy">
-      </picture>
-      <span>Xiangling</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Polearm</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-xiao.html" data-name="Xiao" data-rarity="5" data-weapon="Polearm" data-element="Anemo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-xiao.webp?v=20250809 1x, assets/genshin/ui-avataricon-xiao@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Xiao" loading="lazy">
-      </picture>
-      <span>Xiao</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Anemo</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-xilonen.html" data-name="Xilonen" data-rarity="" data-weapon="" data-element="">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-xilonen.webp?v=20250809 1x, assets/genshin/ui-avataricon-xilonen@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Xilonen" loading="lazy">
-      </picture>
-      <span>Xilonen</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">—</span> <span class="badge">—</span> <span class="badge">—</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-xingqiu.html" data-name="Xingqiu" data-rarity="4" data-weapon="Sword" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-xingqiu.webp?v=20250809 1x, assets/genshin/ui-avataricon-xingqiu@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Xingqiu" loading="lazy">
-      </picture>
-      <span>Xingqiu</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Sword</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-xinyan.html" data-name="Xinyan" data-rarity="4" data-weapon="Claymore" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-xinyan.webp?v=20250809 1x, assets/genshin/ui-avataricon-xinyan@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Xinyan" loading="lazy">
-      </picture>
-      <span>Xinyan</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Claymore</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-yae-miko.html" data-name="Yae Miko" data-rarity="5" data-weapon="Catalyst" data-element="Electro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-yae-miko.webp?v=20250809 1x, assets/genshin/ui-avataricon-yae-miko@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Yae Miko" loading="lazy">
-      </picture>
-      <span>Yae Miko</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Electro</span> <span class="badge">Catalyst</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-yanfei.html" data-name="Yanfei" data-rarity="4" data-weapon="Catalyst" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-yanfei.webp?v=20250809 1x, assets/genshin/ui-avataricon-yanfei@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Yanfei" loading="lazy">
-      </picture>
-      <span>Yanfei</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Catalyst</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-yelan.html" data-name="Yelan" data-rarity="5" data-weapon="Bow" data-element="Hydro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-yelan.webp?v=20250809 1x, assets/genshin/ui-avataricon-yelan@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Yelan" loading="lazy">
-      </picture>
-      <span>Yelan</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Hydro</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-yoimiya.html" data-name="Yoimiya" data-rarity="5" data-weapon="Bow" data-element="Pyro">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-yoimiya.webp?v=20250809 1x, assets/genshin/ui-avataricon-yoimiya@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Yoimiya" loading="lazy">
-      </picture>
-      <span>Yoimiya</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Pyro</span> <span class="badge">Bow</span> <span class="badge">5★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-yun-jin.html" data-name="Yun Jin" data-rarity="4" data-weapon="Polearm" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-yun-jin.webp?v=20250809 1x, assets/genshin/ui-avataricon-yun-jin@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Yun Jin" loading="lazy">
-      </picture>
-      <span>Yun Jin</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Polearm</span> <span class="badge">4★</span></div>
-    </a>
-    
-
-    <a class="char-card" href="genshin-zhongli.html" data-name="Zhongli" data-rarity="5" data-weapon="Polearm" data-element="Geo">
-      <picture>
-        <div class="char-skeleton"></div>
-        <source data-srcset="assets/genshin/ui-avataricon-zhongli.webp?v=20250809 1x, assets/genshin/ui-avataricon-zhongli@2x.webp?v=20250809 2x" type="image/webp">
-        <img alt="Zhongli" loading="lazy">
-      </picture>
-      <span>Zhongli</span>
-      <div class="muted" style="font-size:12px;margin-top:4px"><span class="badge">Geo</span> <span class="badge">Polearm</span> <span class="badge">5★</span></div>
-    </a>
+  <div class="characters-grid">
+    
+      <a class="char-card" href="genshin-albedo.html" data-name="Albedo" data-rarity="5" data-weapon="Sword" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Albedo</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-aloy.html" data-name="Aloy" data-rarity="5" data-weapon="Bow" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Aloy</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-amber.html" data-name="Amber" data-rarity="4" data-weapon="Bow" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Amber</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kamisato-ayaka.html" data-name="Ayaka" data-rarity="5" data-weapon="Sword" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Ayaka</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kamisato-ayato.html" data-name="Ayato" data-rarity="5" data-weapon="Sword" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Ayato</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-baizhu.html" data-name="Baizhu" data-rarity="5" data-weapon="Catalyst" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Baizhu</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-barbara.html" data-name="Barbara" data-rarity="4" data-weapon="Catalyst" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Barbara</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-bennett.html" data-name="Bennett" data-rarity="4" data-weapon="Sword" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Bennett</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-candace.html" data-name="Candace" data-rarity="4" data-weapon="Polearm" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Candace</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-charlotte.html" data-name="Charlotte" data-rarity="4" data-weapon="Catalyst" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Charlotte</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-chasca.html" data-name="Chasca" data-rarity="5" data-weapon="Bow" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Chasca</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-chiori.html" data-name="Chiori" data-rarity="5" data-weapon="Sword" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Chiori</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-clorinde.html" data-name="Clorinde" data-rarity="5" data-weapon="Sword" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Clorinde</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-collei.html" data-name="Collei" data-rarity="4" data-weapon="Bow" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Collei</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-cyno.html" data-name="Cyno" data-rarity="5" data-weapon="Polearm" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Cyno</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-dahlia.html" data-name="Dahlia" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Dahlia</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-dehya.html" data-name="Dehya" data-rarity="5" data-weapon="Claymore" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Dehya</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-diluc.html" data-name="Diluc" data-rarity="5" data-weapon="Claymore" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Diluc</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-diona.html" data-name="Diona" data-rarity="4" data-weapon="Bow" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Diona</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-dori.html" data-name="Dori" data-rarity="4" data-weapon="Claymore" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Dori</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-emilie.html" data-name="Emilie" data-rarity="5" data-weapon="Polearm" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Emilie</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-escoffier.html" data-name="Escoffier" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Escoffier</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-eula.html" data-name="Eula" data-rarity="5" data-weapon="Claymore" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Eula</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-faruzan.html" data-name="Faruzan" data-rarity="4" data-weapon="Bow" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Faruzan</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-fischl.html" data-name="Fischl" data-rarity="4" data-weapon="Bow" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Fischl</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-freminet.html" data-name="Freminet" data-rarity="4" data-weapon="Claymore" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Freminet</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-furina.html" data-name="Furina" data-rarity="5" data-weapon="Sword" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Furina</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-gaming.html" data-name="Gaming" data-rarity="4" data-weapon="Claymore" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Gaming</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-ganyu.html" data-name="Ganyu" data-rarity="5" data-weapon="Bow" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Ganyu</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-gorou.html" data-name="Gorou" data-rarity="4" data-weapon="Bow" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Gorou</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-shikanoin-heizou.html" data-name="Heizou" data-rarity="4" data-weapon="Catalyst" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Heizou</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-hu-tao.html" data-name="Hu Tao" data-rarity="5" data-weapon="Polearm" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Hu Tao</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-iansan.html" data-name="Iansan" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Iansan</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-ifa.html" data-name="Ifa" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Ifa</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-ineffa.html" data-name="Ineffa" data-rarity="5" data-weapon="Polearm" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Ineffa</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-arataki-itto.html" data-name="Itto" data-rarity="5" data-weapon="Claymore" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Itto</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-jean.html" data-name="Jean" data-rarity="5" data-weapon="Sword" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Jean</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kachina.html" data-name="Kachina" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Kachina</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kaeya.html" data-name="Kaeya" data-rarity="4" data-weapon="Sword" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Kaeya</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kaveh.html" data-name="Kaveh" data-rarity="4" data-weapon="Claymore" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Kaveh</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kaedehara-kazuha.html" data-name="Kazuha" data-rarity="5" data-weapon="Sword" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Kazuha</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-keqing.html" data-name="Keqing" data-rarity="5" data-weapon="Sword" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Keqing</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kinich.html" data-name="Kinich" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Kinich</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kirara.html" data-name="Kirara" data-rarity="4" data-weapon="Sword" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Kirara</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-klee.html" data-name="Klee" data-rarity="5" data-weapon="Catalyst" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Klee</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-sangonomiya-kokomi.html" data-name="Kokomi" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Kokomi</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-lan-yan.html" data-name="Lan Yan" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Lan Yan</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-layla.html" data-name="Layla" data-rarity="4" data-weapon="Sword" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Layla</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-lisa.html" data-name="Lisa" data-rarity="4" data-weapon="Catalyst" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Lisa</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-mavuika.html" data-name="Mavuika" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Mavuika</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-mika.html" data-name="Mika" data-rarity="4" data-weapon="Polearm" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Mika</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-mizuki.html" data-name="Mizuki" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Mizuki</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-mona.html" data-name="Mona" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Mona</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-mualani.html" data-name="Mualani" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Mualani</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-nahida.html" data-name="Nahida" data-rarity="5" data-weapon="Catalyst" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Nahida</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-navia.html" data-name="Navia" data-rarity="5" data-weapon="Claymore" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Navia</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-neuvillette.html" data-name="Neuvillette" data-rarity="5" data-weapon="Catalyst" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Neuvillette</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-nilou.html" data-name="Nilou" data-rarity="5" data-weapon="Sword" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Nilou</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-ningguang.html" data-name="Ningguang" data-rarity="4" data-weapon="Catalyst" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Ningguang</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-noelle.html" data-name="Noelle" data-rarity="4" data-weapon="Claymore" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Noelle</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-ororon.html" data-name="Ororon" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Ororon</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-qiqi.html" data-name="Qiqi" data-rarity="5" data-weapon="Sword" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Qiqi</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-raiden-shogun.html" data-name="Raiden" data-rarity="5" data-weapon="Polearm" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Raiden</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-razor.html" data-name="Razor" data-rarity="4" data-weapon="Claymore" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Razor</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-rosaria.html" data-name="Rosaria" data-rarity="4" data-weapon="Polearm" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Rosaria</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-kujou-sara.html" data-name="Sara" data-rarity="4" data-weapon="Bow" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Sara</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-sayu.html" data-name="Sayu" data-rarity="4" data-weapon="Claymore" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Sayu</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-sethos.html" data-name="Sethos" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Sethos</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-shenhe.html" data-name="Shenhe" data-rarity="5" data-weapon="Polearm" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Shenhe</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-sigewinne.html" data-name="Sigewinne" data-rarity="4" data-weapon="Bow" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Sigewinne</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-skirk.html" data-name="Skirk" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Skirk</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-sucrose.html" data-name="Sucrose" data-rarity="4" data-weapon="Catalyst" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Sucrose</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-tartaglia.html" data-name="Tartaglia" data-rarity="5" data-weapon="Bow" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Tartaglia</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-thoma.html" data-name="Thoma" data-rarity="4" data-weapon="Polearm" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Thoma</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-tighnari.html" data-name="Tighnari" data-rarity="5" data-weapon="Bow" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Tighnari</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-traveler-anemo.html" data-name="Traveler Anemo" data-rarity="5" data-weapon="Sword" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Traveler Anemo</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-traveler-dendro.html" data-name="Traveler Dendro" data-rarity="5" data-weapon="Sword" data-element="Dendro">
+        <div class="char-top">
+          <div class="char-name">Traveler Dendro</div>
+          <div class="meta">
+            <span class="badge">Dendro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-traveler-electro.html" data-name="Traveler Electro" data-rarity="5" data-weapon="Sword" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Traveler Electro</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-traveler-geo.html" data-name="Traveler Geo" data-rarity="5" data-weapon="Sword" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Traveler Geo</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-traveler-hydro.html" data-name="Traveler Hydro" data-rarity="5" data-weapon="Sword" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Traveler Hydro</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-traveler-pyro.html" data-name="Traveler Pyro" data-rarity="5" data-weapon="Sword" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Traveler Pyro</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-varesa.html" data-name="Varesa" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Varesa</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-venti.html" data-name="Venti" data-rarity="5" data-weapon="Bow" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Venti</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-wanderer.html" data-name="Wanderer" data-rarity="5" data-weapon="Catalyst" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Wanderer</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-wriothesley.html" data-name="Wriothesley" data-rarity="5" data-weapon="Catalyst" data-element="Cryo">
+        <div class="char-top">
+          <div class="char-name">Wriothesley</div>
+          <div class="meta">
+            <span class="badge">Cryo</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-xiangling.html" data-name="Xiangling" data-rarity="4" data-weapon="Polearm" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Xiangling</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-xiao.html" data-name="Xiao" data-rarity="5" data-weapon="Polearm" data-element="Anemo">
+        <div class="char-top">
+          <div class="char-name">Xiao</div>
+          <div class="meta">
+            <span class="badge">Anemo</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-xilonen.html" data-name="Xilonen" data-rarity="" data-weapon="" data-element="">
+        <div class="char-top">
+          <div class="char-name">Xilonen</div>
+          <div class="meta">
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+            <span class="badge">—</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-xingqiu.html" data-name="Xingqiu" data-rarity="4" data-weapon="Sword" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Xingqiu</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Sword</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-xinyan.html" data-name="Xinyan" data-rarity="4" data-weapon="Claymore" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Xinyan</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Claymore</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-yae-miko.html" data-name="Yae Miko" data-rarity="5" data-weapon="Catalyst" data-element="Electro">
+        <div class="char-top">
+          <div class="char-name">Yae Miko</div>
+          <div class="meta">
+            <span class="badge">Electro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-yanfei.html" data-name="Yanfei" data-rarity="4" data-weapon="Catalyst" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Yanfei</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Catalyst</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-yelan.html" data-name="Yelan" data-rarity="5" data-weapon="Bow" data-element="Hydro">
+        <div class="char-top">
+          <div class="char-name">Yelan</div>
+          <div class="meta">
+            <span class="badge">Hydro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-yoimiya.html" data-name="Yoimiya" data-rarity="5" data-weapon="Bow" data-element="Pyro">
+        <div class="char-top">
+          <div class="char-name">Yoimiya</div>
+          <div class="meta">
+            <span class="badge">Pyro</span>
+            <span class="badge">Bow</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-yun-jin.html" data-name="Yun Jin" data-rarity="4" data-weapon="Polearm" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Yun Jin</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">4★</span>
+          </div>
+        </div>
+      </a>
+    
+
+      <a class="char-card" href="genshin-zhongli.html" data-name="Zhongli" data-rarity="5" data-weapon="Polearm" data-element="Geo">
+        <div class="char-top">
+          <div class="char-name">Zhongli</div>
+          <div class="meta">
+            <span class="badge">Geo</span>
+            <span class="badge">Polearm</span>
+            <span class="badge">5★</span>
+          </div>
+        </div>
+      </a>
     
   </div>
 </main>
 <footer class="site-footer">© 2025 Bolle Gacha</footer>
-<script>
-// Simple filter (client-side)
-function filterCharacters(){
-  const q=(document.getElementById('q').value||'').toLowerCase();
-  const rarity=document.getElementById('rarity').value;
-  const weapon=document.getElementById('weapon').value;
-  const element=document.getElementById('element').value;
-  document.querySelectorAll('.char-card').forEach(card=>{
-    const r=card.dataset.rarity,w=card.dataset.weapon,e=card.dataset.element,n=(card.dataset.name||'').toLowerCase();
-    const ok=(!rarity||r===rarity)&&(!weapon||w===weapon)&&(!element||e===element)&&(!q||n.includes(q));
-    card.style.display=ok?'block':'none';
-  });
-}
-['q','rarity','weapon','element'].forEach(id=>{
-  document.addEventListener('input',e=>{ if(e.target&&e.target.id===id) filterCharacters(); });
-});
-
-// Lazy loader with IntersectionObserver
-const io = new IntersectionObserver((entries)=>{
-  const toLoad = entries.filter(e=>e.isIntersecting).map(e=>e.target);
-  toLoad.forEach(picture => {
-    const src = picture.querySelector('source');
-    const img = picture.querySelector('img');
-    if(src && src.dataset.srcset && !img.dataset.loaded){
-      src.srcset = src.dataset.srcset;
-      img.src = (src.dataset.srcset.split(',')[0]||'').trim().split(' ')[0];
-      img.onload = ()=>{ img.classList.add('loaded'); img.dataset.loaded='1'; };
-      img.onerror = ()=>{ img.src='assets/placeholder.png?v=20250809'; img.classList.add('loaded'); img.dataset.loaded='1'; };
-    }
-    io.unobserve(picture);
-  });
-}, {rootMargin:'200px 0px', threshold:0.01});
-
-document.querySelectorAll('picture').forEach(p=>io.observe(p));
-
-// Diagnostic: list missing icons
-document.getElementById('check-missing').addEventListener('click', async ()=>{
-  const cards=[...document.querySelectorAll('.char-card')];
-  for(const c of cards){
-    const srcset=c.querySelector('source').dataset.srcset.split(',')[0].trim().split(' ')[0];
-    try{
-      const r=await fetch(srcset,{method:'HEAD',cache:'no-store'});
-      if(!r.ok) console.warn('Missing icon:', srcset);
-    }catch(err){ console.warn('Error fetching:', srcset, err); }
-  }
-  console.log('Check complete.');
-});
-</script>
 </body>
 </html>
