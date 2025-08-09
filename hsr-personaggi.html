@@ -84,5 +84,70 @@
       });
   });
 </script>
+<script>
+  // --- HSR ENRICHER: compila Path/Element mancanti ---
+  const HSR_PATH = {
+    // Top & comuni — aggiungi liberamente!
+    "Seele":"Hunt","Dan Heng":"Hunt","Dan Heng - Imbibitor Lunae":"Destruction",
+    "Jingliu":"Destruction","Blade":"Destruction","Acheron":"Nihility","Kafka":"Nihility",
+    "Black Swan":"Nihility","Ruan Mei":"Harmony","Bronya":"Harmony","Sparkle":"Harmony",
+    "Gepard":"Preservation","Fu Xuan":"Preservation","Natasha":"Abundance","Bailu":"Abundance",
+    "Welt":"Nihility","Silver Wolf":"Nihility","Topaz and Numby":"Hunt","Jing Yuan":"Erudition",
+    "Himeko":"Erudition","Qingque":"Erudition","Arlan":"Destruction","Clara":"Destruction",
+    "Sushang":"Hunt","Tingyun":"Harmony","Pela":"Nihility","Yukong":"Harmony",
+    "Huohuo":"Abundance","Yanqing":"Hunt","Aventurine":"Preservation","Robin":"Harmony",
+    "Firefly":"Destruction","Dr. Ratio":"Hunt","Luocha":"Abundance","Jiaoqiu":"Nihility",
+    // Trailblazer (usa i tuoi slug):
+    "Trailblazer (Physical)":"Destruction","Trailblazer (Fire)":"Preservation",
+    "Trailblazer (Imaginary)":"Harmony","Trailblazer (Ice)":"Hunt"
+  };
+  const HSR_ELEM = {
+    "Seele":"Quantum","Silver Wolf":"Quantum","Fu Xuan":"Quantum","Qingque":"Quantum",
+    "Jingliu":"Ice","Gepard":"Ice","Herta":"Ice","Pela":"Ice","Yanqing":"Ice","Misha":"Ice",
+    "Kafka":"Lightning","Serval":"Lightning","Bailu":"Lightning","Jing Yuan":"Lightning",
+    "Acheron":"Lightning","Hook":"Fire","Topaz and Numby":"Fire","Himeko":"Fire","Guinaifen":"Fire",
+    "Clara":"Physical","Sushang":"Physical","Luka":"Physical","Xueyi":"Quantum?","Arlan":"Lightning",
+    "Bronya":"Wind","Dan Heng":"Wind","Blade":"Wind","Luocha":"Imaginary","Welt":"Imaginary",
+    "Dr. Ratio":"Imaginary","Ruan Mei":"Ice","Sparkle":"Quantum","Aventurine":"Imaginary",
+    "Robin":"Physical","Firefly":"Fire","Jiaoqiu":"Fire"
+  };
+  function enrichHSR(list){
+    return list.map(c=>{
+      const name=c.name||"";
+      const filled = { ...c };
+      if(!filled.path && HSR_PATH[name]) filled.path = HSR_PATH[name];
+      if(!filled.element && HSR_ELEM[name]) filled.element = HSR_ELEM[name];
+      return filled;
+    });
+  }
+
+  // Sostituisci il fetch esistente (o inserisci se non c’è)
+  document.addEventListener('DOMContentLoaded', ()=>{
+    const wrap = document.getElementById('grid');
+    fetch('assets/hsr_roster.json?v=20250809')
+      .then(r=>r.json())
+      .then(raw=>{
+        const list = enrichHSR(raw);
+        wrap.innerHTML = list.map(c => `
+          <a class="char-card" href="${c.link}"
+             data-name="${c.name||''}"
+             data-rarity="${c.rarity||''}"
+             data-weapon="${c.path||''}"
+             data-element="${c.element||''}">
+            <div class="char-top">
+              <div class="char-name">${c.name||''}</div>
+              <div class="meta">
+                ${c.element?`<span class="badge">${c.element}</span>`:''}
+                ${c.path?`<span class="badge">${c.path}</span>`:''}
+                ${c.rarity?`<span class="badge">${c.rarity}★</span>`:''}
+              </div>
+            </div>
+          </a>
+        `).join('');
+        if (window.filterCharacters) window.filterCharacters();
+      })
+      .catch(e=>{ console.error(e); wrap.innerHTML='<div class="panel">Errore caricamento roster HSR.</div>'; });
+  });
+</script>
 </body>
 </html>
