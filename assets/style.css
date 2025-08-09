@@ -1,68 +1,35 @@
-/* === Bolle Gacha — Fix v9: Rectangular Menus ===
-   Apply to: index.html (game buttons) and <game>.html (section cards)
-   Effect: turn .game-btn and .section-card into rectangles (no rounded corners),
-           with a subtle hover elevation and clear borders.
-================================================================== */
+
+/* Bolle Gacha — Shared Styles */
 :root{
-  --bg:#0b0f14; --panel:#121821; --text:#e6edf3; --muted:#9fb2c8;
-  --card:#161e29; --border:#263244; --accent:#5ac8fa;
+  --bg:#0b0f14;--bg2:#121821;--panel:#161e29;--border:#263244;--text:#e6edf3;--muted:#9fb2c8;--accent:#5ac8fa;
 }
-/* Global (keep your existing rules; these can be appended safely) */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1200px;margin:0 auto;padding:24px}
+.site-header{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px;padding:14px;border-bottom:1px solid var(--border);background:var(--bg2);position:sticky;top:0;z-index:10}
+.logo-wrap{justify-self:center}
+.site-logo{width:88px;height:88px;border-radius:50%;border:2px solid var(--border);background:var(--bg)}
+.site-footer{border-top:1px solid var(--border);background:var(--bg2);padding:12px;text-align:center;color:var(--muted);margin-top:24px}
 
-/* Rectangular game buttons on Home */
-.game-buttons{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
-  gap:16px;
-  margin-top:12px;
-}
-.game-btn{
-  display:block;
-  text-align:center;
-  padding:18px 20px;
-  background:var(--card);
-  border:2px solid var(--border);
-  border-radius:0;                 /* <-- rectangle */
-  color:var(--text);
-  font-weight:700;
-  text-decoration:none;
-  box-shadow:0 0 0 rgba(0,0,0,0);
-  transition:box-shadow .15s ease, transform .03s ease, background .2s ease;
-}
-.game-btn:hover{
-  background:#1b2534;
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
-  transform:translateY(-1px);
-}
+/* Home cards */
+.grid{display:grid;gap:16px}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--panel);border:2px solid var(--border);border-radius:14px;padding:16px;display:flex;align-items:center;justify-content:center;min-height:120px;text-align:center;font-weight:700;transition:transform .08s ease, border-color .08s ease}
+.card:hover{transform:translateY(-2px);border-color:var(--accent)}
 
-/* Rectangular section cards inside each game page */
-.section-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
-  gap:16px;
-  margin-top:16px;
-}
-.section-card{
-  display:block;
-  padding:16px;
-  background:var(--card);
-  border:2px solid var(--border);
-  border-radius:0;                 /* <-- rectangle */
-  color:var(--text);
-  text-decoration:none;
-  box-shadow:0 0 0 rgba(0,0,0,0);
-  transition:box-shadow .15s ease, background .2s ease, transform .03s ease;
-}
-.section-card h3{ margin:0 0 8px; }
-.section-card p{ margin:0; color:var(--muted); }
-.section-card:hover{
-  background:#1b2534;
-  box-shadow:0 6px 18px rgba(0,0,0,.25);
-  transform:translateY(-1px);
-}
+/* Submenu buttons */
+.menu{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
 
-/* Optional: make character cards rectangular too (if you want consistency) */
-.card{
-  border-radius:0 !important;
-  border-width:2px !important;
-}
+/* Characters page */
+.filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.filter-box{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:10px}
+select,input{background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:8px}
+.characters-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:16px}
+.char-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:10px;text-align:center;transition:transform .08s ease,border-color .08s}
+.char-card:hover{transform:translateY(-2px);border-color:var(--accent)}
+.char-card picture{display:block;margin:0 auto 8px;width:80px;height:80px}
+.char-card img{width:80px;height:80px;object-fit:cover;border-radius:10px;border:1px solid var(--border);background:var(--bg)}
+.char-card span{display:block;font-size:14px}
+.badge{display:inline-block;padding:2px 8px;border:1px solid var(--border);border-radius:999px;background:#0e141d;color:var(--text);font-size:12px}
+.muted{color:var(--muted)}
