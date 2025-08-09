@@ -1,0 +1,534 @@
+[
+  {
+    "name": "Acheron",
+    "slug": "acheron",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Aglaea",
+    "slug": "aglaea",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Anaxa",
+    "slug": "anaxa",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "ArcherNew",
+    "slug": "archernew",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Argenti",
+    "slug": "argenti",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Arlan",
+    "slug": "arlan",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Asta",
+    "slug": "asta",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Aventurine",
+    "slug": "aventurine",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Bailu",
+    "slug": "bailu",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Black Swan",
+    "slug": "black-swan",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Blade",
+    "slug": "blade",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Boothill",
+    "slug": "boothill",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Bronya",
+    "slug": "bronya",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Castorice",
+    "slug": "castorice",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Cerydra3.5",
+    "slug": "cerydra35",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Cipher",
+    "slug": "cipher",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Clara",
+    "slug": "clara",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Dan Heng",
+    "slug": "dan-heng",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Dan Heng â¢ Imbibitor Lunae",
+    "slug": "dan-heng-â-imbibitor-lunae",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Dr. Ratio",
+    "slug": "dr-ratio",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Feixiao",
+    "slug": "feixiao",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Firefly",
+    "slug": "firefly",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Fu Xuan",
+    "slug": "fu-xuan",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Gallagher",
+    "slug": "gallagher",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Gepard",
+    "slug": "gepard",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Guinaifen",
+    "slug": "guinaifen",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Hanya",
+    "slug": "hanya",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Herta",
+    "slug": "herta",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Himeko",
+    "slug": "himeko",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Hook",
+    "slug": "hook",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Huohuo",
+    "slug": "huohuo",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Hyacine",
+    "slug": "hyacine",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Hysilens3.5",
+    "slug": "hysilens35",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Jade",
+    "slug": "jade",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Jiaoqiu",
+    "slug": "jiaoqiu",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Jing Yuan",
+    "slug": "jing-yuan",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Jingliu",
+    "slug": "jingliu",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Kafka",
+    "slug": "kafka",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Lingsha",
+    "slug": "lingsha",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Luka",
+    "slug": "luka",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Luocha",
+    "slug": "luocha",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Lynx",
+    "slug": "lynx",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "March 7th",
+    "slug": "march-7th",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "March 7th â¢ The Hunt",
+    "slug": "march-7th-â-the-hunt",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Misha",
+    "slug": "misha",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Moze",
+    "slug": "moze",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Mydei",
+    "slug": "mydei",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Natasha",
+    "slug": "natasha",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Pela",
+    "slug": "pela",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Phainon",
+    "slug": "phainon",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Qingque",
+    "slug": "qingque",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Rappa",
+    "slug": "rappa",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Robin",
+    "slug": "robin",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Ruan Mei",
+    "slug": "ruan-mei",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "SaberNew",
+    "slug": "sabernew",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Sampo",
+    "slug": "sampo",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Seele",
+    "slug": "seele",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Serval",
+    "slug": "serval",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Silver Wolf",
+    "slug": "silver-wolf",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Sparkle",
+    "slug": "sparkle",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Sunday",
+    "slug": "sunday",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Sushang",
+    "slug": "sushang",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "The Herta",
+    "slug": "the-herta",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Tingyun",
+    "slug": "tingyun",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Tingyun â¢ Fugue",
+    "slug": "tingyun-â-fugue",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Topaz & Numby",
+    "slug": "topaz-numby",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Trailblazer â¢ Destruction",
+    "slug": "trailblazer-â-destruction",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Trailblazer â¢ Harmony",
+    "slug": "trailblazer-â-harmony",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Trailblazer â¢ Preservation",
+    "slug": "trailblazer-â-preservation",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Trailblazer â¢ Remembrance",
+    "slug": "trailblazer-â-remembrance",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Tribbie",
+    "slug": "tribbie",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Welt",
+    "slug": "welt",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Xueyi",
+    "slug": "xueyi",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Yanqing",
+    "slug": "yanqing",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Yukong",
+    "slug": "yukong",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  },
+  {
+    "name": "Yunli",
+    "slug": "yunli",
+    "rarity": "",
+    "path": "",
+    "element": ""
+  }
+]
