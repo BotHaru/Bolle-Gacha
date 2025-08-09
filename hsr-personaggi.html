@@ -1,61 +1,26 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Honkai: Star Rail — Personaggi</title>
-  <link rel="stylesheet" href="assets/style.css" />
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSR — Characters</title>
+<link rel="stylesheet" href="assets/style-extra.css">
+<script defer src="assets/filters-roster.js"></script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a> · 
-      <a href="genshin-personaggi.html">Genshin</a> · 
-      <a href="hsr-personaggi.html">Honkai: Star Rail</a> · 
-      <a href="wuwa-personaggi.html">Wuthering Waves</a>
-    </nav>
-    <h1>Honkai: Star Rail — Tutti i personaggi</h1>
-  </header>
-  <main>
-    <ul>
-      <li><a href="hsr-acheron.html">Acheron</a></li>
-      <li><a href="hsr-argenti.html">Argenti</a></li>
-      <li><a href="hsr-asta.html">Asta</a></li>
-      <li><a href="hsr-blade.html">Blade</a></li>
-      <li><a href="hsr-bronya.html">Bronya</a></li>
-      <li><a href="hsr-clara.html">Clara</a></li>
-      <li><a href="hsr-dan-heng.html">Dan Heng</a></li>
-      <li><a href="hsr-dan-heng-il.html">Dan Heng Il</a></li>
-      <li><a href="hsr-fu-xuan.html">Fu Xuan</a></li>
-      <li><a href="hsr-gepard.html">Gepard</a></li>
-      <li><a href="hsr-guinaifen.html">Guinaifen</a></li>
-      <li><a href="hsr-herta.html">Herta</a></li>
-      <li><a href="hsr-himeko.html">Himeko</a></li>
-      <li><a href="hsr-hook.html">Hook</a></li>
-      <li><a href="hsr-jing-yuan.html">Jing Yuan</a></li>
-      <li><a href="hsr-jingliu.html">Jingliu</a></li>
-      <li><a href="hsr-kafka.html">Kafka</a></li>
-      <li><a href="hsr-luocha.html">Luocha</a></li>
-      <li><a href="hsr-march-7th.html">March 7Th</a></li>
-      <li><a href="hsr-natasha.html">Natasha</a></li>
-      <li><a href="hsr-pela.html">Pela</a></li>
-      <li><a href="hsr-qingque.html">Qingque</a></li>
-      <li><a href="hsr-ruan-mei.html">Ruan Mei</a></li>
-      <li><a href="hsr-seele.html">Seele</a></li>
-      <li><a href="hsr-serval.html">Serval</a></li>
-      <li><a href="hsr-silver-wolf.html">Silver Wolf</a></li>
-      <li><a href="hsr-sparkle.html">Sparkle</a></li>
-      <li><a href="hsr-sushang.html">Sushang</a></li>
-      <li><a href="hsr-tingyun.html">Tingyun</a></li>
-      <li><a href="hsr-topaz.html">Topaz</a></li>
-      <li><a href="hsr-trailblazer-fire.html">Trailblazer Fire</a></li>
-      <li><a href="hsr-trailblazer-imaginary.html">Trailblazer Imaginary</a></li>
-      <li><a href="hsr-trailblazer-phys.html">Trailblazer Phys</a></li>
-      <li><a href="hsr-welt.html">Welt</a></li>
-      <li><a href="hsr-xueyi.html">Xueyi</a></li>
-      <li><a href="hsr-yanqing.html">Yanqing</a></li>
-      <li><a href="hsr-yukong.html">Yukong</a></li>
-    </ul>
-  </main>
+<header class="site-header">
+  <div></div>
+  <a href="index.html" title="Back"><div class="logo" aria-label="Bolle Gacha"></div></a>
+  <div></div>
+</header>
+<main class="container">
+  <h1>Honkai: Star Rail — Characters</h1>
+  <div class="filter-box"><label>Search<br><input id="q" type="search" placeholder="Search name"></label></div>
+  <div class="filter-box"><label>Rarity<br><select id="rarity"><option value="">All</option><option value="5">5★</option><option value="4">4★</option></select></label></div>
+  <div class="filter-box"><label>Path<br><select id="weapon"><option value="">All</option><option>Destruction</option><option>The Hunt</option><option>Erudition</option><option>Harmony</option><option>Preservation</option><option>Nihility</option><option>Abundance</option><option>Remembrance</option></select></label></div>
+  <div class="filter-box"><label>Element<br><select id="element"><option value="">All</option><option>Physical</option><option>Fire</option><option>Ice</option><option>Lightning</option><option>Wind</option><option>Quantum</option><option>Imaginary</option></select></label></div>
+  <div class="characters-grid" id="hsr-list"></div>
+</main>
+<script>
+__rosterLoader.loadAndInit('assets/hsr_roster.json', '#hsr-list');
+</script>
 </body>
 </html>
