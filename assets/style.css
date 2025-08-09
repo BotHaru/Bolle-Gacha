@@ -23,8 +23,8 @@ select,input{background:var(--bg);color:var(--text);border:1px solid var(--borde
 .char-name{font-weight:700;font-size:16px}
 .meta{display:flex;flex-wrap:wrap;gap:6px}
 .badge{display:inline-block;padding:2px 8px;border:1px solid var(--border);border-radius:999px;background:#0e141d;color:var(--text);font-size:12px}
-.muted{color:var(--muted)}
-/* Events / Map from previous pack */
+.muted{color:#9fb2c8}
+/* Events / Map */
 .split{display:grid;grid-template-columns:320px 1fr;gap:16px}
 @media(max-width:960px){.split{grid-template-columns:1fr}}
 .banners-col{background:var(--panel);border:2px solid var(--border);padding:12px}
@@ -42,7 +42,9 @@ select,input{background:var(--bg);color:var(--text);border:1px solid var(--borde
 .tab.active{background:#263244}
 .event{padding:10px 0;border-bottom:1px dashed var(--border)}
 .event-title{font-weight:700}
-.event-dates{color:var(--muted);font-size:13px}
+.event-dates{color:#9fb2c8;font-size:13px}
 .region{background:var(--panel);border:2px solid var(--border);border-radius:12px;padding:12px;margin-bottom:12px}
 .video{display:block;padding:8px;border:1px dashed var(--border);border-radius:8px;margin:6px 0}
+.figure{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:12px;margin:12px 0}
+.figure svg{width:100%;height:auto;display:block}
 .hidden{display:none}
